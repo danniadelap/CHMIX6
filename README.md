@@ -3,3 +3,4 @@
 * Dannia Roxana De La Peña Torres
 * Gustavo Adrian Martinez Velazquez
 * Juan José Morales Sevilla
+* Omar Saúl Resendiz Soto
