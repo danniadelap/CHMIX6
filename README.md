@@ -1,4 +1,5 @@
 # CHMIX6
 ## Miembros de equipo:
-Gustavo Adrian Martinez Velazquez
-Juan José Morales Sevilla
+* Dannia Roxana De La Peña Torres
+* Gustavo Adrian Martinez Velazquez
+* Juan José Morales Sevilla
