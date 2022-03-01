@@ -4,3 +4,4 @@
 * Gustavo Adrian Martinez Velazquez
 * Juan José Morales Sevilla
 * Omar Saúl Resendiz Soto
+* Emmanuel Rosales Sánchez
