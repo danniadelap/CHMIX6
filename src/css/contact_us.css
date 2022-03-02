@@ -1,0 +1,14 @@
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconmargin{
+    padding-bottom: 50px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
