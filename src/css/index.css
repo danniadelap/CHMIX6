@@ -1,3 +1,6 @@
-.inicio{
-    background-image: url("./src/img/inicio/imageninicio1.jpeg");
+.centrado{display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
 }
