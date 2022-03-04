@@ -11,4 +11,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 15px;
 }
+
+
+
+
+
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+ .tamañodeiconos {
+    width: 60px;
+    height: 60px;
+ }
+ .celular{
+     display: flex;
+     flex-direction: row-reverse;
+ }
+ }
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { ... }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { ... }
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { ... }
