@@ -7,7 +7,7 @@
 .iconmargin{
     padding-bottom: 50px;
 }
-.center{
+#center{
     display: flex;
     justify-content: center;
     align-items: center;
