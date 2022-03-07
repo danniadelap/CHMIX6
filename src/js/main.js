@@ -3,16 +3,15 @@
 
 const PI = 3.14159265;
 
-let barra = [
+let barra = 
     {
-        products: "./list_of_products.html",
-        form: "./form.html",
-        logo: "./index.html",
-        us: "./aboutUs.html",
-        contact: "./contact_us.html"
-    }
 
-];
+        products: "../../list_of_products.html",
+        form: "../../form.html",
+        logo: "../../index.html",
+        us: "../../aboutUs.html",
+        contact: "../../contact_us.html"
+    };
 
 
 
@@ -47,7 +46,7 @@ let barra = [
                 <a class="nav-link" href="${barra.us}">Nosotros</a>
             </li>            
             <li class="nav-item">
-                <a class="nav-link" href="${barra.contact}l">Contactanos</a>
+                <a class="nav-link" href="${barra.contact}">Contactanos</a>
             </li>                      
         </ul>
     <!--<form class="form-inline my-2 my-lg-0">
