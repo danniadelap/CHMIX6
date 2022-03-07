@@ -1,7 +1,7 @@
 //se necesita el objeto miembros con los datos anidados
 let miembros =[
     {
-        foto:  "./src/img/dannia.jpeg",
+        foto:  "./src/img/Danniatutu.png",
         fotoAlt : "foto de Dannia",
         nombre: "Dannia Roxana de la Peña Torres",
         descripción: "Soy estudiante de la carrera de Gestión Empresarial. Me considero una persona divertida, comprometida, honesta y me apasionan los temas de tecnología y marketing.",
@@ -10,7 +10,7 @@ let miembros =[
         linkedIn: "https://www.linkedIn.com/in/danniaroxana-delap/"
     },
     {
-        foto:  "./src/img/Emmanuel.png",
+        foto:  "./src/img/Emmanueltutu.png",
         fotoAlt : "foto de Emmanuel",
         nombre: "Emmanuel Rosales Sánchez",
         descripción: "Me gusta trabajar en equipo, soy autodidacta, persistente, responsable y siempre tengo ganas de aprender. Creo que la programación es una herramienta muy importante en el presente y en el futuro. Me encantaría formar parte de una empresa en donde pueda colaborar aplicando mis competencias en el desarrollo Frontend y Backend.",
@@ -19,7 +19,7 @@ let miembros =[
         linkedIn: "https://www.linkedIn.com/in/emmanuel-ross"
     },
     {
-        foto: "./src/img/Gustavo.jpeg",
+        foto: "./src/img/Gustavotutu.png",
         fotoALT : "foto de Gustavo",
         nombre:"Gustavo Adrian Martinez Velazquez",
         descripción:"Soy un desarrollador java full stack Jr, e ingeniero en electrónica, me gusta aplicar mis habilidades las cuales son: trabajo en equipo, responsabilidad, pensamiento analítico, liderazgo y deseos por aprender.",participación: "Desarrollador Java",
@@ -27,7 +27,7 @@ let miembros =[
         linkedIn: "www.linkedIn.com/in/mtzgustavo"
     },
     {
-        foto : "./src/img/Joel.jpeg",
+        foto : "./src/img/Joeltutu.png",
         fotoAlt : "foto de Joel",
         nombre : "Joel Enrique Espejel Zarate",
         descripción : " Soy feliz desarrollando, aprendiendo y practicando Box, la persistencia es uno de mis soft skills",
@@ -36,7 +36,7 @@ let miembros =[
         linkedIn : "https://www.linkedIn.com/in/joel-espejel-65b1901b1"
     },
     {
-        foto : "./src/img/JuanJo.png",
+        foto : "./src/img/Juantutu.png",
         fotoALT : "foto de JuanJo",
         nombre : "Juan José Morales Sevilla",
         descripción : "Soy Ingeniero en Electronica y Desarrollador Java FullStack, al ser muy apacionado a la tecnologia mis ramas de dominio son una extencion de eso, me gusta divertirme en todo lo que hago y no me gusta rendirme.",
@@ -45,7 +45,7 @@ let miembros =[
         linkedIn : "https://www.linkedIn.com/in/jjms2508"
     },
     {
-        foto: "./src/img/michelle.webp",
+        foto: "./src/img/michtutu.png",
         fotoALT : "foto de Michelle",
         nombre:"Michel Anahí Guerrero Jacuinde",
         descripción:"Me encanta trabajar en el sector administrativo, estar cerca de la tecnología y aprender en el proceso. Me emociona aprender sobre programación,  finanzas, ventas y diseño.",
@@ -55,7 +55,7 @@ let miembros =[
 
     },
     {
-        foto: "./src/img/omar.jpeg",
+        foto: "./src/img/Omartutu.png",
         fotoALT : "foto de Omar",
         nombre:  "Omar Saul Resendiz Soto", 
         descripción: "Estudiante de ingeniería mecatrónica, me considero una persona persistente, comprometida, resiliente, y honesta, con gran afición a la tecnología.", 
@@ -64,7 +64,7 @@ let miembros =[
         linkedIn: "https://www.linkedIn.com/in/omar-resendiz-soto/"
     },
     {
-        foto:"./src/img/Fulana.PNG",
+        foto:"./src/img/Sam.png",
         fotoALT : "foto de Samantha",
         nombre: "Samantha Esmeralda Loza Lopez",
         descripción: "Soy egresada de la licenciatura en derecho, estudiante de carrera técnica en electrónica con gusto por las innovaciones tecnológicas y programación.",
@@ -83,16 +83,16 @@ let miembros =[
     }
 ];
 
-
+  
 
 //se necerita funcion que crea los cards
 function crearCard(foto,fotoAlt,nombre,descripción,participación,linkGitHub,linkedIn){
     //crear mi plantilla
     let estilos = "";
     const myCard = `
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row no-guttersk">
-                <div class="col-md-4">
+        <div class="card mb-3 ajuste fondo_card" style="max-width: 540px;">
+            <div class="row no-guttersk flex_img">
+                <div class="col-md-4 img_center">
                     <img src="${foto}" class="img-fluid" alt="${fotoAlt}">
                 </div>
                 <div class="col-md-8">

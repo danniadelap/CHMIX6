@@ -1,0 +1,27 @@
+.ajuste{
+    margin-right: 20px;
+    
+}
+
+body{
+    background-image: url(../img/Fondo_productos_form.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.centar_jum{
+    text-align: center;
+}
+
+.flex_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fondo_card{
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255, .8 );
+}
+
