@@ -5,11 +5,11 @@ const PI = 3.14159265;
 
 let barra = [
     {
-        products: "../../list_of_products.html",
-        form: "../../form.html",
-        logo: "../../index.html",
-        us: "../../aboutUs.html",
-        contact: "../../contact_us.html"
+        products: "./list_of_products.html",
+        form: "./form.html",
+        logo: "./index.html",
+        us: "./aboutUs.html",
+        contact: "./contact_us.html"
     }
 
 ];
