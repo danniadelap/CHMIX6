@@ -92,10 +92,10 @@ function crearCard(foto,fotoAlt,nombre,descripción,participación,linkGitHub,li
     const myCard = `
         <div class="card mb-3 ajuste fondo_card" style="max-width: 540px;">
             <div class="row no-guttersk flex_img">
-                <div class="col-md-4 img_center">
+                <div class="col-lg-4 img_center">
                     <img src="${foto}" class="img-fluid" alt="${fotoAlt}">
                 </div>
-                <div class="col-md-8">
+                <div class="col-lg-8">
                     <div class="card-body">
                         <h5 class="card-title">${nombre}</h5>
                         <p class="card-text">${descripción}</p>

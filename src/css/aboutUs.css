@@ -25,3 +25,21 @@ body{
     background-color: rgb(255, 255, 255, .8 );
 }
 
+.nosotros_presenta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nosotros_fuente{
+    font-size:x-large;
+}
+
+.nosotros_fondo{
+    background-color: rgb(255, 255, 255, .6 );
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
