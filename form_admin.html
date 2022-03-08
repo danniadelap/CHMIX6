@@ -35,8 +35,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleFormControlFile1">Imagen</label>
-                    <input type="file" id="imagen" name="imagen" class="form-control-file" id="exampleFormControlFile1"required>
+                    <label for="validationTextarea">Imagen</label>
+                    <input type="file" class="form-control-file"   id="validatedCustomFile" required>
+                    <div class="invalid-feedback">Ingresa un archivo válido</div>
                 </div>
 
 
@@ -48,31 +49,43 @@
     </div>
 </form>
 
+
+
     <div class="row fondo" >
         <div class="titulo_producto">
             <h4>Modificar producto</h4>
         </div>
-
+    
         <div class="col-md-12">
-            <form class="">
+            <form class="needs-validation" novalidate>
+            
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Nombre de producto</label>
-                  <input type="text" class="form-control" required>
+
+                  <label for="validationCustom01">Nombre de producto</label>
+                  <input type="text" id="validationCustom01"class="form-control" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Precio</label>
-                    <input type="text" class="form-control" required>
+                    <label for="validationCustom02">Precio</label>
+                    <input type="text" id="validationCustom02" class="form-control" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Descripcion</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                    <label for="validationCustom03">Descripcion</label>
+                    <form class="textarea">
+                        
+                          <label for="validationTextarea">Textarea</label>
+                          
+                          <div class="invalid-feedback">
+                            Please enter a message in the textarea.
+                          </div>
+                    <textarea class="form-control is-invalid" id="validationTextarea" rows="3" required></textarea>
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleFormControlFile1">Imagen</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1" required>
+                    <label for="validationTextarea">Imagen</label>
+                    <input type="file" class="form-control-file"   id="validatedCustomFile" required>
+                    <div class="invalid-feedback">Ingresa un archivo válido</div>
                 </div>
 
                 
@@ -83,6 +96,7 @@
             </form>   
         </div> 
     </div>
+  
 </section>
 
 <script>
@@ -106,7 +120,7 @@
     })();
     </script>
 
-    
+     
 
 
 
