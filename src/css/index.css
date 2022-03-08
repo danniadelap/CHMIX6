@@ -4,3 +4,51 @@
    
 
 }
+
+/*buttons sobre imagenes*/
+.button-container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+}
+.d-button-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+/*Style a buttons*/
+.button-container a{
+    position: absolute;
+    left: 15%;
+    top: 47%;
+    text-decoration: underline;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 2rem;
+    background-color: #572354dd;
+    border-radius: 20px;
+    color:white;
+    text-transform:uppercase;
+    padding:1rem 1.5rem;
+}
+.button-container a:hover{
+    background-color:#572354;
+    text-decoration: none;
+    text-decoration-style: solid;
+    cursor:pointer;
+}
+.button-container a:target{
+    background-color: black;
+}
+
+/*ajusta button movil*/
+@media only screen and (max-width:600px) {
+
+    .button-container a{
+        font-size:1em;
+        padding:1em 1.5em;
+        text-transform:uppercase;
+        border-radius:1.5em;
+    }
+}
