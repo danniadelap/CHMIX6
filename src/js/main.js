@@ -15,7 +15,7 @@ let barra =
 
 
     const contenidoBarra =`
-    <div class="container">
+    <div>
       
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
     <!--<a class="navbar-brand" href="./index.html">Navbar</a>-->
