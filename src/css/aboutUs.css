@@ -1,27 +1,65 @@
-.ajuste{
-    margin-right: 20px;
-    
-}
-
 body{
     background-image: url(../img/Fondo_productos_form.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
-}
+}/*se agrega imagen de fondo con propiedades de no repetirse ademas de 
+abarque toda la pantalla y se quede fijo*/
 
-.centar_jum{
-    text-align: center;
-}
-
-.flex_img{
+.nosotros_presenta{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+}/*para que el h1 y p salgan uno debajo de otro ademas de que esten centrados*/
 
-.fondo_card{
+.nosotros_fuente{
+    font-size:xx-large;
+}/*tipo de fuente para el parrafo de nosotros*/
+
+
+
+.nosotros_fondo{
+    background-color: rgb(255, 255, 255, .6 );
+    text-align: center;
     border-radius: 20px;
-    background-color: rgb(255, 255, 255, .8 );
-}
+    margin-top: 20px;
+    margin-bottom: 20px;
+}/*para que el fondo del p y el h1 sagan color blanco ademas de que sean 
+tranparentes se redondean las esquinas y se deja el texto centrado*/
 
+
+.tarjetas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*para que el contenido de la card quede en columna y centrado*/
+
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255, .7 );
+    padding: 40px;
+    /*se bordean las esquinas, color y padding para que no quede pegado el texto a la
+    orilla*/
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+    /*separacion sobre la parte de top y bot para que las card no queden pegadas */
+
+    text-align: center;
+}/*todas las propiedades de la card*/
+
+.ajuste_icono{
+    width: 90px;
+}/*ajuste del tamaño del icono de github y in para que no se deformen*/
+
+.cards_{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}/*para que los iconos queden centrados ademas de que queden en fila*/
+
+.altura_descrip{
+    height: 180px;
+}/*altura de la descripcion para que todas las card's mantengan la misma altura*/
