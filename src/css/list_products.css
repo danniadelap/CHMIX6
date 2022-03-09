@@ -1,0 +1,41 @@
+body{
+    background-image: url(../img/Fondo_productos_form.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.list_titile{
+    margin-top: 50px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255, .7 );
+    padding: 15px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+.list_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*para que el contenido de la card quede en columna y centrado*/
+
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    /*se bordean las esquinas, color y padding para que no quede pegado el texto a la
+    orilla*/
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+    /*separacion sobre la parte de top y bot para que las card no queden pegadas */
+
+    text-align: center;
+}

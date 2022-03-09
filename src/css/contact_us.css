@@ -1,9 +1,17 @@
-.icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@import url(./aboutUs.css);
+
+
+
+
+.titulo {
+    background-color: rgb(255, 255, 255, .6 );
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
 .iconmargin{
     padding-bottom: 50px;
 }
@@ -11,4 +19,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
+=======
+#center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+
+
+
+
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { }
+ 
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { } 
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { }
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    
+>>>>>>> main
 }
