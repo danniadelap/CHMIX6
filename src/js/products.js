@@ -1,9 +1,15 @@
 //se necesita el objeto miembros con los datos anidados
 let productos =[
     {
+<<<<<<< HEAD
         foto:  ".",
         fotoAlt : "foto de sombrero amarillo",
         nombre: "   Sombrero amarillo",
+=======
+        foto:  "./src/img/Productos/Gorras/Gorra-negra/gorra_negra.jpg",
+        fotoAlt : "foto de gorra negra",
+        nombre: "Gorra Negra",
+>>>>>>> dannia
         precio: "$"
         descripción: "Gorro con correa amarilla",
     },
