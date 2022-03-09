@@ -12,16 +12,12 @@
     margin-right: auto;
     position:relative;
 }
-.d-button-container{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
 /*Style a buttons*/
 .button-container a{
     position: absolute;
-    left: 15%;
-    top: 47%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     text-decoration: underline;
     border: 2px solid black;
     text-align: center;
