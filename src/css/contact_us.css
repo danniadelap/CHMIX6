@@ -15,11 +15,8 @@
     padding-bottom: 50px;
 }
 
-#center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
+
 
 #iconos{
     display: flex;
@@ -32,3 +29,27 @@
     align-items: center;
     padding-left: 50px;
 }
+
+
+#center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+
+
+
+
+
+
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { }
+ 
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { } 
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { }
+
