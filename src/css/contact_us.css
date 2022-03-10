@@ -11,7 +11,6 @@
     margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
 .iconmargin{
     padding-bottom: 50px;
 }
@@ -19,13 +18,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-=======
-#center {
+
+/*#center {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 15px;
-}
+}*/
 
 
 
@@ -41,9 +40,3 @@
 
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) { }
-
-/*Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) { 
-    
->>>>>>> main
-}
