@@ -11,6 +11,15 @@
     margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
+.iconmargin{
+    padding-bottom: 50px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+=======
 #center {
     display: flex;
     justify-content: center;
@@ -36,4 +45,5 @@
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) { 
     
+>>>>>>> main
 }
