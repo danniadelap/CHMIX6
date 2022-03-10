@@ -14,17 +14,29 @@
 .iconmargin{
     padding-bottom: 50px;
 }
-.center{
+
+
+
+
+#iconos{
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-/*#center {
+.icon1{
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+}
+
+
+#center {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 15px;
-}*/
+
 
 
 
@@ -40,3 +52,4 @@
 
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) { }
+
