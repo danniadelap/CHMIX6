@@ -27,3 +27,10 @@ body{
     background-size: 100% 100%;
     background-attachment: fixed;
 }
+
+#categoriaProduct{
+
+    display: flex;
+    flex-direction: row;
+    
+}
