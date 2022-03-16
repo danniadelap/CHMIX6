@@ -21,11 +21,11 @@
 }
 
 
-
+/*sistema grid de css para organizar section*/
 .grid-container >* {
     padding: 10px;
     text-align: center;
-}
+}  
 .aside{
     grid-area: aside;
 }
@@ -45,6 +45,7 @@
 
 
 /*Small devices (landscape phones, 576px and up)*/
+/*sistema grid css responsivo para versiones moviles*/
 @media (max-width: 576px) { 
     
     .grid-container{
