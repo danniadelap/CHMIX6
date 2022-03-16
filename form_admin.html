@@ -18,20 +18,40 @@
         </div>
 
         <div class="col-md-12">
+            
             <form class="">
+                <div id="categoriaProduct">
+                    <div class="col-md-1"></div>
+                <div class="form-group col-md-4 text-center">
+                    <label for="validationCustom01">Id de producto</label>
+                    <input type="number" id="producto" name="producto"  class="form-control" id="validationCustom01"required>
+                </div>
+                    <div class="col-md-2"></div>
+
+                  <div class="form-group col-md-4 text-center"  >
+                    <label for="inputState">Caterogira de producto</label>
+                    <select id="inputState" class="form-control">
+                        <option value="Gorra" selected>Gorra</option>
+                        <option value="Sombrero">Sombrero</option>
+                      </select>
+                  </div>
+                </div>
+
                 <div class="form-group">
                   <label for="validationCustom01">Nombre de producto</label>
-                  <input type="text" id="producto" name="producto"  class="form-control" id="validationCustom01"required>
+                  <input type="text" id="producto" name="producto"  class="form-control" id="validationCustom01"required 
+                  minlength="5" maxlength="25">
                 </div>
 
                 <div class="form-group">
                     <label for="exampleInputEmail1">Precio</label>
-                    <input type="number" id="precio" name="precio" class="form-control" required>
+                    <input type="number" id="precio" name="precio" class="form-control" required minlength="100">
                 </div>
 
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Descripción</label>
-                    <textarea class="form-control" id="descripcion" name="descripcion" id="exampleFormControlTextarea1" rows="3"required></textarea>
+                    <textarea class="form-control" id="descripcion" name="descripcion" id="exampleFormControlTextarea1"
+                    minlength="10" maxlength="120"  rows="3"required></textarea>
                 </div>
 
                 <div class="form-group">
