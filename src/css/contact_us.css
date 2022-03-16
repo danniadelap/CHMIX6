@@ -1,8 +1,6 @@
 @import url(./aboutUs.css);
 
 
-
-
 .titulo {
     background-color: rgb(255, 255, 255, .6 );
     text-align: center;
@@ -11,24 +9,7 @@
     margin-bottom: 20px;
 }
 
-.iconmargin{
-    padding-bottom: 50px;
-}
 
-
-
-
-#iconos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon1{
-    justify-content: center;
-    align-items: center;
-    padding-left: 50px;
-}
 
 
 #center {
@@ -37,19 +18,45 @@
     align-items: center;
     padding-top: 15px;
 
+}
 
 
 
+.grid-container >* {
+    padding: 10px;
+    text-align: center;
+}
+.aside{
+    grid-area: aside;
+}
+
+.form1{
+    grid-area: form1;
+}
+
+.grid-container{
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+        "aside form1 "
+        ;
+}
 
 
 
 /*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) { }
- 
+@media (max-width: 576px) { 
+    
+    .grid-container{
+        grid-template-areas: 
+        "form1"
+        "aside"
+        ;
+    }
+}
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) { } 
 
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) { }
-
