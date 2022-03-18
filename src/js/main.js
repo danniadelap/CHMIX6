@@ -6,11 +6,19 @@ const PI = 3.14159265;
 let barra = 
     {
 
+<<<<<<< HEAD
         products: "../../list_of_products.html",
         form: "../../form_admin.html",
         logo: "../../index.html",
         us: "../../aboutUs.html",
         contact: "../../contact_us.html"
+=======
+        products: "./list_of_products.html",
+        form: "./form_admin.html",
+        logo: "./index.html",
+        us: "./aboutUs.html",
+        contact: "./contact_us.html"
+>>>>>>> juanjo
     };
 
 
@@ -31,6 +39,10 @@ let barra =
                 </a>                    
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="${barra.products}">Todo</a>
+<<<<<<< HEAD
+=======
+                    <div class="dropdown-divider"></div>
+>>>>>>> juanjo
                     <a class="dropdown-item" href="#">Sombreros</a>
                     <a class="dropdown-item" href="#">Gorras</a>
                 </div>
