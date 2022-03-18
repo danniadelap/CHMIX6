@@ -30,10 +30,7 @@ let barra =
                 </a>                    
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="${barra.products}">Todo</a>
-<<<<<<< HEAD
-=======
                     <div class="dropdown-divider"></div>
->>>>>>> juanjo
                     <a class="dropdown-item" href="#">Sombreros</a>
                     <a class="dropdown-item" href="#">Gorras</a>
                 </div>
