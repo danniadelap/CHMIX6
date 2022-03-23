@@ -13,7 +13,7 @@ let miembros =[
         foto:  "./src/img/Emmanueltutu.png",
         fotoAlt : "foto de Emmanuel",
         nombre: "Emmanuel Rosales Sánchez",
-        descripción: "Me gusta trabajar en equipo, soy autodidacta, persistente, responsable y siempre tengo ganas de aprender. Creo que la programación es una herramienta muy importante en el presente y en el futuro. Me encantaría formar parte de una empresa en donde pueda colaborar aplicando mis competencias en el desarrollo Frontend y Backend.",
+        descripción: "Me gusta trabajar en equipo, soy autodidacta, persistente, responsable y siempre tengo ganas de aprender. Creo que la programación es una herramienta muy importante en el presente y en el futuro.",
         participación: "Desarrollador",
         linkGitHub: "https://github.com/EmmanuelRoss",
         linkedIn: "https://www.linkedIn.com/in/emmanuel-ross"
@@ -70,15 +70,6 @@ let miembros =[
         descripción: "Soy egresada de la licenciatura en derecho, estudiante de carrera técnica en electrónica con gusto por las innovaciones tecnológicas y programación.",
         participación:"Desarrolladora Java",
         linkGitHub:"https://github.com/isamloza",
-        linkedIn:""
-    },
-    {
-        foto:"./src/img/Sebas.png",
-        fotoALT : "foto de Rafael",
-        nombre: "Rafael Villaseñor Reyes",
-        descripción: "Me gusta trabajar en equipo, soy autodidacta, persistente, responsable y siempre tengo ganas de aprender. Creo que la programación es una herramienta muy importante en el presente y en el futuro. Me encantaría formar parte de una empresa en donde pueda colaborar aplicando mis competencias en el desarrollo Frontend y Backend.",
-        participación: "Desarrollador",
-        linkGitHub:"",
         linkedIn:""
     }
 ];
