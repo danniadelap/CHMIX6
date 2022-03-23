@@ -7,6 +7,7 @@
     <title>Tutu-Wix</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="./src/css/login.css">
+    <link rel="stylesheet" href="./src/css/login2.css">
 </head>
 <body>
     <!-- //se agrega la barra de navegacion -->
@@ -16,94 +17,116 @@
 
         <div class="btn-group btn-group-toggle centrar" data-toggle="buttons">
             <label class="btn btn-secondary active">
-                <input type="radio" name="options" id="option1" checked> Inicio
+                <input type="radio" onclick="cambiar1();" name="options" id="option1" checked> Inicio
             </label>
             <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option2"> Registro
+                <input type="radio" onclick="cambiar();" name="options" id="option2"> Registro
             </label>
         </div>
 
-        <form class="needs-validation" id="registro" novalidate>
-            <div class="row fondo" >
-                <div class="titulo_producto">
-                    <h4>Register</h4>
-                </div>
-
-                <div class="col-md-12">
-                    <form class="needs-validation">
-                        <div class="form-group">
-                            <input type="email" id="nombre" name="correo"  class="form-control" placeholder="correo@ejem.plo" required>
-                            <div class="invalid-feedback" style="color:aquamarine;">
-                                <span class="centrar">No es un correo!</span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="nombre" name="nombre"  class="form-control" placeholder="Nombre" required>
-                            <div class="invalid-feedback" style="color:aquamarine;">
-                                <span class="centrar">Ingresa nombre!</span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="number" id="telefono" name="telefono" class="form-control" placeholder="Telefono" required>
-                            <div class="invalid-feedback" style="color:aquamarine;">
-                                <span class="centrar">Ingresa numero de telefono!</span>
-                            </div>
-                        </div>                
-                        <div class="form-group">
-                            <input type="password" name="password" class="form-control" placeholder="Crea Password" required>
-                            <div class="invalid-feedback" style="color:aquamarine;">
-                                <span class="centrar">No comple condiciones de contraseña!</span>
-                            </div>
-                        </div>                
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Validacion Password" required>
-                            <div class="invalid-feedback" style="color:aquamarine;">
-                                <span class="centrar">No coincide con contraseña!</span>
-                            </div>
-                        </div>
-                        <div class="centrar_boton">
-                            <button type="submit" class="btn btn-primary estilo_boton">Registrar</button>
-                        </div>                
-                    </form>   
-                    <div class="centrar">
-                        <p>Ya tienes cuenta? <span><a href="./login.html">Login</a></span></p>
+        <div id="registro_pre">
+            <div class="needs-validation" id="registro" novalidate>
+                <div class="row fondo" >
+                    <div class="titulo_producto">
+                        <h4>Register</h4>
                     </div>
-                </div> 
+
+                    <div class="col-md-12">
+                        <form class="needs-validation" id="agregar_usuario">
+
+                            <div class="form-group">
+                                <input type="text" name="correo" class="form-control" placeholder="correo" id="correo">
+
+                                <div id="correo_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong>El correo no es valido favor de verificarlo.
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="nombre" class="form-control" placeholder="nombre" id="nombre">
+                                
+                                <div id="nombre_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong>EL nombre es muy corto
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <input type="number" name="telefono" class="form-control" placeholder="telefono" id="telefono">
+
+                                <div id="telefono_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong>numero de telefono no valido favor de introducir un nimero valido
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="contraseña" class="form-control" placeholder="contraseña" id="password">
+
+                                <div id="contrasena_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong>contraseña muy corta introduca minimo 6 caracteres.
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="confirmación" class="form-control" placeholder="confirmación" id="validacion">
+
+                                <div id="validacion_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong>Las contraseñas no coinciden favor de validarlo
+                                </div>
+
+                            </div>
+                            <div class="centrar_boton">
+                                <button class="btn btn-primary estilo_boton" type="submit">Crear</button>
+                                
+                                <div id="exito_alert" class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <strong>usuario creado con exito
+                                </div>
+
+                                <div id="existe_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong>correo ya existente
+                                </div>
+                            </form>   
+                            <div class="centrar">
+                                <p>Ya tienes cuenta? <span><a href="./login.html">Login</a></span></p>
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </form>
+        </div>
         
-
-        <form class="needs-validation" id="inicio" novalidate>
-            <div class="row fondo" >
-                <div class="titulo_producto">
-                    <h4>Inicio</h4>
-                </div>
-
-                <div class="col-md-12">
-                    <form class="needs-validation">
-                        <div class="form-group">
-                            <input type="email" id="nombre" name="correo"  class="form-control" placeholder="correo@ejem.plo" required>
-                            <div class="invalid-feedback" style="color:aquamarine;">
-                                <span class="centrar">No es un correo!</span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" name="password" class="form-control" placeholder="Password" required>
-                            <div class="invalid-feedback" style="color:aquamarine;">
-                                <span class="centrar">No comple condiciones de contraseña!</span>
-                            </div>
-                        </div>          
-                        <div class="centrar_boton">
-                            <button type="submit" class="btn btn-primary estilo_boton">Registrar</button>
-                        </div>                
-                    </form>   
-                    <div class="centrar">
-                        <p>No tienes cuenta? <span><a href="./login.html">Registro</a></span></p>
+        <div id="inicio_pre">
+            <form class="needs-validation" id="inicio" novalidate>
+                <div class="row fondo" >
+                    <div class="titulo_producto">
+                        <h4>Inicio</h4>
                     </div>
-                </div> 
-            </div>
-        </form>
 
+                    <div class="col-md-12">
+                        <form class="needs-validation">
+                            <div class="form-group">
+                                <input type="email" id="nombre_" name="correo"  class="form-control" placeholder="correo@ejem.plo" required>
+                                <div class="invalid-feedback" style="color:aquamarine;">
+                                    <span class="centrar">No es un correo!</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" class="form-control" placeholder="Password" required>
+                                <div class="invalid-feedback" style="color:aquamarine;">
+                                    <span class="centrar">No comple condiciones de contraseña!</span>
+                                </div>
+                            </div>          
+                            <div class="centrar_boton">
+                                <button type="submit" class="btn btn-primary estilo_boton">Registrar</button>
+                            </div>                
+                        </form>   
+                        <div class="centrar">
+                            <p>No tienes cuenta? <span><a href="./login.html">Registro</a></span></p>
+                        </div>
+                    </div> 
+                </div>
+            </form>
+        </div>
     </section>
 
     <script>
@@ -131,6 +154,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <script src="./src/js/form_admin.js"></script>
     <script src="./src/js/main.js"></script>
-    
+    <script src="./src/js/login.js"></script>
 </body>
 </html>
