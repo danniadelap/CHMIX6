@@ -1,5 +1,6 @@
 body{
-    background-image: url(https://static.comunicae.com.mx/photos/notas/82444/desierto-chihua.jpg);
+    /*background-image: url(https://static.comunicae.com.mx/photos/notas/82444/desierto-chihua.jpg);*/
+    background-color: white;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
