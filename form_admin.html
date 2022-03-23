@@ -16,7 +16,7 @@
 </header>
 
 <section class="container">
-    <form class="needs-validation" novalidate>
+ <form class="needs-validation" novalidate>
     <div class="row fondo" >
         <div class="titulo_producto">
             <h4>Nuevo Producto</h4>
@@ -76,6 +76,7 @@
 
 
 <!--AQUI EMPIEZA MODIFICAR PRODUCTO-->
+<form class="needs-validation" novalidate>
 
     <div class="row fondo" >
         <div class="titulo_producto">
@@ -83,45 +84,48 @@
         </div>
     
         <div class="col-md-12">
-            <form class="needs-validation" novalidate>
+           
             
                 <div class="form-group">
 
                   <label for="validationCustom01" class="form-label">Nombre de producto</label>
-                  <input type="text" id="validationCustom01"class="form-control  "  required>
+                  <input type="text" id="validationCustom01"class="form-control" minlength="3" maxlength="25"  required>
                   <div class="invalid-feedback">Ingresa un nombre de producto válido</div>
                 </div>
 
                 <div class="form-group">
                     <label for="validationCustom02">Precio</label>
-                    <input type="text" id="validationCustom02" class="form-control" required>
+                    <input type="number" id="validationCustom02" class="form-control" value="0.0" step="any" required minlength="100" required>
                     <div class="invalid-feedback">Ingresa un precio válido</div>
                 </div>
 
                 <div class="form-group">
                     <label for="validationCustom03">Descripcion</label>
                     <form class="textarea">
-                             
-                          <div class="invalid-feedback">
-                            Please enter a message in the textarea.
-                          </div>                        
-                            
-                    <textarea class="form-control " id="validationCustom03" rows="3" required></textarea>
+                    <div class="invalid-feedback">
+                     Please enter a message in the textarea.
+                    </div>                                                                               
+                    <textarea class="form-control " id="validationCustom03" rows="3" required
+                    minlength="3" maxlength="60" ></textarea>
                     <div class="invalid-feedback">Ingresa un texto válido</div>
-                      </div>
-                </div>
+                    </div>
 
-                <div class="form-group">
+                </div>
+                <div class="form-group col-md-12">
                     <label for="validationTextarea">Imagen</label>
                     <input type="file" class="form-control-file"   id="validatedCustomFile" required>
                     <div class="invalid-feedback">Ingresa un archivo válido</div>
                 </div>
 
-                <div class="centrar_boton">
-                    <button type="submit" class="btn btn-primary estilo_boton">Modificar</button>
-                </div>                                            
-            </form>               
-        </div> 
+
+                <div class="centrar_boton col-md-12" rows="3 ">
+                    <button type="submit" class="btn btn-primary estilo_boton ">Modificar Producto</button>
+                </div>
+                                              
+            </form>   
+                            
+        </div>         
+       
     </div>
   
 </section>
