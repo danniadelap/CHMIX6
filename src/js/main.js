@@ -47,7 +47,7 @@ let barra =
                 <a class="nav-link" href="${barra.us}">Nosotros</a>
             </li>            
             <li class="nav-item">
-                <a class="nav-link" href="${barra.contact}">Contactanos</a>
+                <a class="nav-link" href="${barra.contact}">Contáctanos</a>
             </li>                      
         </ul>
     <!--<form class="form-inline my-2 my-lg-0">
