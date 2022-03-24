@@ -1,0 +1,35 @@
+#correo_alert{
+    display: none;
+}
+
+#nombre_alert{
+    display: none;
+}
+
+#telefono_alert{
+    display: none;
+}
+
+#contrasena_alert{
+    display: none;
+}
+
+#validacion_alert{
+    display: none;
+}
+
+#existe_alert{
+    display: none;
+}
+
+#exito_alert{
+    display: none;
+}
+
+#registro_pre{
+    display: none;
+}
+
+#inicio_pre{
+    display: block;
+}

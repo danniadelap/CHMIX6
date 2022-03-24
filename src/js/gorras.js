@@ -1,32 +1,32 @@
 //se necesita el objeto miembros con los datos anidados
 let gorras =[
     {
-        foto1:  "./src/img/Productos/gris.jpg",
-        fotoAlt1 : "Gorra Tatei",
-        nombre: "Gorra Tatei",
+        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/Gorras/gorra negra.jpg",
+        fotoAlt1 : "Gorra Yawi",
+        nombre: "Gorra Yawi",
         precio: "$699.00",
         detalle: "Disfruta de esos conciertos con tu gorra bordada",
     },
     {
-        foto1:  "./src/img/Productos/gorra-rosa-rosa-verde-frente.png",
+        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/Gorras/gorra roja.jpg",
         fotoAlt1 : "Gorra Tatei",
         nombre: "Gorra Tatei",
-        precio: "$699.00",
-        detalle: "Gorra rosa perfecta para cualquier ocasión",
+        precio: "$499.00",
+        detalle: "Combinación perfecta para cualquier ocasión",
     },
     {
-        foto1:  "./src/img/Productos/gris.png",
+        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/Gorras/gorra-azul.jpg",
         fotoAlt1 : "Gorra Ojo de Dios",
         nombre: "Gorra Ojo de Dios",
         precio: "$579.00",
         detalle: "El poder de los dioses te acompañara en cualquier ocasión con esta gorra",
     },
     {
-        foto1:  "./src/img/Productos/venado.png",
-        fotoAlt1 : "Gorra Venado",
-        nombre: "Gorra Venado",
-        precio: "$780.00",
-        detalle: "Esta es la gorra perfecta para ir a cualquier reunión",
+        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/Gorras/gorra.gris.jpg",
+        fotoAlt1 : "Gorra Xéri",
+        nombre: "Gorra Xéri",
+        precio: "$659.00",
+        detalle: "Contrastante con tu personalidad",
     }
 ];
 

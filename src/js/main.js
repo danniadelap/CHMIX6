@@ -5,12 +5,11 @@ const PI = 3.14159265;
 
 let barra = 
     {
-
-        products: "../../list_of_products.html",
-        form: "../../form.html",
-        logo: "../../index.html",
-        us: "../../aboutUs.html",
-        contact: "../../contact_us.html"
+        products: "./list_of_products.html",
+        form: "./form_admin.html",
+        logo: "./index.html",
+        us: "./aboutUs.html",
+        contact: "./contact_us.html"
     };
 
 
@@ -30,6 +29,8 @@ let barra =
                     Productos
                 </a>                    
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="${barra.products}">Todo</a>
+                    <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Sombreros</a>
                     <a class="dropdown-item" href="#">Gorras</a>
                 </div>
@@ -39,7 +40,7 @@ let barra =
             </li>
             <li class="nav-item">                    
                 <a class="navbar-brand" href="${barra.logo}">
-                    <img src="./src/img/tutuLogo.png" width="80" height="32" class="d-inline-block align-top" alt="Logo tutu_wix">
+                    <img src="./src/img/tutu_logo_sin_fondo.png" width="80" height="32" class="d-inline-block align-top" alt="Logo tutu_wix">
                 </a>
             </li>        
             <li class="nav-item">

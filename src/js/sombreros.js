@@ -1,33 +1,47 @@
 //se necesita el objeto miembros con los datos anidados
 let sombreros =[
     {
-        foto1:  "./src/img/Productos/Sombreros/sombrero_rojo_1.png",
-        fotoAlt1 : "Sombrero Tau",
-        nombre: "Sombrero Tau",
+        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/sombrero-rojo-final.jpg",
+        fotoAlt1 : "Sombrero Xeta",
+        nombre: "Sombrero Xeta",
         precio: "$699.00",
         detalle: "Nada como un rojo vibrante",
     },
     {
-        foto1:  "./src/img/Productos/Sombreros/Sombrero negro con rojo/sombrero-negro-y-rojo.jpg",
+        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/sombrero-negro-final.jpg",
         fotoAlt1 : "Sombrero Yivíme",
         nombre: "Sombrero Yivíme",
         precio: "$699.00",
         detalle: "Un toque de elegancia que va contigo",
     },
     {
-        foto1:  "./src/img/Productos/Sombreros/Sombreros cafe/sombre verde/sombrero-verde.jpg",
-        fotoAlt1 : "Sombrero Yeexáry",
-        nombre: "Sombrero Yeexáry",
+        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/sombrero_rosa.jpg",
+        fotoAlt1 : "Sombrero Iyarí",
+        nombre: "Sombrero Iyarí",
         precio: "$579.00",
         detalle: "Siéntete en contacto con la naturaleza",
     },
     {
-        foto1:  "./src/img/Productos/venado.png",
+        foto1:  "./src/img/Productos/Sombreros/sombrero_amarillo.jpg",
         fotoAlt1 : "Sombrero Tau",
         nombre: "Sombrero Tau",
-        precio: "$780.00",
+        precio: "$789.00",
         detalle: "Radiante y vibrante",
-    }
+    },
+    {
+        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/sombrero_azul.jpg",
+        fotoAlt1 : "Sombrero Yuavíme",
+        nombre: "Sombrero Yuavíme",
+        precio: "$799.00",
+        detalle: "Se un espíritu libre",
+    },
+{
+    foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/sombrero-verde-final.jpg",
+    fotoAlt1 : "Sombrero Haaraweri",
+    nombre: "Sombrero Haaraweri",
+    precio: "$699.00",
+    detalle: "Se un espíritu libre",
+}
 ];
 
   

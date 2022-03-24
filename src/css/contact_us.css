@@ -1,8 +1,11 @@
 @import url(./aboutUs.css);
 
-
-
-
+html{
+    height: 100%;
+}
+section{
+    min-width: 100%;
+}
 .titulo {
     background-color: rgb(255, 255, 255, .6 );
     text-align: center;
@@ -11,23 +14,13 @@
     margin-bottom: 20px;
 }
 
-.iconmargin{
-    padding-bottom: 50px;
-}
-
-
-
-
-#iconos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon1{
-    justify-content: center;
-    align-items: center;
-    padding-left: 50px;
+.icon {
+    background-color: rgb(255, 255, 255, .6 );
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
 }
 
 
@@ -37,19 +30,46 @@
     align-items: center;
     padding-top: 15px;
 
+}
 
 
+/*sistema grid de css para organizar section*/
+.grid-container >* {
+    padding: 10px;
+    text-align: center;
+}  
+.aside{
+    grid-area: aside;
+}
 
+.form1{
+    grid-area: form1;
+}
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+        " aside form1  "
+        ;
+}
 
 
 
 /*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) { }
- 
+/*sistema grid css responsivo para versiones moviles*/
+@media (max-width: 720px) { 
+    
+    .grid-container{
+        grid-template-areas: 
+        " form1"
+        "aside"
+        ;
+    }
+}
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) { } 
 
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) { }
-
