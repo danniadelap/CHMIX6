@@ -70,8 +70,7 @@ function crearCard(foto1,fotoAlt1,nombre,precio, detalle){
                         <p>${precio}</p>
                     </div>
                     <div>
-                        <button type="button" class="btn btn-outline-success">Comprar</button>
-                        <button type="button" class="btn btn-outline-warning">Agregar</button>
+                        <button type="button" class="btn btn-outline-success">Comprar</button>                       
                     </div>
                 </div> 
             </div>

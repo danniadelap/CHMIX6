@@ -47,7 +47,7 @@ let barra =
                 <a class="nav-link" href="${barra.us}">Nosotros</a>
             </li>            
             <li class="nav-item">
-                <a class="nav-link" href="${barra.contact}">Contactanos</a>
+                <a class="nav-link" href="${barra.contact}">Contáctanos</a>
             </li>                      
         </ul>
     <!--<form class="form-inline my-2 my-lg-0">
@@ -69,3 +69,23 @@ let barra =
 
 let anclaBarra = document.getElementById("anclaBarra");
 anclaBarra.innerHTML = contenidoBarra;
+
+
+const contenidoFooter =`
+    <blockquote class="blockquote mb-0 bg-dark text-secondary" Style="padding-top:30px;">
+      <footer>
+      <div>
+        <div class="d-flex justify-content-center">
+            <h3>Juntos trabajando para lograr una mayor equidad cultural.<\h3>
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="d-flex justify-content-center">
+            <p>© Tutu-Wix. All rights reserved.</p>
+        </div>
+      </div>
+      </footer>
+    </blockquote>
+`;
+
+let anclafooter = document.getElementById("anclafooter");
+anclafooter.innerHTML = contenidoFooter;
