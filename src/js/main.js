@@ -17,7 +17,7 @@ let barra =
     const contenidoBarra =`
     <div>
       
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+<nav class="navbar navbar-expand-lg <nav class="navbar navbar-light">
     <!--<a class="navbar-brand" href="./index.html">Navbar</a>-->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -40,7 +40,7 @@ let barra =
             </li>
             <li class="nav-item">                    
                 <a class="navbar-brand" href="${barra.logo}">
-                    <img src="./src/img/tutu_logo_sin_fondo.png" width="80" height="32" class="d-inline-block align-top" alt="Logo tutu_wix">
+                    <img src="./src/img/tutu_logo_sin_fondo.png" width="120" height="45" class="d-inline-block align-top" alt="Logo tutu_wix">
                 </a>
             </li>        
             <li class="nav-item">
@@ -57,11 +57,13 @@ let barra =
     </div>
     <div class="d-flex">
       <a href="./login.html">
-        <img src="./src/img/usuario.png" class="mr-2" width="30" height="30" src="./usuario.png" alt="Logo">
-      </a>                
+        <img src="./src/img/usuario.png" class="mr-2" width="30" height="30" src="./usuario.png" alt="Logo"> 
+      </a>   
+      <a href="./login.html">
+      <img src="./src/img/carrito-compras.png" class="mr-2" width="30" height="30" src="./carrito-compras.png" alt="Carrito"> 
+    </a>              
     </div>
 </nav>
-
 </div>
     `;
      
