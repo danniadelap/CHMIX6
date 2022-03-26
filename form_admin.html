@@ -77,7 +77,8 @@
 
 
 <!--AQUI EMPIEZA MODIFICAR PRODUCTO-->
-<form class="needs-validation" novalidate>
+
+<form action="" class="needs-validation" id="Modificarformulario" novalidate>
 
     <div class="row fondo" >
         <div class="titulo_producto">
@@ -86,31 +87,33 @@
     
         <div class="col-md-12">
            
-            
+            <!-- Grupo: Modificar nombre -->
                 <div class="form-group">
-
-                  <label for="validationCustom01" class="form-label">Nombre de producto</label>
-                  <input type="text" id="validationCustom01"class="form-control" minlength="3" maxlength="25"  required>
-                  <div class="invalid-feedback">Ingresa un nombre de producto válido</div>
+                  <label for="validationCustom01NombreProducto"  class="form-label">Nombre de producto</label>
+                  <input type="text" id="validationCustom01NombreProducto" name="ModificarNombre" minlength="3" maxlength="25" class="form-control"  required>
+                  <div class="invalid-feedback ">Ingresa un nombre de producto válido</div>   
                 </div>
-
+				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+			    </div>           
+                </div>
+            <!-- Grupo: Modificar precio -->
                 <div class="form-group">
-                    <label for="validationCustom02">Precio</label>
-                    <input type="number" id="validationCustom02" class="form-control" value="0.0" step="any" required minlength="100" required>
+                    <label for="validationCustom02Precio">Precio</label>
+                    <input type="number" id="validationCustom02Precio" name="ModificarPrecio"  class="form-control" value="0.0" step="any"  minlength="1"  required>
                     <div class="invalid-feedback">Ingresa un precio válido</div>
                 </div>
-
+            <!-- Grupo: Modificar descripcion -->
                 <div class="form-group">
-                    <label for="validationCustom03">Descripcion</label>
+                    <label for="validationCustom03Descripcion">Descripcion</label>
                     <form class="textarea">
                     <div class="invalid-feedback">
                      Please enter a message in the textarea.
                     </div>                                                                               
-                    <textarea class="form-control " id="validationCustom03" rows="3" required
+                    <textarea class="form-control " name="ModificarDescripcion"  id="validationCustom03Descripcion" rows="3" required
                     minlength="3" maxlength="60" ></textarea>
                     <div class="invalid-feedback">Ingresa un texto válido</div>
                     </div>
-
+            <!-- Grupo: Modificar Imagen -->
                 </div>
                 <div class="form-group col-md-12">
                     <label for="validationTextarea">Imagen</label>
@@ -118,7 +121,7 @@
                     <div class="invalid-feedback">Ingresa un archivo válido</div>
                 </div>
 
-
+             <!-- BUTTON -->
                 <div class="centrar_boton col-md-12" rows="3 ">
                     <button type="submit" class="btn btn-primary estilo_boton ">Modificar Producto</button>
                 </div>
