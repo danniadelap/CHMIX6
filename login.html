@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutu-Wix</title>
+    <title>Tutu-Wix Ingreso</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="./src/css/login.css">
     <link rel="stylesheet" href="./src/css/login2.css">
     <link rel="stylesheet" href="src/css/nav_bar.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
     <!-- //se agrega la barra de navegacion -->
     <header id="anclaBarra">   </header>
@@ -18,145 +21,113 @@
 
         <div class="btn-group btn-group-toggle centrar" data-toggle="buttons">
             <label class="btn btn-secondary active">
-                <input type="radio" onclick="cambiar1();" name="options" id="option1" checked> Inicio
+                <input type="radio" onclick="cambiar1();" name="options" id="option1" checked> Iniciar sesión
             </label>
             <label class="btn btn-secondary">
-                <input type="radio" onclick="cambiar();" name="options" id="option2"> Registro
+                <input type="radio" onclick="cambiar();" name="options" id="option2"> Crear cuenta
             </label>
         </div>
 
         <div id="registro_pre">
-            <div class="needs-validation" id="registro" novalidate>
-                <div class="row fondo" >
-                    <div class="titulo_producto">
-                        <h4>Register</h4>
-                    </div>
-
-                    <div class="col-md-12">
-                        <form class="needs-validation" id="agregar_usuario">
-
-                            <div class="form-group">
-                                <input type="text" name="correo" class="form-control" placeholder="correo" id="correo">
-
-                                <div id="correo_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
-                                    <strong>El correo no es valido favor de verificarlo.
-                                </div>
-
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="nombre" class="form-control" placeholder="nombre" id="nombre">
-                                
-                                <div id="nombre_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
-                                    <strong>EL nombre es muy corto
-                                </div>
-
-                            </div>
-                            <div class="form-group">
-                                <input type="number" name="telefono" class="form-control" placeholder="telefono" id="telefono">
-
-                                <div id="telefono_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
-                                    <strong>numero de teléfono no valido favor de introducir un nimero valido
-                                </div>
-
-                            </div>
-                            <div class="form-group">
-                                <input type="password" name="contraseña" class="form-control" placeholder="contraseña" id="password">
-
-                                <div id="contrasena_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
-                                    <strong>contraseña muy corta introduca minimo 6 caracteres.
-                                </div>
-
-                            </div>
-                            <div class="form-group">
-                                <input type="password" name="confirmación" class="form-control" placeholder="confirmación" id="validacion">
-
-                                <div id="validacion_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
-                                    <strong>Las contraseñas no coinciden favor de validarlo
-                                </div>
-
-                            </div>
-                            <div class="centrar_boton">
-                                <button class="btn btn-primary estilo_boton" type="submit">Crear</button>
-                                
-                                <div id="exito_alert" class="alert alert-success alert-dismissible fade show" role="alert">
-                                    <strong>usuario creado con exito
-                                </div>
-
-                                <div id="existe_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
-                                    <strong>correo ya existente
-                                </div>
-                            </form>   
-                            <div class="centrar">
-                                <p>Ya tienes cuenta? <span><a href="./login.html">Login</a></span></p>
-                            </div>
-                            </div>
-                        </form>
-                    </div>
+            <div class="row fondo">
+                <div class="titulo_producto">
+                    <h4>Crear cuenta</h4>
                 </div>
+
+                <div class="col-md-12">
+                    <div id="existe_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+                        Correo ya existente.
+                    </div>
+                    <form class="needs-validation" id="agregar_usuario">
+
+                        <div class="form-group">
+                            <input type="text" name="correo" class="form-control sinEspacios" placeholder="Correo: correo@ejem.plo" id="correo">
+                            <div id="correo_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="nombre" class="form-control" placeholder="Nombre" id="nombre">
+                            <div id="nombre_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="telefono" class="form-control" placeholder="Teléfono" id="telefono">
+                            <div id="telefono_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" name="contrasena" class="form-control sinEspacios" placeholder="Contraseña" id="contrasena">
+                            <div id="contrasena_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" name="confirmación" class="form-control sinEspacios" placeholder="Confirmación contraseña" id="validacion">
+                            <div id="validacion_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+                            </div>
+                        </div>
+
+                        <div class="centrar_boton">
+                            <button class="btn btn-primary estilo_boton" type="submit">Crear cuenta</button>
+                            <div id="exito_alert" class="alert alert-success alert-dismissible fade show" role="alert">
+                                Usuario creado con éxito.
+                            </div>
+                        </div>
+
+                        <div class="centrar">
+                            <p>¡Para iniciar sesión usa el botón arriba!</p>
+                        </div>
+                </div>
+                </form>
             </div>
         </div>
-        
-        <div id="inicio_pre">
-            <form class="needs-validation" id="inicio" novalidate>
-                <div class="row fondo" >
-                    <div class="titulo_producto">
-                        <h4>Inicio</h4>
+        </div>
+
+        <div class="row fondo" id="inicio_pre">
+            <div class="titulo_producto">
+                <h4>Iniciar sesión</h4>
+            </div>
+
+            <div class="col-md-12">
+
+                <form class="needs-validation">
+                    <div class="form-group">
+                        <input type="email" id="nombre_" name="correo" class="form-control"
+                            placeholder="correo@ejem.plo" required>
+                        <div class="invalid-feedback">
+                            <span class="centrar">No es un correo!</span>
+                        </div>
                     </div>
 
-                    <div class="col-md-12">
-                        <form class="needs-validation">
-                            <div class="form-group">
-                                <input type="email" id="nombre_" name="correo"  class="form-control" placeholder="correo@ejem.plo" required>
-                                <div class="invalid-feedback" style="color:aquamarine;">
-                                    <span class="centrar">No es un correo!</span>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" name="password" class="form-control" placeholder="Password" required>
-                                <div class="invalid-feedback" style="color:aquamarine;">
-                                    <span class="centrar">No comple condiciones de contraseña!</span>
-                                </div>
-                            </div>          
-                            <div class="centrar_boton">
-                                <button type="submit" class="btn btn-primary estilo_boton">Registrar</button>
-                            </div>                
-                        </form>   
-                        <div class="centrar">
-                            <p>No tienes cuenta? <span><a href="./login.html">Registro</a></span></p>
+                    <div class="form-group">
+                        <input type="password" name="password" class="form-control" placeholder="Contraseña" required>
+                        <div class="invalid-feedback">
+                            <span class="centrar">No comple condiciones de contraseña!</span>
                         </div>
-                    </div> 
+                    </div>
+                    
+                    <div class="centrar_boton">
+                        <button type="submit" class="btn btn-primary estilo_boton">Ingresar</button>
+                    </div>
+                </form>
+
+                <div class="centrar">
+                    <p>¡Para crear cuenta usa el botón arriba!</p>
                 </div>
-            </form>
+
+            </div>
         </div>
     </section>
 
     <footer id="anclafooter"></footer>
 
-    <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-                if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
-            });
-        }, false);
-        })();
-    </script>
-
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-    <script src="./src/js/form_admin.js"></script>
     <script src="./src/js/main.js"></script>
     <script src="./src/js/login.js"></script>
 </body>
+
 </html>
