@@ -1,0 +1,23 @@
+.linea_separadora{
+    background-color: black;
+    height: 1px;
+}/*esta clase es para darle al hr un color negro y 1px de ancho*/
+
+.centrar_texto{
+    text-align: center;
+}/*en esta clase se centra el texto*/
+
+.centrado_cajas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}/*esta clase es para que el texto de los apartados de texto este centrado a la imagen*/
+
+.titulo_fuente{
+    font-size: 60px;
+}
+
+.parrafo_fuente{
+    font-size: 23px;    
+}
