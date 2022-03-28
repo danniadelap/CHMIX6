@@ -1,0 +1,20 @@
+
+.navbar{
+
+    background-color:#003333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-link{
+    position: relative;
+    color:white;
+    cursor: pointer;
+    font-size: 28px;
+    transition: all 450ms ease;
+    justify-content: space-around;
+    letter-spacing: 0.5;
+}
+
+.nav-link:hover{
+    color:coral
+}
