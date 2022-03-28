@@ -90,14 +90,7 @@ form.addEventListener('submit',(e) => {
 }
 
 let valiCorreo = validarCorreo(producto.value);
-
-if(valiCorreo == true) {
-  console.log("el nombre es correctono");
-  document.getElementById("correo_alert").style.display = "none";
-}else{
-  console.log("el correo no es correcto favor de validarlo");
-  document.getElementById("correo_alert").style.display = "block";
-}//validacion de correo */
+*/
 
 //VALIDACION DE MODIFICAR PRODUCTO //
 const formulario = document.getElementById('Modificarformulario');
