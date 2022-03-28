@@ -56,10 +56,10 @@ let barra =
     </form>-->
     </div>
     <div class="d-flex">
-      <a href="./login.html">
+      <a href="./inicioSesion.html">
         <img src="./src/img/usuario.png" class="mr-2" width="30" height="30" src="./usuario.png" alt="Logo"> 
       </a>   
-      <a href="./login.html">
+      <a href="#">
       <img src="./src/img/carrito-compras.png" class="mr-2" width="30" height="30" src="./carrito-compras.png" alt="Carrito"> 
     </a>              
     </div>
@@ -74,19 +74,51 @@ anclaBarra.innerHTML = contenidoBarra;
 
 
 const contenidoFooter =`
-    <blockquote class="blockquote mb-0 bg-dark text-secondary" Style="padding-top:30px;">
-      <footer>
-      <div>
-        <div class="d-flex justify-content-center">
-            <h3>Juntos trabajando para lograr una mayor equidad cultural.<\h3>
+<footer class="footer-03">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">                        
+                <div class="col-md-4 mb-md-0 mb-4">
+                    <h2 class="footer-heading">Equipo</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="aboutUs.html" class="py-1 d-block">Nosotros</a></li>
+                        <li><a href="form_admin.html" class="py-1 d-block">Administrador</a></li>                  
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-md-0 mb-4">
+                    <h2 class="footer-heading">Legales</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="py-1 d-block">Términos y Condiciones</a></li>
+                        <li><a href="#" class="py-1 d-block">Aviso de privacidad</a></li>   
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="dropdown-divider"></div>
-        <div class="d-flex justify-content-center">
-            <p>© Tutu-Wix. All rights reserved.</p>
+        <div class="col-md-6">
+            <div class="row justify-content-end">
+                <div class="col-md-12 col-lg-11 mb-md-0 mb-4">
+                    <h2 class="footer-heading">Siguenos</h2>
+                    <ul class="ftco-footer-social p-0">
+                        <li class="ftco-animate"><a href="https://www.instagram.com/tutu_wix/?hl=es" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="ion-logo-instagram"><img src="./src/img/iconosRedes/instagram-logo-24.png" alt="icono instagram"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.facebook.com/tutuwix" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="ion-logo-facebook"><img src="./src/img/iconosRedes/facebook-circle-logo-24.png" alt="icono facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="contact_us.html" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="ion-logo-twitter"><img src="./src/img/iconosRedes/envelope-regular-24.png" alt="icono correo"></span></a></li>
+
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-      </footer>
-    </blockquote>
+    </div>
+    <div class="row mt-5 pt-4 border-top">
+        <div class="col-md-6 col-lg-8">
+            <p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy; Tutú_wix Todos los derechos reservados</a>
+            </p>
+        </div>                
+    </div>
+</div>
+</footer>
+
 `;
 
 let anclafooter = document.getElementById("anclafooter");
