@@ -112,7 +112,7 @@ const contenidoFooter =`
     <div class="row mt-5 pt-4 border-top">
         <div class="col-md-6 col-lg-8">
             <p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy; Tutú_wix Todos los derechos reservados</a>
+                Copyright &copy; Tutú_wix Esta página fue creada con fines didácticos de aprendizaje</a>
             </p>
         </div>                
     </div>
