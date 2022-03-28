@@ -3,26 +3,31 @@
 }*/
 
 footer {
-    padding: 7em 0; 
+    padding: 0em 0; 
+
 }
   
 .footer-03 {
     /*ad9466*/
     background: #003333;
-    font-size: 18px; 
-}    
+    font-size: 18px;
 
+}    
+/* aqui se definen los estilos de los heads */
 .footer-03 .footer-heading {
     color: #fff;
-    font-size: 20px;
+    font-size: 22px;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 500;
-    margin-bottom: 30px; 
+    margin-top: 50px;
+    margin-bottom:20px; 
 }
-    
+
+  /* aqui se definen los estilos del copyright */  
 .footer-03 .copyright {
     color: #828282; 
+   text-align:center;
 }
 
 .footer-03 .list-unstyled li a {
@@ -40,6 +45,7 @@ footer {
     list-style: none;
     margin: 0 10px 0 0;
     display: inline-block; 
+    
 }
 
 .ftco-footer-social li a {
@@ -61,4 +67,5 @@ footer {
     transform: translate(-50%, -50%); }
     .ftco-footer-social li a:hover {
     color: #fff; 
+    
 }
