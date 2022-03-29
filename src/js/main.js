@@ -110,9 +110,9 @@ const contenidoFooter =`
         </div>
     </div>
     <div class="row mt-5 pt-4 border-top">
-        <div class="col-md-6 col-lg-8">
-            <p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy; Tutú_wix Esta página fue creada con fines didácticos de aprendizaje</a>
+        <div class="col-md-12">
+            <p class="copyright" style="text-align:center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy; Tutú_wix Esta página fue creada con fines didácticos y de aprendizaje</a>
             </p>
         </div>                
     </div>
