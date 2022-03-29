@@ -27,7 +27,6 @@ function validarCorreo(correo) {
 }//funcion para la validacion de correo electronico
 
 let add_usuario = document.getElementById("agregar_usuario");
-//let login = document.getElementById("login");
 //en esta variable se guardara lo que se escriba en el html
 
 //con esta parte cuando el usuario precione el boton traera todos los elementos de formulario a la variable add_user

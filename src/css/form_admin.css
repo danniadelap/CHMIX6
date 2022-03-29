@@ -35,5 +35,19 @@ body{
 
     display: flex;
     flex-direction: row;
-    
 }
+
+.correct{
+    border-color: #1ed12d;
+    color: #1ed12d;
+    opacity: 1;
+
+}
+
+.incorrect{
+    border-color: #E8070C;
+    color: #bb2929;
+    opacity: 1;
+
+}
+
