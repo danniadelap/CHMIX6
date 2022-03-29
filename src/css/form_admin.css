@@ -35,5 +35,29 @@ body{
 
     display: flex;
     flex-direction: row;
-    
 }
+
+.correct{
+    border-color: #1ed12d;
+    color: #1ed12d;
+    opacity: 1;
+
+}
+
+.incorrect{
+    border-color: #E8070C;
+    color: #bb2929;
+    opacity: 1;
+
+}
+
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario__input-error-activo {
+	display: block;
+}
+

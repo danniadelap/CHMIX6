@@ -1,59 +1,73 @@
-let array_user = [];
+let array_usuario = [];
 //se crea arreglo para guardar los datos del usuario al crear un nuevo usuario
 
-let celular = document.getElementById("telefono");
-celular.addEventListener("keypress", (event) => {
+let superior=false;
+let numeros=false;
+let simbolos=false;
+
+
+let correo = document.getElementById("correo");
+let correo_alert = document.getElementById("correo_alert");
+let nombre = document.getElementById("nombre");
+let nombre_alert = document.getElementById("nombre_alert");
+let telefono = document.getElementById("telefono");
+let telefono_alert = document.getElementById("telefono_alert");
+let contrasena = document.getElementById("contrasena");
+let contrasena_alert = document.getElementById("contrasena_alert");
+let validacion = document.getElementById("validacion");
+let validacion_alert = document.getElementById("validacion_alert");
+
+telefono.addEventListener("keypress", (event) => {
     event.preventDefault();
 
     let codigoKey = event.keyCode;
     let valorKey = String.fromCharCode(codigoKey);
-    console.log(valorKey);
 
     let valor = parseInt(valorKey);
-    console.log(valor);
 
     if (valor < 10) {
         if (celular.value.length < 11) {
             celular.value += valor;
-            console.log(celular.value.length);
         }
     }
 });//validacion de campo de numero de telefono para solo introducir numeros ademas de solo permitir 10 digitos
 
 function validarCorreo(correo) {
-    var expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-    var esValido = expReg.test(correo);
+    let expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+    let esValido = expReg.test(correo);
     return esValido;
 }//funcion para la validacion de correo electronico
 
+function validarContrase(contrase) {
+    for (i=0; i<contrase.length;i++)
+	{
+		if (contrase[i].match(/[A-Z]/g)) {superior=true;}
+		if (contrase[i].match(/[0-9]/g)) {numeros=true;}
+		if (contrase[i].match(/(.*[!,@,#,$,%,^,&,*,?,_,~])/)) {simbolos=true;}
+	}    
+}//funcion para la validacion de contraseña
+
+
 let add_usuario = document.getElementById("agregar_usuario");
-//let login = document.getElementById("login");
 //en esta variable se guardara lo que se escriba en el html
 
-//con esta parte cuando el usuario precione el boton traera todos los elementos de formulario a la variable add_user
+//con esta parte cuando el usuario precione el boton traera todos los elementos de formulario a la variable add_usuario
 add_usuario.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    let correo = document.getElementById("correo");
-    let correo_alert = document.getElementById("correo_alert");
-    let nombre = document.getElementById("nombre");
-    let nombre_alert = document.getElementById("nombre_alert");
-    let telefono = document.getElementById("telefono");
-    let telefono_alert = document.getElementById("telefono_alert");
-    let contrasena = document.getElementById("contrasena");
-    let contrasena_alert = document.getElementById("contrasena_alert");
-    let validacion = document.getElementById("validacion");
-    let validacion_alert = document.getElementById("validacion_alert");
     //mandar a traer el texto que el susuario introduce en el formulario y guardarlos en variables
 
     let valiCorreo = validarCorreo(correo.value);
+    console.log("valiCorreo"+valiCorreo);
     //mandamos a llamar la funcion de correo para validarlo y que nos de un resusltado y lo guardamos en valiCorreo
 
-    const existe = array_user.findIndex(elemento => {
+    validarContrase(contrasena.value);
+    //mandamos a llamar la funcion de correo para validarlo y que nos de un resusltado y lo guardamos en valiCorreo
+
+    const existe = array_usuario.findIndex(elemento => {
         return elemento.correo == correo.value
-    });
-    //console.log(existe)
-    //aqui es donde validamos en el arreglo si el correo registrado ya existe a lo cual guardamos el valor en existe y despues la comparamos
+    }); //aqui es donde validamos en el arreglo si el correo registrado ya existe a lo cual guardamos el valor en existe y despues la comparamos
+
     if (correo.value === "") {
         correo_alert.innerHTML = `Favor de ingresar correo.`;
         correo_alert.style.display = "block";
@@ -132,7 +146,7 @@ add_usuario.addEventListener("submit", (e) => {
         validacion.classList.remove("is-invalid");
         validacion.classList.add("is-valid");
     } else {
-        contrasena_alert.innerHTML = "Las contraseñas no coinciden favor de validarlo.";
+        validacion_alert.innerHTML = "Las contraseñas no coinciden favor de validarlo.";
         validacion_alert.style.display = "block";
         validacion.classList.remove("is-valid");
         validacion.classList.add("is-invalid");
@@ -143,33 +157,48 @@ add_usuario.addEventListener("submit", (e) => {
         contrasena_alert.style.display = "block";
         contrasena.classList.remove("is-valid");
         contrasena.classList.add("is-invalid");
-    } else if (contrasena.value.length > 6) {
+    } else if (numeros==false){
+        contrasena_alert.innerHTML = "Contraseña debe tener al menos un Numero.";
+        contrasena_alert.style.display = "block";
+        contrasena.classList.remove("is-valid");
+        contrasena.classList.add("is-invalid");
+    } else if (superior==false){
+        contrasena_alert.innerHTML = "Contraseña debe tener al menos una Mayúscula.";
+        contrasena_alert.style.display = "block";
+        contrasena.classList.remove("is-valid");
+        contrasena.classList.add("is-invalid");
+    } else if (simbolos==false){
+        contrasena_alert.innerHTML = "Contraseña debe tener al menos un Símbolo.";
+        contrasena_alert.style.display = "block";
+        contrasena.classList.remove("is-valid");
+        contrasena.classList.add("is-invalid");
+    } else if (contrasena.value.length > 7) {
         console.log("tu contraseñas tiene la longitud correcta");
         contrasena_alert.style.display = "none";
         contrasena.classList.remove("is-invalid");
         contrasena.classList.add("is-valid");
     } else {
-        contrasena_alert.innerHTML = "Contraseña muy corta introduce mínimo 6 caracteres.";
+        contrasena_alert.innerHTML = "Contraseña muy corta introduce mínimo 8 caracteres.";
         contrasena_alert.style.display = "block";
         contrasena.classList.remove("is-valid");
         contrasena.classList.add("is-invalid");
     }//validacion para que la contraseña contenga mas de 6 caracteres
 
-    if ((valiCorreo == true) && (nombre.value.length > 2) && (existe == "-1") && (telefono.value.length > 9) && (contrasena.value == validacion.value) && (contrasena.value.length > 6)) {
+    if ((numeros==true) && (superior==true) && (simbolos==true) && (valiCorreo == true) && (nombre.value.length > 2) && (existe == "-1") && (telefono.value.length > 9) && (contrasena.value == validacion.value) && (contrasena.value.length > 7)) {
         //si esta condicion se cumple entrara en el if y creara el Json 
 
         let nuevo_usuario = {
-            "id_user": array_user.length + 1,
+            "id_usuario": array_usuario.length + 1,
             "correo": correo.value,
             "nombre": nombre.value,
             "telefono": telefono.value,
             "contrasena": contrasena.value
         }//se crea un arreglo con los datos del nuevo usuario
 
-        array_user.push(nuevo_usuario);//se grega el nuevo usuario en el arreglo principal 
-        let json_user = JSON.stringify(array_user);//el arreglo principal se convierte a JSON
-        console.log(array_user);
-        console.log(json_user);
+        array_usuario.push(nuevo_usuario);//se grega el nuevo usuario en el arreglo principal 
+        let json_usuario = JSON.stringify(array_usuario);//el arreglo principal se convierte a JSON
+        console.log(array_usuario);
+        console.log(json_usuario);
         Swal.fire({
             icon: 'success',
             text: `${nuevo_usuario.nombre}, bienvenido a Tutu!`,
@@ -180,6 +209,9 @@ add_usuario.addEventListener("submit", (e) => {
             timer: 1800
         })
     }
+    superior=false;
+    numeros=false;
+    simbolos=false;
 });
 
 function cambiar() {
