@@ -9,7 +9,8 @@ let barra =
         form: "./form_admin.html",
         logo: "./index.html",
         us: "./aboutUs.html",
-        contact: "./contact_us.html"
+        contact: "./contact_us.html",
+        nosotros: "./nosotros.html"
     };
 
 
@@ -24,6 +25,9 @@ let barra =
     </button>  
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+                <a class="nav-link" href="${barra.logo}">Inicio<span class="sr-only">(current)</span></a>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="${barra.products}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                     Productos
@@ -35,9 +39,7 @@ let barra =
                     <a class="dropdown-item" href="#">Gorras</a>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="${barra.form}">Formulario<span class="sr-only">(current)</span></a>
-            </li>
+            
             <li class="nav-item">                    
                 <a class="navbar-brand" href="${barra.logo}">
                     <img src="./src/img/tutu_logo_sin_fondo.png" width="120" height="45" class="d-inline-block align-top" alt="Logo tutu_wix">
@@ -57,10 +59,10 @@ let barra =
     </div>
     <div class="d-flex">
       <a href="./inicioSesion.html">
-        <img src="./src/img/usuario.png" class="mr-2" width="30" height="30" src="./usuario.png" alt="Logo"> 
+        <img src="./src/img/iconosRedes/user.png" class="mr-2" width="30" height="30" src="./usuario.png" alt="Logo"> 
       </a>   
       <a href="#">
-      <img src="./src/img/carrito-compras.png" class="mr-2" width="30" height="30" src="./carrito-compras.png" alt="Carrito"> 
+      <img src="./src/img/iconosRedes/cart.png" class="mr-2" width="30" height="30" src="./carrito-compras.png" alt="Carrito"> 
     </a>              
     </div>
 </nav>
