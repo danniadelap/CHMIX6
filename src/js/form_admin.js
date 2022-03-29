@@ -83,14 +83,10 @@ form.addEventListener('submit',(e) => {
   }, false);
 })(); */
 
-/* function validarNombre(producto){
-  var expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-  var esValido = expReg.test(producto);
-  return esValido; 
-}
 
-let valiCorreo = validarCorreo(producto.value);
-*/
+/*let valiCorreo = validarCorreo(producto.value);*/
+
+
 
 //VALIDACION DE MODIFICAR PRODUCTO //
 const formulario2 = document.getElementById('Modificarformulario');
@@ -161,4 +157,6 @@ inputs2.forEach((input) => {
 formulario2.addEventListener('submit', (m) => {
 	m.preventDefault();
 });
+=======
+
 
