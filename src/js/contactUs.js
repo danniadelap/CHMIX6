@@ -47,8 +47,9 @@ function showError() {
   emailError.className = 'error activo';
 }*/
 
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
+// deshabilita envios de formularios si hay campos no validos
+
+/*(function() {
     'use strict';
     window.addEventListener('load', function() {
       // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -64,6 +65,48 @@ function showError() {
         }, false);
       });
     }, false);
-  })();
+  })();*/
 
   
+  /*let celular = document.getElementById("telefono");
+celular.addEventListener("keypress" , (event)=>{
+    event.preventDefault();
+        
+    let codigoKey = event.keyCode;
+    let valorKey = String.fromCharCode(codigoKey);
+    console.log(valorKey);
+
+    let valor = parseInt(valorKey);
+    console.log(valor);
+
+    if(valor < 10){
+        if (celular.value.length < 11 ) {
+            celular.value += valor;
+        console.log(celular.value.length);    
+        }
+    }
+});
+*/
+
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+
+
+
