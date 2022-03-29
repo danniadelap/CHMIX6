@@ -3,43 +3,92 @@ const inputs = document.querySelectorAll('#form input')
 
 const expresiones = {
   name: /^\S[a-zA-Z0-9a-zA-Z0-9\s?]{4,30}$/,
-  price: /^[0-9\.?0-9]{3,5}$/,
-  description:/^[a-zA-Z0-9]{5,30}$/
+  price: /^[0-9\.?0-9]{2,6}$/,
+  description:/^\S[a-zA-Z0-9\s?]{5,30}$/
 }
+
+const productCorrect =`
+<div class="alert alert-success" role="alert">
+  COOOORRRECTOOO!!
+</div>
+`;
+const productInorrect =`
+<div class="alert alert-danger" role="alert">
+El nombre debe tener entre 4 y 30 caracteres de la A-Z 
+sin simbolos ni solo espacios en blanco.
+</div>
+`;
+const priceCorrect =`
+<div class="alert alert-success" role="alert">
+  Coooooorectooooo!
+</div>
+`;
+const priceInorrect =`
+<div class="alert alert-danger" role="alert">
+  El precio debe ser no mayor a 6 digitos.
+</div>
+`;
+const descriptionCorrect =`
+<div class="alert alert-success" role="alert">
+  Coooooorectooooo!
+</div>
+`;
+const descriptionIncorrect =`
+<div class="alert alert-danger" role="alert">
+  La descripcion debe tener como minimo 5 caracteres y maximo 30.
+</div>
+`;
+
 
 const validForm = (e) =>{
  switch(e.target.name){
    case "product":
      if(expresiones.name.test(e.target.value)){
-      document.getElementById('product').classList.remove('incorrect');
-      document.getElementById('product').classList.add('correct');
-      document.getElementById('product').classList.add('was-validated');
-     
-      
+      document.getElementById('divProduct').classList.remove('incorrect');
+      document.getElementById('product').classList.remove('is-invalid');
+      document.getElementById('divProduct').classList.add('correct');
+      document.getElementById('product').classList.add('is-valid');
+      document.getElementById('products').innerHTML= productCorrect;
+            
      }else {
-       document.getElementById('product').classList.add('incorrect');
-       document.getElementById('product').classList.remove('was-validated');
+       document.getElementById('divProduct').classList.add('incorrect');
+       document.getElementById('product').classList.add('is-invalid');
+       document.getElementById('divProduct').classList.remove('correct');
+       document.getElementById('product').classList.remove('is-valid');
+       document.getElementById('products').innerHTML= productInorrect;
+       
      }
    break;
    case "price":
     if(expresiones.price.test(e.target.value)){
-      document.getElementById('price').classList.remove('incorrect');
-      document.getElementById('price').classList.add('correct');
-      document.getElementById('price').classList.add('was-validated');
+      document.getElementById('divPrice').classList.remove('incorrect');
+      document.getElementById('price').classList.remove('is-invalid');
+      document.getElementById('divPrice').classList.add('correct');
+      document.getElementById('price').classList.add('is-valid');
+      document.getElementById('prices').innerHTML= priceCorrect;
+      
      }else {
-       document.getElementById('price').classList.add('incorrect');
-       document.getElementById('price').classList.remove('was-validated');
+      document.getElementById('divPrice').classList.add('incorrect');
+       document.getElementById('price').classList.add('is-invalid');
+       document.getElementById('divPrice').classList.remove('correct');
+       document.getElementById('price').classList.remove('is-valid');
+       document.getElementById('prices').innerHTML= priceInorrect;
       }
      
    break;
    case "description":
     if(expresiones.description.test(e.target.value)){
-      document.getElementById('description').classList.remove('incorrect');
-      document.getElementById('description').classList.add('correct');
-      document.getElementById('description').classList.add('was-validated');
+      document.getElementById('divDescription').classList.remove('incorrect');
+      document.getElementById('description').classList.remove('is-invalid');
+      document.getElementById('divDescription').classList.add('correct');
+      document.getElementById('description').classList.add('is-valid');
+      document.getElementById('descriptions').innerHTML= descriptionCorrect;
      }else {
-       document.getElementById('description ').classList.add('incorrect');
+      document.getElementById('divDescription').classList.add('incorrect');
        document.getElementById('description').classList.add('is-invalid');
+       document.getElementById('divDescription').classList.remove('correct');
+       document.getElementById('description').classList.remove('is-valid');
+       document.getElementById('descriptions').innerHTML= descriptionIncorrect;
       }
    break;
  }
@@ -50,7 +99,7 @@ const validForm = (e) =>{
 inputs.forEach((input) =>{
   input.addEventListener('keyup', validForm);
   input.addEventListener('blur', validForm);
-  console.log("sirve")
+ 
 });
 
 form.addEventListener('submit',(e) => {
@@ -157,6 +206,6 @@ inputs2.forEach((input) => {
 formulario2.addEventListener('submit', (m) => {
 	m.preventDefault();
 });
-=======
+
 
 
