@@ -69,3 +69,8 @@ footer {
     color: #fff; 
     
 }
+/*tamaño de los iconos*/
+.sizeIcono{
+    height:50px;
+    width: 50px;
+}
