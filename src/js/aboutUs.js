@@ -39,7 +39,7 @@ let miembros =[
         foto : "./src/img/Juantutu.png",
         fotoALT : "foto de JuanJo",
         nombre : "Juan José Morales Sevilla",
-        descripción : "Soy Ingeniero en Electronica y Desarrollador Java FullStack, al ser muy apacionado a la tecnologia mis ramas de dominio son una extencion de eso, me gusta divertirme en todo lo que hago y no me gusta rendirme.",
+        descripción : "Soy Ingeniero en Electrónica y Desarrollador Java FullStack, al ser muy apasionado a la tecnología mis ramas de dominio son una extensión de eso, me gusta divertirme en todo lo que hago y no me gusta rendirme.",
         participación : "Desarrollar",
         linkGitHub : "https://github.com/jjms2508",
         linkedIn : "https://www.linkedIn.com/in/jjms2508"

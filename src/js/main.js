@@ -9,7 +9,9 @@ let barra =
         form: "./form_admin.html",
         logo: "./index.html",
         us: "./aboutUs.html",
-        contact: "./contact_us.html"
+        contact: "./contact_us.html",
+        seccion: "./inicioSesion.html",
+        carrito: ""
     };
 
 
@@ -56,7 +58,7 @@ let barra =
     </form>-->
     </div>
     <div class="d-flex">
-      <a href="./inicioSesion.html">
+      <a href="${barra.seccion}">
         <img src="./src/img/usuario.png" class="mr-2" width="30" height="30" src="./usuario.png" alt="Logo"> 
       </a>   
       <a href="#">
