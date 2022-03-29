@@ -100,9 +100,9 @@ const contenidoFooter =`
                 <div class="col-md-12 col-lg-11 mb-md-0 mb-4">
                     <h2 class="footer-heading">Siguenos</h2>
                     <ul class="ftco-footer-social p-0">
-                        <li class="ftco-animate"><a href="https://www.instagram.com/tutu_wix/?hl=es" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="ion-logo-instagram"><img src="./src/img/iconosRedes/instagram-logo-24.png" alt="icono instagram"></span></a></li>
-                        <li class="ftco-animate"><a href="https://www.facebook.com/tutuwix" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="ion-logo-facebook"><img src="./src/img/iconosRedes/facebook-circle-logo-24.png" alt="icono facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="contact_us.html" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="ion-logo-twitter"><img src="./src/img/iconosRedes/envelope-regular-24.png" alt="icono correo"></span></a></li>
+                        <li class="ftco-animate "><a href="https://www.instagram.com/tutu_wix/?hl=es" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="ion-logo-instagram "><img src="./src/img/iconosRedes/instagram-logo-24.png" alt="icono instagram" class="sizeIcono"></span></a></li>
+                        <li class="ftco-animate "><a href="https://www.facebook.com/tutuwix" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="ion-logo-facebook "><img src="./src/img/iconosRedes/facebook-circle-logo-24.png" alt="icono facebook" class="sizeIcono"></span></a></li>
+                        <li class="ftco-animate "><a href="contact_us.html" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="ion-logo-twitter "><img src="./src/img/iconosRedes/envelope-regular-24.png" alt="icono correo" class="sizeIcono"></span></a></li>
 
                     </ul>
                 </div>

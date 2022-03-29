@@ -93,10 +93,10 @@ let valiCorreo = validarCorreo(producto.value);
 */
 
 //VALIDACION DE MODIFICAR PRODUCTO //
-const formulario = document.getElementById('Modificarformulario');
-const inputs = document.querySelectorAll('#Modificarformulario input');
+const formulario2 = document.getElementById('Modificarformulario');
+const inputs2 = document.querySelectorAll('#Modificarformulario input');
 
-const expresiones = {
+const expresiones2 = {
   //Modificarnombre: /^[a-zA-ZÁ-ÿ\s\-9\_\-]{3,25}$/, // Letras, numeros, guion y guion_bajo
 	ModificarNombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.//
   ModificarDescripcion: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.//
@@ -107,7 +107,7 @@ const expresiones = {
 }
 
 //
-const campos = {
+const campos2 = {
 	ModificarNombre: false,
 	ModificarDescripcion: false,
 	ModificarPrecio: false
@@ -116,11 +116,14 @@ const campos = {
 
 
 // Mostrar y quitar mensaje de que no deben poner caracteres
-const validarCampo = (expresion, input, campo) => {
-	if(expresion.test(input.value)){
-    document.querySelector(`#grupo__${campo} .ModificarNombre__input-error`);
+const validarCampo2 = (expresion2, input, campo) => {
+	if(expresion2.test(input.value)){
+    /*document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');*/
+    document.querySelector(`#grupo__${campo} .ModificarNombre__input-error`).classList.remove('formulario__input-error-activo');campos2[campo] = true;
 	} else {
-    document.querySelector(`#grupo__${campo} .ModificarNombre__input-error`);
+    document.querySelector(`#grupo__${campo} .ModificarNombre__input-error`).classList.add('formulario__input-error-activo');
+		campos[campo] = false;
 }
 }
 
@@ -130,18 +133,18 @@ const validarCampo = (expresion, input, campo) => {
 
 
 //VALIDACIONES POR NAME
-const validarFormulario = (e) => {
-	switch (e.target.name) {
+const validarFormulario2 = (m) => {
+	switch (m.target.name) {
 		case "ModificarNombre":
-			validarCampo(expresiones.ModificarNombre, e.target, 'ModificarNombre');
+			validarCampo2(expresiones2.ModificarNombre, m.target, 'ModificarNombre');
       break;
 
     case "ModificarPrecio":
-      validarCampo(expresiones.ModificarPrecio, e.target, 'ModificarPrecio');
+      validarCampo2(expresiones2.ModificarPrecio, m.target, 'ModificarPrecio');
       break;
 
     case "ModificarDescripcion":
-      validarCampo(expresiones.ModificarDescripcion, e.target, 'ModificarDescripcion');
+      validarCampo2(expresiones2.ModificarDescripcion, m.target, 'ModificarDescripcion');
       break;
     }
   }
@@ -149,13 +152,13 @@ const validarFormulario = (e) => {
   
 
 
-// EVENTO AL LEVANTAR EL DEDO DE LA TECLA VALIDA EL FORMULARIO
-inputs.forEach((input) => {
-	input.addEventListener('keyup', validarFormulario);
-	input.addEventListener('blur', validarFormulario);
+// EVENTO AL LEVANTAR EL DEDO DE LA TECLA VALIDA EL FORMULARIO  
+inputs2.forEach((input) => {
+	input.addEventListener('keyup',validarFormulario2);
+	input.addEventListener('blur',validarFormulario2);
 });
 //PREVENT DEFAULT DE BUTTON
-formulario.addEventListener('submit', (e) => {
-	e.preventDefault();
+formulario2.addEventListener('submit', (m) => {
+	m.preventDefault();
 });
 
