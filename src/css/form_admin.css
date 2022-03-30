@@ -79,3 +79,7 @@ body{
     background-color: #22918de7;
     color: #EAEAEA;
 }
+
+.mantenimiento{
+    display: none;
+}
