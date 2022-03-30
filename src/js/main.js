@@ -28,11 +28,11 @@ let barra =
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
         <li class="nav-item">
-                <a class="nav-link" href="${barra.logo}">Inicio<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="${barra.logo}">INICIO <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="${barra.products}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                    Productos
+                    PRODUCTOS
                 </a>                    
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="${barra.products}">Todo</a>
@@ -44,14 +44,14 @@ let barra =
             
             <li class="nav-item">                    
                 <a class="navbar-brand" href="${barra.logo}">
-                    <img src="./src/img/tutu_logo_sin_fondo.png" width="120" height="45" class="d-inline-block align-top" alt="Logo tutu_wix">
+                    <img src="./src/img/tutuLogo.png" width="50" height="30" class="d-inline-block align-top" alt="Logo tutu_wix">
                 </a>
             </li>        
             <li class="nav-item">
-                <a class="nav-link" href="${barra.us}">Nosotros</a>
+                <a class="nav-link" href="${barra.us}">NOSOTROS</a>
             </li>            
             <li class="nav-item">
-                <a class="nav-link" href="${barra.contact}">Contáctanos</a>
+                <a class="nav-link" href="${barra.contact}">CONTÁCTANOS</a>
             </li>                      
         </ul>
     <!--<form class="form-inline my-2 my-lg-0">
