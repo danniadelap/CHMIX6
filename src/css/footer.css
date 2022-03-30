@@ -9,7 +9,8 @@ footer {
   
 .footer-03 {
     /*ad9466*/
-    background: #003333;
+    background: #2C343E;
+    ;
     font-size: 18px;
 
 }    
@@ -73,4 +74,5 @@ footer {
 .sizeIcono{
     height:50px;
     width: 50px;
+    
 }
