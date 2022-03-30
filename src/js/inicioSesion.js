@@ -1,3 +1,5 @@
+let array_inicioSesion = []; //Se crea arreglo para guardar los datos
+
 function iniciarSesion() {
     
     var form = document.form;
