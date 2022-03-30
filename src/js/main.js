@@ -44,7 +44,7 @@ let barra =
             
             <li class="nav-item">                    
                 <a class="navbar-brand" href="${barra.logo}">
-                    <img src="./src/img/tutu_logo_sin_fondo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo tutu_wix">
+                    <img src="./src/img/tutuLogo.png" width="50" height="30" class="d-inline-block align-top" alt="Logo tutu_wix">
                 </a>
             </li>        
             <li class="nav-item">

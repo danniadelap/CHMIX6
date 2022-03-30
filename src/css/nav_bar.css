@@ -1,7 +1,7 @@
 
 .navbar{
 
-    background-color:#FEFCF7;
+    background-color:#FEFCF7;;
     font-family: 'Barlow', sans-serif;
 }
 
@@ -18,5 +18,6 @@
 }
 
 .nav-link:hover{
-    color: beige;
+    color: #0E8784;
+    ;
 }
