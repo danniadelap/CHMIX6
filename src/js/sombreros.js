@@ -43,8 +43,14 @@ let sombreros =[
     detalle: "Se un espíritu libre",
 }
 ];
+//Se setan los productos sombreros a localStorage
+let jsonSombreros = JSON.stringify(sombreros);
+localStorage.setItem("sombrerosStorage", jsonSombreros);
 
-  
+/*let productosTutuStorage = localStorage.getItem("sombrerosStorage");
+console.log(productosTutuStorage);
+let arrayProduc = JSON.parse(productosTutuStorage);
+console.log(arrayProduc);*/
 
 //se necesita funcion que crea los cards
 function crearCard(foto1,fotoAlt1,nombre,precio, detalle){
