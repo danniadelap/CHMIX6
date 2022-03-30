@@ -26,15 +26,7 @@
         </div>
 
         <div class="col-md-12">
-                      
-                <div class="col-md-4 was-validated"  >
-                    <label>Categoria de producto</label>
-                    <select class="form-control">
-                        <option value="Gorra" selected>Gorra</option>
-                        <option value="Sombrero">Sombrero</option>
-                      </select>
-                </div>
-                
+                                          
                 <div class=""  >
                   <label id="divProduct">Nombre de producto</label>
                   <input type="text"  id="product" name="product" class="form-control " required>
@@ -47,25 +39,46 @@
                 </div>    
                 <div id="prices"></div>
                 <div  >
+                    <div class=""  >
+                        <label>Categoria de producto</label>
+                        <select class="form-control">
+                            <option value="Gorra" selected>Gorra</option>
+                            <option value="Sombrero">Sombrero</option>
+                          </select>
+                    </div>
+
                     <label id="divDescription">Descripción</label>
                     <input  type="text" id="description" class="form-control" name="description" required>
                    
                 </div>
                 <div id="descriptions"></div>
-                <div>
-                    <label for="validationTextarea">Imagen</label>
-                    <input type="file" class="form-control-file"   id="validatedCustomFile" required>
-                    
-                </div>
-
-
-                <div class="centrar_boton">
-                    <button type="submit" class="btn btn-primary estilo_boton">Crear Producto</button>
+            
+                    <div>
+                        <label for="fileImage" >Selecciona una imagen:</label>
+                    </div>
+                    <div class="form-group container2">
+                        
+                        <input type="button" class="btn estilo_botones" value="Subir imagen" id="btnFake"> 
+                        
+                        <input type="file" class="form-control-file" id="fileImage" style="display:none">
+                    </div>                
+                
+                <div class="container2">
+                        <button type="submit" class="btn estilo_botones">Crear Producto</button>
                 </div>                
-             
+                 </div>
         </div> 
     </div>
 </form>
+<div class="col-2">
+    <img id="imageFile" name="imageFile" src="" alt="" title="Vista previa de la imagen" />
+</div><!--col-6-->
+<div class="row">
+    <div class="col-4">
+      <textarea rows="4" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="display:block"></textarea>
+    </div>
+</div> <!--row-->
+</div> <!--container-->
 
 
 <!--AQUI EMPIEZA MODIFICAR PRODUCTO-->
