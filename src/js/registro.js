@@ -1,9 +1,18 @@
-let array_usuario = [];
+let array_usuarios = [
+    {
+        "id_usuario": "1",
+        "correo": "correo@ejem.plo",
+        "nombre": "Correo Ejemplo",
+        "telefono": "3333333333",
+        "contrasena": "C0nt@5n@"
+    }
+];
 //se crea arreglo para guardar los datos del usuario al crear un nuevo usuario
 
-let superior=false;
-let numeros=false;
-let simbolos=false;
+
+let superior = false;
+let numeros = false;
+let simbolos = false;
 
 
 let correo = document.getElementById("correo");
@@ -26,8 +35,8 @@ telefono.addEventListener("keypress", (event) => {
     let valor = parseInt(valorKey);
 
     if (valor < 10) {
-        if (celular.value.length < 11) {
-            celular.value += valor;
+        if (telefono.value.length < 13) {
+            telefono.value += valor;
         }
     }
 });//validacion de campo de numero de telefono para solo introducir numeros ademas de solo permitir 10 digitos
@@ -39,12 +48,11 @@ function validarCorreo(correo) {
 }//funcion para la validacion de correo electronico
 
 function validarContrase(contrase) {
-    for (i=0; i<contrase.length;i++)
-	{
-		if (contrase[i].match(/[A-Z]/g)) {superior=true;}
-		if (contrase[i].match(/[0-9]/g)) {numeros=true;}
-		if (contrase[i].match(/(.*[!,@,#,$,%,^,&,*,?,_,~])/)) {simbolos=true;}
-	}    
+    for (i = 0; i < contrase.length; i++) {
+        if (contrase[i].match(/[A-Z]/g)) { superior = true; }
+        if (contrase[i].match(/[0-9]/g)) { numeros = true; }
+        if (contrase[i].match(/(.*[!,@,#,$,%,^,&,*,?,_,~])/)) { simbolos = true; }
+    }
 }//funcion para la validacion de contraseña
 
 
@@ -58,13 +66,12 @@ add_usuario.addEventListener("submit", (e) => {
     //mandar a traer el texto que el susuario introduce en el formulario y guardarlos en variables
 
     let valiCorreo = validarCorreo(correo.value);
-    console.log("valiCorreo"+valiCorreo);
     //mandamos a llamar la funcion de correo para validarlo y que nos de un resusltado y lo guardamos en valiCorreo
 
     validarContrase(contrasena.value);
     //mandamos a llamar la funcion de correo para validarlo y que nos de un resusltado y lo guardamos en valiCorreo
 
-    const existe = array_usuario.findIndex(elemento => {
+    const existe = array_usuarios.findIndex(elemento => {
         return elemento.correo == correo.value
     }); //aqui es donde validamos en el arreglo si el correo registrado ya existe a lo cual guardamos el valor en existe y despues la comparamos
 
@@ -81,7 +88,7 @@ add_usuario.addEventListener("submit", (e) => {
     } else {
         console.log("el correo no es correcto favor de validarlo");
         //document.getElementById("correo_alert").style.display = "block";
-        correo_alert.innerText = "El correo no es válido favor de verificarlo.";
+        correo_alert.innerText = "El correo no es válido, favor de verificarlo.";
         correo_alert.style.display = "block";
         correo.classList.remove("is-valid");
         correo.classList.add("is-invalid");
@@ -119,7 +126,7 @@ add_usuario.addEventListener("submit", (e) => {
         telefono_alert.style.display = "block";
         telefono.classList.remove("is-valid");
         telefono.classList.add("is-invalid");
-    } else if (telefono.value.length > 9) {
+    } else if (telefono.value.length > 9 && telefono.value > 0) {
         console.log("el telefono es correcto");
         //document.getElementById("telefono_alert").style.display = "none";
         telefono_alert.style.display = "none";
@@ -146,7 +153,7 @@ add_usuario.addEventListener("submit", (e) => {
         validacion.classList.remove("is-invalid");
         validacion.classList.add("is-valid");
     } else {
-        validacion_alert.innerHTML = "Las contraseñas no coinciden favor de validarlo.";
+        validacion_alert.innerHTML = "Las contraseñas no coinciden, favor de validarlo.";
         validacion_alert.style.display = "block";
         validacion.classList.remove("is-valid");
         validacion.classList.add("is-invalid");
@@ -157,17 +164,17 @@ add_usuario.addEventListener("submit", (e) => {
         contrasena_alert.style.display = "block";
         contrasena.classList.remove("is-valid");
         contrasena.classList.add("is-invalid");
-    } else if (numeros==false){
+    } else if (numeros == false) {
         contrasena_alert.innerHTML = "Contraseña debe tener al menos un Numero.";
         contrasena_alert.style.display = "block";
         contrasena.classList.remove("is-valid");
         contrasena.classList.add("is-invalid");
-    } else if (superior==false){
+    } else if (superior == false) {
         contrasena_alert.innerHTML = "Contraseña debe tener al menos una Mayúscula.";
         contrasena_alert.style.display = "block";
         contrasena.classList.remove("is-valid");
         contrasena.classList.add("is-invalid");
-    } else if (simbolos==false){
+    } else if (simbolos == false) {
         contrasena_alert.innerHTML = "Contraseña debe tener al menos un Símbolo.";
         contrasena_alert.style.display = "block";
         contrasena.classList.remove("is-valid");
@@ -184,21 +191,23 @@ add_usuario.addEventListener("submit", (e) => {
         contrasena.classList.add("is-invalid");
     }//validacion para que la contraseña contenga mas de 6 caracteres
 
-    if ((numeros==true) && (superior==true) && (simbolos==true) && (valiCorreo == true) && (nombre.value.length > 2) && (existe == "-1") && (telefono.value.length > 9) && (contrasena.value == validacion.value) && (contrasena.value.length > 7)) {
+    if ((numeros == true) && (superior == true) && (simbolos == true) && (valiCorreo == true) && (nombre.value.length > 2) && (existe == "-1") && (telefono.value.length > 9) && telefono.value > 0 && (contrasena.value == validacion.value) && (contrasena.value.length > 7)) {
         //si esta condicion se cumple entrara en el if y creara el Json 
 
         let nuevo_usuario = {
-            "id_usuario": array_usuario.length + 1,
+            "id_usuario": array_usuarios.length + 1,
             "correo": correo.value,
             "nombre": nombre.value,
             "telefono": telefono.value,
             "contrasena": contrasena.value
         }//se crea un arreglo con los datos del nuevo usuario
 
-        array_usuario.push(nuevo_usuario);//se grega el nuevo usuario en el arreglo principal 
-        let json_usuario = JSON.stringify(array_usuario);//el arreglo principal se convierte a JSON
-        console.log(array_usuario);
+        array_usuarios.push(nuevo_usuario);//se grega el nuevo usuario en el arreglo principal 
+        let json_usuario = JSON.stringify(array_usuarios);//el arreglo principal se convierte a JSON
+        console.log(array_usuarios);
         console.log(json_usuario);
+        let arrayUsuarios = JSON.stringify(array_usuarios);
+        localStorage.setItem("usuariosStorage", arrayUsuarios);
         Swal.fire({
             icon: 'success',
             text: `${nuevo_usuario.nombre}, bienvenido a Tutu!`,
@@ -209,9 +218,9 @@ add_usuario.addEventListener("submit", (e) => {
             timer: 1800
         })
     }
-    superior=false;
-    numeros=false;
-    simbolos=false;
+    superior = false;
+    numeros = false;
+    simbolos = false;
 });
 
 function cambiar() {
@@ -225,11 +234,11 @@ function cambiar1() {
 }
 
 
-const sinEspacios=document.querySelectorAll(".sinEspacios");
-sinEspacios.forEach((el)=>el.addEventListener("keypress", impedirEspacios));
- 
+const sinEspacios = document.querySelectorAll(".sinEspacios");
+sinEspacios.forEach((el) => el.addEventListener("keypress", impedirEspacios));
+
 function impedirEspacios(e) {
-    if (e.key==" ") {
+    if (e.key == " ") {
         // Si se pulsa el espacio eliminamos la pulsación
         e.preventDefault();
     }
