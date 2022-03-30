@@ -1,75 +1,94 @@
-@import url(./aboutUs.css);
-
-html{
-    height: 100%;
-}
-section{
-    min-width: 100%;
-}
-.titulo {
-    background-color: rgb(255, 255, 255, .6 );
-    text-align: center;
+.fondo{
+    margin-top: 50px;
+    /*background-color: #FF4362CC;*/
+    color: black;
+    background-color: #EAEAEA;
     border-radius: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 15px;
 }
 
-.icon {
-    background-color: rgb(255, 255, 255, .6 );
+.titulo_producto{
+    border-radius: 20px 20px 0px 0px ;
+   /*background-color: #FBCDAE;*/
+   background-color: #595959;
+   
+    width: 100%;
+    padding: 25px;
     text-align: center;
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
 }
 
+.centrar_boton{
+    text-align: center;
+}
 
-#center {
+.estilo_boton{
+    background-color: #595959;
+    width: 30%;
+}
+
+.centrar{
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-top: 15px;
-
-}
-
-
-/*sistema grid de css para organizar section*/
-.grid-container >* {
-    padding: 10px;
     text-align: center;
-}  
-.aside{
-    grid-area: aside;
+}
+.centrar p{
+    padding: 20px 0px 0px 0px;
 }
 
-.form1{
-    grid-area: form1;
+input{
+    width: 750px;
+    margin-top: 30px;
+}
+body{
+    /*background-image: url(../img/Fondo_productos_form.png);*/
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+h4{
+    color: #FFFFFF;
+}
+#ingreso{
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-.grid-container{
-    display: grid;
-    gap: 10px;
-    grid-template-areas: 
-        " aside form1  "
-        ;
+
+
+#correo_alert{
+    display: none;
 }
 
-
-
-/*Small devices (landscape phones, 576px and up)*/
-/*sistema grid css responsivo para versiones moviles*/
-@media (max-width: 720px) { 
-    
-    .grid-container{
-        grid-template-areas: 
-        " form1"
-        "aside"
-        ;
-    }
+#nombre_alert{
+    display: none;
 }
 
-/*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) { } 
+#telefono_alert{
+    display: none;
+}
 
-/* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) { }
+#contrasena_alert{
+    display: none;
+}
+
+#validacion_alert{
+    display: none;
+}
+
+#existe_alert{
+    display: none;
+}
+
+#exito_alert{
+    display: none;
+}
+
+#registro_pre{
+    display: none;
+}
+
+#inicio_pre{
+    display: block;
+}
+
