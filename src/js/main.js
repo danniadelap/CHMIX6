@@ -108,6 +108,7 @@ const contenidoFooter =`
                 <div class="col-md-12 col-lg-11 mb-md-0 mb-4">
                     <h2 class="footer-heading">Siguenos</h2>
                     <ul class="ftco-footer-social p-0">
+
                                         
                         
                     <li class="ftco-animate "><a href="https://www.instagram.com/tutu_wix/?hl=es" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="ion-logo-instagram "><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-instagram" viewBox="0 0 16 16">
