@@ -208,4 +208,3 @@ formulario2.addEventListener('submit', (m) => {
 });
 
 
-
