@@ -17,9 +17,11 @@
     text-align: center;
 }
 
+
 .centrar_boton{
     text-align: center;
 }
+
 
 .estilo_boton{
     background-color: #595959;
@@ -63,6 +65,7 @@ h4{
 #nombre_alert{
     display: none;
 }
+
 
 #telefono_alert{
     display: none;

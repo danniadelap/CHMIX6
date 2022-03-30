@@ -9,7 +9,10 @@ let barra =
         form: "./form_admin.html",
         logo: "./index.html",
         us: "./aboutUs.html",
-        contact: "./contact_us.html"
+        contact: "./contact_us.html",
+        nosotros: "./nosotros.html",
+        sesion: "./inicioSesion.html",
+        carrito: "#"
     };
 
 
@@ -24,9 +27,12 @@ let barra =
     </button>  
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+                <a class="nav-link" href="${barra.logo}">INICIO <span class="sr-only">(current)</span></a>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="${barra.products}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                    Productos
+                    PRODUCTOS
                 </a>                    
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="${barra.products}">Todo</a>
@@ -35,19 +41,17 @@ let barra =
                     <a class="dropdown-item" href="#">Gorras</a>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="${barra.form}">Formulario<span class="sr-only">(current)</span></a>
-            </li>
+            
             <li class="nav-item">                    
                 <a class="navbar-brand" href="${barra.logo}">
-                    <img src="./src/img/tutu_logo_sin_fondo.png" width="120" height="45" class="d-inline-block align-top" alt="Logo tutu_wix">
+                    <img src="./src/img/tutuLogo.png" width="50" height="30" class="d-inline-block align-top" alt="Logo tutu_wix">
                 </a>
             </li>        
             <li class="nav-item">
-                <a class="nav-link" href="${barra.us}">Nosotros</a>
+                <a class="nav-link" href="${barra.us}">NOSOTROS</a>
             </li>            
             <li class="nav-item">
-                <a class="nav-link" href="${barra.contact}">Contáctanos</a>
+                <a class="nav-link" href="${barra.contact}">CONTÁCTANOS</a>
             </li>                      
         </ul>
     <!--<form class="form-inline my-2 my-lg-0">
@@ -56,11 +60,11 @@ let barra =
     </form>-->
     </div>
     <div class="d-flex">
-      <a href="./login.html">
-        <img src="./src/img/usuario.png" class="mr-2" width="30" height="30" src="./usuario.png" alt="Logo"> 
+      <a href="${barra.sesion}">
+        <img src="./src/img/iconosRedes/user.png" class="mr-2" width="30" height="30" alt="Logo"> 
       </a>   
-      <a href="./login.html">
-      <img src="./src/img/carrito-compras.png" class="mr-2" width="30" height="30" src="./carrito-compras.png" alt="Carrito"> 
+      <a href="#">
+      <img src="./src/img/iconosRedes/cart.png" class="mr-2" width="30" height="30" src="./carrito-compras.png" alt="Carrito"> 
     </a>              
     </div>
 </nav>
@@ -72,21 +76,55 @@ let barra =
 let anclaBarra = document.getElementById("anclaBarra");
 anclaBarra.innerHTML = contenidoBarra;
 
-
+//FOOTER
 const contenidoFooter =`
-    <blockquote class="blockquote mb-0 bg-dark text-secondary" Style="padding-top:30px;">
-      <footer>
-      <div>
-        <div class="d-flex justify-content-center">
-            <h3>Juntos trabajando para lograr una mayor equidad cultural.<\h3>
+<footer class="footer-03">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">                        
+                <div class="col-md-4 mb-md-0 mb-4">
+                    <h2 class="footer-heading">Equipo</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="aboutUs.html" class="py-1 d-block">Nosotros</a></li>
+                        <li><a href="form_admin.html" class="py-1 d-block">Administrador</a></li>                  
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-md-0 mb-4">
+                    <h2 class="footer-heading">Legales</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="py-1 d-block">Términos y Condiciones</a></li>
+                        <li><a href="#" class="py-1 d-block">Aviso de privacidad</a></li>   
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="dropdown-divider"></div>
-        <div class="d-flex justify-content-center">
-            <p>© Tutu-Wix. All rights reserved.</p>
+        <div class="col-md-6">
+            <div class="row justify-content-end">
+                <div class="col-md-12 col-lg-11 mb-md-0 mb-4">
+                    <h2 class="footer-heading">Siguenos</h2>
+                    <ul class="ftco-footer-social p-0">
+                                        
+
+                        <li class="ftco-animate "><a href="https://www.instagram.com/tutu_wix/?hl=es" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="ion-logo-instagram "><img src="./src/img/iconosRedes/instagram-brands-fontawesome.svg" alt="icono instagram" class="sizeIcono"></span></a></li>
+                        <li class="ftco-animate "><a href="https://www.facebook.com/tutuwix" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="ion-logo-facebook "><img src="./src/img/iconosRedes/facebook-square-fontawesome-facebook.svg" alt="icono facebook" class="sizeIcono"></span></a></li>
+                        <li class="ftco-animate "><a href="contact_us.html" data-toggle="tooltip" data-placement="top" title="Correo"><span class="ion-logo-Correo "><img src="./src/img/iconosRedes/correo-regular-fontawesome.svg" alt="icono correo" class="sizeIcono"></span></a></li>
+
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-      </footer>
-    </blockquote>
+    </div>
+    <div class="row mt-5 pt-4 border-top">
+        <div class="col-md-12">
+            <p class="copyright" style="text-align:center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy; Tutú_wix Esta página fue creada con fines didácticos y de aprendizaje</a>
+            </p>
+        </div>                
+    </div>
+</div>
+</footer>
+
 `;
 
 let anclafooter = document.getElementById("anclafooter");

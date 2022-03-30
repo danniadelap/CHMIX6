@@ -1,20 +1,23 @@
 
 .navbar{
 
-    background-color:#003333;
-    font-family: 'Montserrat', sans-serif;
+    background-color:#FEFCF7;;
+    font-family: 'Barlow', sans-serif;
 }
 
 .nav-link{
     position: relative;
-    color:white;
+    color:#83888F;
     cursor: pointer;
-    font-size: 28px;
+    font-size: 16px;
     transition: all 450ms ease;
     justify-content: space-around;
     letter-spacing: 0.5;
+    text-transform:uppercase;
+    text-decoration: underline;
 }
 
 .nav-link:hover{
-    color:coral
+    color: #0E8784;
+    ;
 }
