@@ -63,3 +63,6 @@ tranparentes se redondean las esquinas y se deja el texto centrado*/
 .altura_descrip{
     height: 180px;
 }/*altura de la descripcion para que todas las card's mantengan la misma altura*/
+.titulo{
+    font-family:'Fraunces', sans-serif;
+}
