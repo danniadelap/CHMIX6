@@ -10,12 +10,9 @@ let barra =
         logo: "./index.html",
         us: "./aboutUs.html",
         contact: "./contact_us.html",
-<<<<<<< HEAD
-        nosotros: "./nosotros.html"
-=======
-        seccion: "./inicioSesion.html",
-        carrito: ""
->>>>>>> develop
+        nosotros: "./nosotros.html",
+        sesion: "./inicioSesion.html",
+        carrito: "#"
     };
 
 
@@ -63,13 +60,8 @@ let barra =
     </form>-->
     </div>
     <div class="d-flex">
-<<<<<<< HEAD
-      <a href="./inicioSesion.html">
-        <img src="./src/img/iconosRedes/user.png" class="mr-2" width="30" height="30" src="./usuario.png" alt="Logo"> 
-=======
-      <a href="${barra.seccion}">
-        <img src="./src/img/usuario.png" class="mr-2" width="30" height="30" src="./usuario.png" alt="Logo"> 
->>>>>>> develop
+      <a href="${barra.sesion}">
+        <img src="./src/img/iconosRedes/user.png" class="mr-2" width="30" height="30" alt="Logo"> 
       </a>   
       <a href="#">
       <img src="./src/img/iconosRedes/cart.png" class="mr-2" width="30" height="30" src="./carrito-compras.png" alt="Carrito"> 
