@@ -6,6 +6,11 @@
     padding-bottom: 15px;
 }
 
+.container2{
+    display: flex;
+    justify-content: center;
+}
+
 .titulo_producto{
     border-radius: 20px 20px 0px 0px ;
     /*background-color: rgb(51, 141, 43, .6);*/
@@ -51,3 +56,26 @@ body{
 
 }
 
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario__input-error-activo {
+	display: block;
+}
+
+.estilo_botones{
+    flex-wrap: wrap;
+    flex-grow: 5;
+    text-align: center;
+    background-color: #0E8784;
+    border-radius: 10px;
+    color: #FEFCF7;
+    font-family: 'Fraunces';
+}
+.estilo_botones:hover{
+    background-color: #22918de7;
+    color: #EAEAEA;
+}
