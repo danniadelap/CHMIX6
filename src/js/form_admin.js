@@ -136,9 +136,15 @@ let fileImage = document.getElementById('fileImage');
 		}// previewFile 
 
 
-
-
-
+    let newProduct = {
+      "nombre ": getElementById(product) ,
+      "precio": getElementById(price),
+      "categoria": getElementById(category),
+      "descripcion":getElementById(description) ,
+      "imagen": getElementById(inputFile)
+  }
+  console.log("antes de new product");
+  console.log(newProduct);
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 /* (function() {
