@@ -63,13 +63,32 @@
 .seccion_titulo{
     text-align: center;
     font-size: 40px;
+    font-family: 'Fraunces';
+    color: black;   
 }/*Tamaño de letra del titulo de las secciones ademas de el tamaño de letra de ver mas*/
 
+/*estilos de los hipervinculos*/
+.hipervinculo{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Fraunces';
+    color: black;  
+}
+.hipervinculo:hover{
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Fraunces';
+    color:#0E8784;  
+}
+
+/* seccion espacio*/
 .seccion_espacio{
     margin-top: 18%;
     margin-bottom: 18%;
     font-size: 30px;
     text-align: center;
+    font-family: 'Barlow';
+    color: #333D4B;
 }/*tamaño de la letra de del parrafo de la seccion ademas de separar el titulo y el ver mas*/
 
 .centrar_imagen{
@@ -91,10 +110,15 @@
 
 .tamaño_titulo{
     font-size: 70px;
+    font-family: 'Fraunces';
+    color: #0E8784;
 }/*tamaño de texto de los titulos de las secciones*/
 
 .tamaño_parrafo_seccion{
     font-size: 30px;
+    font-family: 'Barlow';
+    color: #333D4B;
+
 }/*tamaño del tipo de letra en el parrafo del titulo de productos*/
 
 .formato_seccion{
