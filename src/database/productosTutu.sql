@@ -1,0 +1,7 @@
+INSERT INTO `databaseTutu`.`productos` (`nombre_prod`, `precio`, `descripcion`, `url_imagen`, `talla`, `cantidad_dis`,`categoria_idcategoria`) VALUES ('Gorra Yawi', 699.00, 'Disfruta de esos conciertos con tu gorra bordada', './src/img/Productos/Sombreros/Imagenes redimensionadas/Gorras/1.PNG', 'Mid',1,1);
+INSERT INTO `databaseTutu`.`productos` (`nombre_prod`, `precio`, `descripcion`, `url_imagen`, `talla`, `cantidad_dis`,`categoria_idcategoria`) VALUES ('Gorra Tatei', 499.00, 'Combinación perfecta para cualquier ocasión', './src/img/Productos/Sombreros/Imagenes redimensionadas/Gorras/2.PNG', 'Mid',2,1);
+INSERT INTO `databaseTutu`.`productos` (`nombre_prod`, `precio`, `descripcion`, `url_imagen`, `talla`, `cantidad_dis`,`categoria_idcategoria`) VALUES ('Gorra Ojo de Dios', 579.00, 'El poder de los dioses te acompañara en cualquier ocasión con esta gorra', './src/img/Productos/Sombreros/Imagenes redimensionadas/Gorras/3.PNG', 'L',2,1);
+INSERT INTO `databaseTutu`.`productos` (`nombre_prod`, `precio`, `descripcion`, `url_imagen`, `talla`, `cantidad_dis`,`categoria_idcategoria`) VALUES ('Sombrero Xeta', 699.00, 'Nada como un rojo vibrante', './src/img/Productos/Sombreros/Imagenes redimensionadas/1.PNG', 'Mid',2,2);
+INSERT INTO `databaseTutu`.`productos` (`nombre_prod`, `precio`, `descripcion`, `url_imagen`, `talla`, `cantidad_dis`,`categoria_idcategoria`) VALUES ('Sombrero Yivíme', 699.00, 'Un toque de elegancia que va contigo', './src/img/Productos/Sombreros/Imagenes redimensionadas/2.PNG', 'XL',1,2);
+
+-- describe productos;
