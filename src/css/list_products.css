@@ -1,42 +1,22 @@
 body{
-    background-color: #F2F2F2;
-}/*color de fondo de la página*/
+    /*background-image: url(https://static.comunicae.com.mx/photos/notas/82444/desierto-chihua.jpg);*/
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
 
 .list_titile{
-    margin-top: 100px;
-    margin-bottom: 15px;
+    margin-top: 50px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255, .7 );
+    padding: 15px;
     text-align: center;
-    font-family: 'Fraunces';
-}/*estilo del titulo de cada sección*/
+}
 
-.estilos_titulo{
-    font-family: 'Fraunces';
-    color: #333D4B;
-    margin-top: 30px;
-}/*se agregan estilos al texto de las card*/
 
-.estilos_descripcion{
-    font-family: 'Barlow';
-    color: #333D4B;
-}/*estilo a descripcion de las cards*/
 
-.estilos_precio{
-    font-family: 'Barlow';
-    color: #0E8784;
-    font-size: 30px;
-}/*estilo de precio de las cards*/
 
-.estilo_botones{
-    background-color: #0E8784;
-    border-radius: 10px;
-    color: #FEFCF7;
-    font-family: 'Fraunces';
-    padding: 18px;
-}/*estilo de los botones de cada card*/
-
-.estilo_botones:hover{
-    background-color: #66D2CF;
-}/*cambio de color del boton cuando pasa el cursor*/
 
 
 .list_card{
@@ -47,6 +27,7 @@ body{
     /*para que el contenido de la card quede en columna y centrado*/
 
     border-radius: 20px;
+    background-color: rgb(255, 255, 255);
     padding: 40px;
     /*se bordean las esquinas, color y padding para que no quede pegado el texto a la
     orilla*/
@@ -56,12 +37,4 @@ body{
     /*separacion sobre la parte de top y bot para que las card no queden pegadas */
 
     text-align: center;
-    transition: all 400ms ease;
-}/*diseño de la card*/
-
-.list_card:hover{
-    background-color: rgb(255, 255, 255);
-    box-shadow: 5px 5px 20px rgb(0, 0, 0,0.4);
-    transform: translateY(-3%);
-
-}/*movimiento resalte y color de fondo de la card*/
+}
