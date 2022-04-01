@@ -243,3 +243,8 @@ function impedirEspacios(e) {
         e.preventDefault();
     }
 }
+
+
+// Inicio de sesion
+
+var correoGuardado = array_usuarios.filter(correo);
