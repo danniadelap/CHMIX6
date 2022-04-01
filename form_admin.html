@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="./src/css/form_admin.css">
     <link rel="stylesheet" href="src/css/nav_bar.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="./src/css/form_admin.css">
+
 </head>
 <body>
 
@@ -24,55 +26,68 @@
         </div>
 
         <div class="col-md-12">
-                      
-                <div class="col-md-4 was-validated"  >
-                    <label>Categoria de producto</label>
-                    <select class="form-control">
-                        <option value="Gorra" selected>Gorra</option>
-                        <option value="Sombrero">Sombrero</option>
-                      </select>
+                                          
+                <div class=""  >
+                  <label id="divProduct">Nombre de producto</label>
+                  <input type="text"  id="product" name="product" class="form-control " required>
                 </div>
+                <div id="products"></div>
                 
-                <div class="" id="product" >
-                  <label>Nombre de producto</label>
-                  <input type="text"  name="product" class="form-control " required>
-                </div>
-                
-                <div id="price">
-                <label >Precio</label>
-                    <input type="number" name="price" class="form-control" required minlength="3">
+                <div >
+                <label id="divPrice">Precio</label>
+                    <input type="number" id="price" name="price" class="form-control" required minlength="3">
                 </div>    
-                <div id="description">
-                    <label>Descripción</label>
-                    <input  type="text" class="form-control" name="description" required>
+                <div id="prices"></div>
+                <div  >
+                    <div class=""  >
+                        <label>Categoria de producto</label>
+                        <select class="form-control" id="category">
+                            <option value="Gorra" selected>Gorra</option>
+                            <option value="Sombrero">Sombrero</option>
+                          </select>
+                    </div>
+
+                    <label id="divDescription">Descripción</label>
+                    <input  type="text" id="description" class="form-control" name="description" required>
                    
                 </div>
-
-                <div>
-                    <label for="validationTextarea">Imagen</label>
-                    <input type="file" class="form-control-file"   id="validatedCustomFile" required>
-                    
-                </div>
-
-
-                <div class="centrar_boton">
-                    <button type="submit" class="btn btn-primary estilo_boton">Crear Producto</button>
+                <div id="descriptions"></div>
+            
+                    <div>
+                        <label for="fileImage" >Selecciona una imagen:</label>
+                    </div>
+                    <div class="form-group container2">
+                        
+                        <input type="button" class="btn estilo_botones" value="Subir imagen" id="btnFake"> 
+                        
+                        <input type="file" class="form-control-file" id="fileImage" style="display:none">
+                    </div>                
+                
+                <div class="container2">
+                        <button type="submit" id="btnaddProduct" class="btn estilo_botones">Crear Producto</button>
                 </div>                
-             
+                 </div>
         </div> 
     </div>
 </form>
+<div class="col-2">
+    <img id="imageFile" name="imageFile" src="" alt="" title="Vista previa de la imagen" />
+</div><!--col-6-->
+<div class="row">
+    <div class="col-4">
+      <textarea rows="4" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="display:block"></textarea>
+    </div>
+</div> <!--row-->
+</div> <!--container-->
 
 
 <!--AQUI EMPIEZA MODIFICAR PRODUCTO-->
-<<<<<<< HEAD
 <form class="" novalidate>
-=======
+
 
 <form action="" class="needs-validation" id="Modificarformulario" novalidate>
->>>>>>> develop
 
-    <div class="row fondo" >
+    <div class="row fondo mantenimiento" >
         <div class="titulo_producto">
             <h4>Modificar producto</h4>
         </div>
@@ -83,10 +98,8 @@
                 <div class="form-group">
                   <label for="validationCustom01NombreProducto"  class="form-label">Nombre de producto</label>
                   <input type="text" id="validationCustom01NombreProducto" name="ModificarNombre" minlength="3" maxlength="25" class="form-control"  required>
-                  <div class="invalid-feedback ">Ingresa un nombre de producto válido</div>   
-                </div>
-				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
-			    </div>           
+                  <div class="invalid-feedback ">Ingresa un nombre de producto válido</div>                  
+				  <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>              
                 </div>
             <!-- Grupo: Modificar precio -->
                 <div class="form-group">

@@ -1,75 +1,92 @@
-@import url(./aboutUs.css);
-
-html{
-    height: 100%;
-}
-section{
-    min-width: 100%;
-}
-.titulo {
-    background-color: rgb(255, 255, 255, .6 );
-    text-align: center;
+.fondo{
+    margin-top: 50px;
+    /*background-color: #FF4362CC;*/
+    color: black;
+    background-color: #EAEAEA;
     border-radius: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 15px;
 }
 
-.icon {
-    background-color: rgb(255, 255, 255, .6 );
+.titulo_producto{
+    border-radius: 20px 20px 0px 0px ;
+    background-color: #003333;
+    width: 100%;
+    padding: 25px;
     text-align: center;
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
+    text-transform: uppercase;
+    font-family: 'Fraunces';
 }
 
 
-#center {
+.centrar_boton{
+    text-align: center;
+}
+
+.estilo_boton{
+    background-color: #0E8784;
+    border-radius: 10px;
+    color: #FEFCF7;
+    font-family: 'Fraunces';
+    padding: 10px;
+    text-transform: uppercase;
+}
+.estilo_boton:hover{
+    background-color: #66D2CF;
+}/*cambio de color del boton cuando pasa el cursor*/
+.estilo_boton:checked{
+    background-color: #003333;
+    color: #FEFCF7;
+}
+
+.centrar{
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-top: 15px;
-
-}
-
-
-/*sistema grid de css para organizar section*/
-.grid-container >* {
-    padding: 10px;
     text-align: center;
-}  
-.aside{
-    grid-area: aside;
 }
 
-.form1{
-    grid-area: form1;
+input{
+    margin-top: 30px;
+    font-family: 'Fraunces';
 }
 
-.grid-container{
-    display: grid;
-    gap: 10px;
-    grid-template-areas: 
-        " aside form1  "
-        ;
+h4{
+    color: #FFFFFF;
+}
+#ingreso{
+    padding-top: 40px;
+    text-transform: uppercase;
+    font-family: 'Fraunces';
+}
+.alerta{
+    align-items: flex-start;
+    color: #d93025;
+    display: flex;
+    font-size: 12px;
+    line-height: normal;
+    margin-top: 2px;
 }
 
 
 
-/*Small devices (landscape phones, 576px and up)*/
-/*sistema grid css responsivo para versiones moviles*/
-@media (max-width: 720px) { 
-    
-    .grid-container{
-        grid-template-areas: 
-        " form1"
-        "aside"
-        ;
-    }
+
+#correo_alert{
+    display: none;
 }
 
-/*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) { } 
+#nombre_alert{
+    display: none;
+}
 
-/* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) { }
+
+#telefono_alert{
+    display: none;
+}
+
+#mensaje_alert{
+    display: none;
+}
+
+#contactanos {
+    padding-bottom: 30px;
+}
+

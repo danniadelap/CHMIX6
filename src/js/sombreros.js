@@ -1,50 +1,56 @@
 //se necesita el objeto miembros con los datos anidados
 let sombreros =[
     {
-        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/sombrero-rojo-final.jpg",
+        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/1.PNG",
         fotoAlt1 : "Sombrero Xeta",
         nombre: "Sombrero Xeta",
         precio: "$699.00",
         detalle: "Nada como un rojo vibrante",
     },
     {
-        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/sombrero-negro-final.jpg",
+        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/2.PNG",
         fotoAlt1 : "Sombrero Yivíme",
         nombre: "Sombrero Yivíme",
         precio: "$699.00",
         detalle: "Un toque de elegancia que va contigo",
     },
     {
-        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/sombrero_rosa.jpg",
+        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/3.PNG",
         fotoAlt1 : "Sombrero Iyarí",
         nombre: "Sombrero Iyarí",
         precio: "$579.00",
         detalle: "Siéntete en contacto con la naturaleza",
     },
     {
-        foto1:  "./src/img/Productos/Sombreros/sombrero_amarillo.jpg",
+        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/4.PNG",
         fotoAlt1 : "Sombrero Tau",
         nombre: "Sombrero Tau",
         precio: "$789.00",
         detalle: "Radiante y vibrante",
     },
     {
-        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/sombrero_azul.jpg",
+        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/5.PNG",
         fotoAlt1 : "Sombrero Yuavíme",
         nombre: "Sombrero Yuavíme",
         precio: "$799.00",
         detalle: "Se un espíritu libre",
     },
 {
-    foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/sombrero-verde-final.jpg",
+    foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/6.PNG",
     fotoAlt1 : "Sombrero Haaraweri",
     nombre: "Sombrero Haaraweri",
     precio: "$699.00",
     detalle: "Se un espíritu libre",
 }
 ];
+//Se setan los productos sombreros a localStorage
+let jsonSombreros = JSON.stringify(sombreros);
+localStorage.setItem("sombrerosStorage", jsonSombreros);
 
-  
+/*let productosTutuStorage = localStorage.getItem("sombrerosStorage");
+console.log(productosTutuStorage);
+let arrayProduc = JSON.parse(productosTutuStorage);
+console.log(arrayProduc);*/
 
 //se necesita funcion que crea los cards
 function crearCard(foto1,fotoAlt1,nombre,precio, detalle){
@@ -53,9 +59,7 @@ function crearCard(foto1,fotoAlt1,nombre,precio, detalle){
     const myCard = `
     <div class="col-lg-4 col-md-6 col-sm-12" >
                 <div class="list_card">
-                    <div>
-                        <h4>${nombre}</h4>
-                    </div>
+                    
                     <div>
                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
@@ -66,12 +70,16 @@ function crearCard(foto1,fotoAlt1,nombre,precio, detalle){
                         </div>
                     </div>
                     <div>
-                        <p>${detalle}</p>
-                        <p>${precio}</p>
+                        <h4 class="estilos_titulo">${nombre}</h4>
                     </div>
                     <div>
-                        <button type="button" class="btn btn-outline-success">Comprar</button>                       
+                        <p class="estilos_descripcion">${detalle}</p>
+                        <p class="estilos_precio"><b>${precio}</b></p>
                     </div>
+                    <div>
+                        <h5 class="estilo_botones">Añadir a tu outfit</h5>                     
+                    </div>
+                    
                 </div> 
             </div>
     `;
