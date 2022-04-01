@@ -1,42 +1,36 @@
 //se necesita el objeto miembros con los datos anidados
 let gorras =[
     {
-        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/Gorras/1.PNG",
+        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/Gorras/gorra negra.jpg",
         fotoAlt1 : "Gorra Yawi",
         nombre: "Gorra Yawi",
         precio: "$699.00",
         detalle: "Disfruta de esos conciertos con tu gorra bordada",
     },
     {
-        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/Gorras/2.PNG",
+        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/Gorras/gorra roja.jpg",
         fotoAlt1 : "Gorra Tatei",
         nombre: "Gorra Tatei",
         precio: "$499.00",
         detalle: "Combinación perfecta para cualquier ocasión",
     },
     {
-        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/Gorras/3.PNG",
+        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/Gorras/gorra-azul.jpg",
         fotoAlt1 : "Gorra Ojo de Dios",
         nombre: "Gorra Ojo de Dios",
         precio: "$579.00",
         detalle: "El poder de los dioses te acompañara en cualquier ocasión con esta gorra",
     },
     {
-        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/Gorras/4.PNG",
+        foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/Gorras/gorra.gris.jpg",
         fotoAlt1 : "Gorra Xéri",
         nombre: "Gorra Xéri",
         precio: "$659.00",
         detalle: "Contrastante con tu personalidad",
     }
 ];
-//Se setean los productos gorras a localStorage
-let jsonGorras = JSON.stringify(gorras);
-localStorage.setItem("gorrasStorage", jsonGorras);
+
   
-let productosTutuStorage = localStorage.getItem("gorrasStorage");
-console.log(productosTutuStorage);
-let arrayProduc = JSON.parse(productosTutuStorage);
-console.log(arrayProduc);  
 
 //se necerita funcion que crea los cards
 function crearCard(foto1,fotoAlt1,nombre,precio, detalle){
@@ -45,7 +39,9 @@ function crearCard(foto1,fotoAlt1,nombre,precio, detalle){
     const myCard = `
     <div class="col-lg-4 col-md-6 col-sm-12" >
                 <div class="list_card">
-                    
+                    <div>
+                        <h4>${nombre}</h4>
+                    </div>
                     <div>
                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
@@ -56,16 +52,12 @@ function crearCard(foto1,fotoAlt1,nombre,precio, detalle){
                         </div>
                     </div>
                     <div>
-                        <h4 class="estilos_titulo">${nombre}</h4>
+                        <p>${detalle}</p>
+                        <p>${precio}</p>
                     </div>
                     <div>
-                        <p class="estilos_descripcion">${detalle}</p>
-                        <p class="estilos_precio"><b>${precio}</b></p>
+                        <button type="button" class="btn btn-outline-success">Comprar</button>                        
                     </div>
-                    <div>
-                        <h5 class="estilo_botones">Añadir a tu outfit</h5>                     
-                    </div>
-                    
                 </div> 
             </div>
     `;
