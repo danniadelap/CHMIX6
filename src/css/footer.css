@@ -16,7 +16,8 @@ footer {
 }    
 /* aqui se definen los estilos de los heads */
 .footer-03 .footer-heading {
-    color: #fff; 
+    /*color: #fff; */
+    color: #0E8784;
     font-size: 22px;
     text-transform: uppercase;
     letter-spacing: 2px;

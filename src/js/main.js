@@ -97,8 +97,8 @@ const contenidoFooter =`
                 <div class="col-md-4 mb-md-0 mb-4">
                     <h2 class="footer-heading">Legales</h2>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="py-1 d-block subtitulo">Términos y Condiciones</a></li>
-                        <li><a href="#" class="py-1 d-block subtitulo">Aviso de privacidad</a></li>   
+                        <li><a href="Terminos.html" class="py-1 d-block subtitulo">Términos y Condiciones</a></li>
+                        <li><a href="./AvisoDePrivacidad.html" class="py-1 d-block subtitulo">Aviso de privacidad</a></li>   
                     </ul>
                 </div>
             </div>
