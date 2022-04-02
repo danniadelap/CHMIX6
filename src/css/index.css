@@ -51,7 +51,7 @@
 
 .fondo_gris{
     background-color: #FEFCF7;
-}/*fondo gris de cada secció este es necesario*/
+}/*fondo gris de cada sección este es necesario*/
 
 .centrado_texto{
     display: flex;
@@ -61,31 +61,41 @@
 }/*esta clase es para que el texto de los apartados seccion este centrado a la imagen*/
 
 .seccion_titulo{
+    
     text-align: center;
-    font-size: 40px;
+    font-size: 4rem;
     font-family: 'Fraunces';
     color: black;   
 }/*Tamaño de letra del titulo de las secciones ademas de el tamaño de letra de ver mas*/
 
+.sombrerosMargin{
+   margin-top: 40px; 
+}/*Tamaño de margen para que no quede tan pegado al limite
+*/
+.sombrerosMarginlink{
+    margin-bottom: 40px; 
+ }/*Tamaño de margen para que no quede tan pegado al limite
+
 /*estilos de los hipervinculos*/
 .hipervinculo{
     text-align: center;
-    font-size: 40px;
-    font-family: 'Fraunces';
-    color: black;  
+    text-decoration: underline;
+    font-size: 2.5rem;
+    font-family: 'Fraunces';  
+    color:  #0E8784;  
 }
 .hipervinculo:hover{
     text-align: center;
-    font-size: 45px;
+    font-size:  3rem;
     font-family: 'Fraunces';
-    color:#0E8784;  
+    color:black;  
 }
 
 /* seccion espacio*/
 .seccion_espacio{
     margin-top: 18%;
     margin-bottom: 18%;
-    font-size: 30px;
+    font-size: 1.9rem;
     text-align: center;
     font-family: 'Barlow';
     color: #333D4B;
@@ -109,13 +119,14 @@
 }/*separacion de los titulos ademas de centrar el texto*/ 
 
 .tamaño_titulo{
-    font-size: 70px;
+    
+    font-size:4.9rem;
     font-family: 'Fraunces';
     color: #0E8784;
 }/*tamaño de texto de los titulos de las secciones*/
 
 .tamaño_parrafo_seccion{
-    font-size: 30px;
+    font-size: 1.9rem;
     font-family: 'Barlow';
     color: #333D4B;
 
@@ -126,7 +137,9 @@
     margin-bottom: 10%;
 }/*separacion entre las secciones de gorras sombreros y nosotros*/
 
-
+.margen_carrusel{
+margin: 2rem 5rem 5rem 5rem;
+}/*margenes del carrusel
 
 
 
