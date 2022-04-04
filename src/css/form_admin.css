@@ -83,3 +83,14 @@ body{
 .mantenimiento{
     display: none;
 }
+
+.container{
+    display: flex;
+    flex-direction: row;
+
+}
+
+#imageFile{
+    border: solid;
+    border-radius: 20px;
+}

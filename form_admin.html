@@ -14,72 +14,100 @@
 </head>
 <body>
 
-    <!-- //se agrega la barra de navegacion  //class="was-validated" novalidate -->
+    <!-- se agrega la barra de navegacion  -->
   <header id="anclaBarra"> </header>
 
-<section class="container">
- 
-<form id="form" class="needs-validation" novalidate>     
+<!-- <section> -->
+<div class="container">
     
-    <div class="row fondo" >
-        <div class="titulo_producto">
-            <h4>Nuevo Producto</h4>
-        </div>
+    <form id="form" class="needs-validation col-md-5" novalidate>     
 
-        <div class="col-md-12">
-                                          
-                <div class=""  >
-                  <label id="divProduct">Nombre de producto</label>
-                  <input type="text"  id="product" name="product" class="form-control " required>
+        <div class="row fondo">
+       
+                <div class="titulo_producto">
+                <h4>Nuevo Producto</h4>
                 </div>
-                <div id="products"></div>
-                
-                <div >
-                <label id="divPrice">Precio</label>
-                    <input type="number" id="price" name="price" class="form-control" required minlength="3">
-                </div>    
-                <div id="prices"></div>
-                <div  >
+
+                <div class="col-md-12">
                     <div class=""  >
-                        <label>Categoria de producto</label>
-                        <select class="form-control">
-                            <option value="Gorra" selected>Gorra</option>
-                            <option value="Sombrero">Sombrero</option>
-                          </select>
+                        <label id="divProduct">Nombre de producto</label>
+                        <input type="text"  id="product" name="product" class="form-control " required>
                     </div>
 
-                    <label id="divDescription">Descripción</label>
-                    <input  type="text" id="description" class="form-control" name="description" required>
+                    <div id="products"></div>
+                        <div >
+                            <label id="divPrice">Precio</label>
+                            <input type="number" id="price" name="price" class="form-control" required              minlength="3">
+                        </div>     
+
+                        <div id="prices"></div>
+                            
+                        <div>
+                            <div class=""  >
+                                <label>Categoria de producto</label>
+                                <select id="category" class="form-control">
+                                    <option value="Gorra" selected>Gorra</option>
+                                    <option value="Sombrero">Sombrero</option>
+                                </select>
+                            </div>
+
+                            <div class=""  >
+                                <label>Talla de producto</label>
+                                <select id="sizeProduct" class="form-control">
+                                    <option value="S" selected>Chica</option>
+                                    <option value="M">Mediana</option>
+                                    <option value="L">Grande</option>
+                                    <option value="XL">Extra Grande</option>
+                                </select>
+                            </div>
+
+                            <div >
+                                <label id="divAmount">Cantidad</label>
+                                <input type="number" id="amount" name="amount" class="form-control" required minlength="1">
+                            </div>    
+
+                            <div id="amounts"></div>
+                            <div>
+                                <label id="divDescription">Descripción</label>
+                                <input  type="text" id="description" class="form-control" name="description" required>
                    
-                </div>
-                <div id="descriptions"></div>
+                            </div>
+
+                            <div id="descriptions"></div>
             
-                    <div>
-                        <label for="fileImage" >Selecciona una imagen:</label>
-                    </div>
-                    <div class="form-group container2">
+                            <div>
+                                <label for="fileImage" >Selecciona una imagen:</label>
+                            </div>
+                            <div class="form-group container2">
                         
-                        <input type="button" class="btn estilo_botones" value="Subir imagen" id="btnFake"> 
+                                <input type="button" class="btn estilo_botones" value="Subir imagen" id="btnFake"> 
                         
-                        <input type="file" class="form-control-file" id="fileImage" style="display:none">
-                    </div>                
+                                <input type="file" class="form-control-file" id="fileImage" style="display:none">
+                            </div>                
                 
-                <div class="container2">
-                        <button type="submit" class="btn estilo_botones">Crear Producto</button>
-                </div>                
-                 </div>
-        </div> 
-    </div>
-</form>
-<div class="col-2">
-    <img id="imageFile" name="imageFile" src="" alt="" title="Vista previa de la imagen" />
-</div><!--col-6-->
-<div class="row">
-    <div class="col-4">
-      <textarea rows="4" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="display:block"></textarea>
-    </div>
-</div> <!--row-->
-</div> <!--container-->
+                             <div class="container2">
+                                 <button type="submit" id="btnSaveProduct" class="btn estilo_botones">Crear Producto</button>
+                            </div>                
+                        </div>
+                </div> 
+        </div>
+    </form>
+    
+   
+    <div class="">
+        <div class="col-md-7">
+            <img id="imageFile"  name="imageFile" src="" alt="" title="Vista previa de la imagen" style="max-width: 350px; max-height: 450px; margin-top: 50px;" />
+        </div><!--col-6-->
+        
+        <div class="row">
+            <div class="col-10">
+                <textarea cols="90" rows="6" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="border:none;" ></textarea>
+            </div>
+        </div> <!--row-->
+    </div> 
+
+</div><!--container-->
+
 
 
 <!--AQUI EMPIEZA MODIFICAR PRODUCTO-->
@@ -138,7 +166,7 @@
        
     </div>
   
-</section>
+<!-- </section> -->
 
 <footer id="anclafooter"></footer>
 
@@ -161,7 +189,7 @@
         });
       }, false);
     })();
-    </script>
+</script>
 
      
 
