@@ -1,7 +1,7 @@
 
 .navbar{
 
-    background-color:#FEFCF7;;
+    background-color:#FEFCF7;
     font-family: 'Barlow', sans-serif;
 }
 
@@ -9,7 +9,7 @@
     position: relative;
     color:#83888F;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     transition: all 450ms ease;
     justify-content: space-around;
     letter-spacing: 0.5;
@@ -19,5 +19,5 @@
 
 .nav-link:hover{
     color: #0E8784;
-    ;
 }
+
