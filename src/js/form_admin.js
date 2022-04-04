@@ -1,10 +1,27 @@
 const form =document.getElementById('form');
 const inputs = document.querySelectorAll('#form input')
 
+const productList = [];
+
+function addProduct(pname,pprice,pdescription,pimage,psize,pamount){
+  let newProduct = {
+    name : pname,
+    price : pprice,
+    description : pdescription,
+    image : pimage,
+    talla : psize,
+    amount : pamount
+  };
+  console.log(newProduct);
+  productList.push(newProduct);
+
+}
+
 const expresiones = {
   name: /^\S[a-zA-Z0-9a-zA-Z0-9\s?]{4,30}$/,
   price: /^[0-9\.?0-9]{2,6}$/,
-  description:/^\S[a-zA-Z0-9\s?]{5,30}$/
+  description:/^\S[a-zA-Z0-9\s?]{5,30}$/,
+  
 }
 
 const productCorrect =`
@@ -135,7 +152,21 @@ let fileImage = document.getElementById('fileImage');
 		  	}// file
 		}// previewFile 
 
+    document.querySelector('#btnSaveProduct').addEventListener('click',saveProduct);
 
+    function saveProduct(){
+      let sname = document.querySelector('#product').value,
+      sprice = document.querySelector('#price').value,
+      scategory = document.querySelector('#category').value,
+      ssize = document.querySelector('#sizeProduct').value,
+      samount = document.querySelector('#amount').value,
+      sdescription = document.querySelector('#description').value,
+      simage = document.querySelector('#inputFile').value
+
+      addProduct(sname,sprice,scategory,ssize,samount,sdescription,simage);
+    }
+
+   
 
 
 
@@ -230,8 +261,8 @@ inputs2.forEach((input) => {
 	input.addEventListener('blur',validarFormulario2);
 });
 //PREVENT DEFAULT DE BUTTON
-formulario2.addEventListener('submit', (m) => {
+/* formulario2.addEventListener('submit', (m) => {
 	m.preventDefault();
 });
-
+ */
 
