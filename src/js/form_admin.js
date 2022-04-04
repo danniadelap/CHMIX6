@@ -166,29 +166,21 @@ let fileImage = document.getElementById('fileImage');
       addProduct(sname,sprice,scategory,ssize,samount,sdescription,simage);
     }
 
-   
+    function addP() {
+      document.getElementById("addProducts").style.display = "block";
+      document.getElementById("modifyProducts").style.display = "none";
+      document.getElementById("addP").classList.remove('active');
+      document.getElementById("modifyP").classList.add('active');
+  }
+  
+  function modifyP() {
+      document.getElementById("addProducts").style.display = "none";
+      document.getElementById("modifyProducts").style.display = "block";
+      document.getElementById("addP").classList.add('active');
+      document.getElementById("modifyP").classList.remove('active');
+  }
 
-
-
-
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-/* (function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})(); */
+ 
 
 
 /*let valiCorreo = validarCorreo(producto.value);*/
