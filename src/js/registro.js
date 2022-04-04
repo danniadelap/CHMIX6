@@ -23,7 +23,7 @@ let correo_alert = document.getElementById("correo_alert");
 let nombre = document.getElementById("nombre");
 let nombre_alert = document.getElementById("nombre_alert");
 let apellido = document.getElementById("apellido");
-let apellido_alert = document.getElementById("apellido");
+let apellido_alert = document.getElementById("apellido_alert");
 let contrasena = document.getElementById("contrasena");
 let contrasena_alert = document.getElementById("contrasena_alert");
 let validacion = document.getElementById("validacion");
@@ -102,7 +102,7 @@ add_usuario.addEventListener("submit", (e) => {
     }//validacion existencia correo
 
     if (apellido.value === "") {
-        apellido.innerHTML = "Favor de ingresar apellido.";
+        apellido_alert.innerHTML = "Favor de ingresar apellido.";
         apellido_alert.style.display = "block";
         apellido.classList.remove("is-valid");
         apellido.classList.add("is-invalid");
@@ -170,7 +170,7 @@ add_usuario.addEventListener("submit", (e) => {
             confirmButtonColor: '#595959',
             timer: 1800 
         })
-        window.open('./index.html');
+        window.open('./index.html', "_self");
     }
     iniciarContrase();
 });

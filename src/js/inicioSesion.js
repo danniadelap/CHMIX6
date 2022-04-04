@@ -1,5 +1,12 @@
-let array_usuario = [];
-let contrasCorrecta = "1";
+let array_usuario = [
+    {
+        "id_usuario": "1",
+        "correo": "correo@ejem.plo",
+        "nombre": "Correo Ejemplo",
+        "apellido": "3333333333",
+        "contrasena": "C0nt@5n@"
+    }
+];
 function validarCorreo(correo) {
     let expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
     let esValido = expReg.test(correo);
@@ -23,17 +30,28 @@ login_usuario.addEventListener("submit", (e) => {
     let valiCorreoL = validarCorreo(correoL.value);
     //mandamos a llamar la funcion de correo para validarlo y que nos de un resusltado y lo guardamos en valiCorreo
 
+    array_usuario.push(localStorage.getItem('rUsuario'))
+    const contrasCorrecta = array_usuarios.findIndex(elemento => {
+        if (elemento.correo == correoL.value){
+            return elemento.contrasena == contrasenaL.value;
+        }
+    });
+
     if (correoL.value === "") {
         correoAlert.innerHTML = `Favor de ingresar correo.`;
         correoAlert.style.display = "block";
         correoL.classList.remove("is-valid");
         correoL.classList.add("is-invalid");
-    } else {
-        console.log("el correo es correcto");
+    } else if (valiCorreoL == true) {
         correoAlert.style.display = "none";
         correoL.classList.remove("is-invalid");
         correoL.classList.add("is-valid");
-    }
+    } else {
+        correoAlert.innerText = "El correo no es válido, favor de verificarlo.";
+        correoAlert.style.display = "block";
+        correoL.classList.remove("is-valid");
+        correoL.classList.add("is-invalid");
+    }//validacion de correo
 
     if (contrasenaL.value === "") {
         contrasenaAlert.innerHTML = "Favor de introducir contraseña.";
@@ -41,21 +59,22 @@ login_usuario.addEventListener("submit", (e) => {
         contrasenaL.classList.remove("is-valid");
         contrasenaL.classList.add("is-invalid");
     } else {
-        contrasena_alert.style.display = "none";
-        contrasena.classList.remove("is-invalid");
-        contrasena.classList.add("is-valid");
+        contrasenaAlert.style.display = "none";
+        contrasenaL.classList.remove("is-invalid");
+        contrasenaL.classList.add("is-valid");
     }
 
-    if ((contrasCorrecta == "1") && (valiCorreoL == "1")){        
-        contrasena_alert.style.display = "none";
+    if ((contrasCorrecta != "-1") && (valiCorreoL == "1") || (contrasenaL.value === "" || correoL.value === "") || valiCorreoL != true) {        
+        ingresoAlert.style.display = "none";
     } else {        
-        contrasenaAlert.innerHTML = "Datos de ingreso incorrectos, valide su usuario y contraseña.";
-        contrasenaAlert.style.display = "block";
+        ingresoAlert.innerHTML = "Datos de ingreso incorrectos, valide su usuario y contraseña.";
+        ingresoAlert.style.display = "block";
     }
 
     console.log(valiCorreoL);
+    console.log(contrasCorrecta);
     //if (existe != "-1" && contrasCorrecta == "1" && valiCorreoL == "1") {
-    if (contrasCorrecta == "1" && valiCorreoL == "1") {
+    if (contrasCorrecta != "-1" && valiCorreoL == "1") {
             //si esta condicion se cumple entrara en el if y creara el Json 
         console.log("A");
         let usuario_logeado = {
@@ -70,17 +89,16 @@ login_usuario.addEventListener("submit", (e) => {
         console.log(json_user);
         Swal.fire({
             icon: 'success',
-            text: `${usuario_logeado.correoL}, bienvenido a Tutu!`,
+            text: `${usuario_logeado.correo}, bienvenido a Tutu!`,
             title: 'Bienvenido a Tutú',
             showConfirmButton: true,
             confirmButtonText: 'Volver',
             confirmButtonColor: '#595959',
             timer: 1800
         })
-        window.open('./index.html');
+        window.open('./index.html', "_self");
     }
 });
-correoL.addEventListener('onfocus', focusCorreoL);
 function blurCorreoL() {
     correoL.value = correoL.value.toLowerCase().replace(/ /g, "");
 }
