@@ -17,65 +17,58 @@ let barra =
         carrito: "#"
     };
 
-
-
-    const contenidoBarra =`
-    <div>
+    const contenidoBarra = `
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-link">
+        <a class="navbar-brand" href="${barra.logo}">
+            <img src="./src/img/tutu_logo_sin_fondo.png" width="60" height="40" alt="">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class ="navbar-toggler-icon"></span>
+        </button>        
       
-<nav class="navbar navbar-expand-lg <nav class="navbar navbar-light">
-    <!--<a class="navbar-brand" href="./index.html">Navbar</a>-->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto">
-        <li class="nav-item">
-                <a class="nav-link" href="${barra.logo}">INICIO <span class="sr-only">(current)</span></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href=""${barra.logo}">INICIO <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="${barra.products}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                    PRODUCTOS
-                </a>                    
+                  PRODUCTOS
+                </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="${barra.products}">Todo</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="${barra.sombreros}">Sombreros</a>
-                    <a class="dropdown-item" href="${barra.gorras}">Gorras</a>
+                  <a class="dropdown-item" href="${barra.products}">TODO</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="${barra.sombreros}">SOMBREROS</a>               
+                  <a class="dropdown-item" href="${barra.gorras}">GORRAS</a>
                 </div>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="${barra.us}">NOSOTROS</a>
             </li>
             
-            <li class="nav-item">                    
-                <a class="navbar-brand" href="${barra.logo}">
-                    <img src="./src/img/tutuLogo.png" width="50" height="30" class="d-inline-block align-top" alt="Logo tutu_wix">
-                </a>
-            </li>        
             <li class="nav-item">
-                <a class="nav-link" href="${barra.us}">NOSOTROS</a>
-            </li>            
-            <li class="nav-item">
-                <a class="nav-link" href="${barra.contact}">CONTÁCTANOS</a>
-            </li>                      
-        </ul>
-    <!--<form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>-->
-    </div>
-    <div class="d-flex">
-      <a href="${barra.sesion}">
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0E8784" class="bi bi-person-fill sizeIcono " viewBox="0 0 16 16">
-         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-      </svg>
-      </a>   
-      <a href="#">
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0E8784" class="bi bi-cart-fill sizeIcono" viewBox="0 0 16 16">
-        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-      </svg>
-    </a>              
-    </div>
-</nav>
-</div>
+              <a class="nav-link" href=""${barra.contact}">CONTÁCTANOS</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+          <div class="d-flex">
+          <a href="${barra.sesion}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0E8784" class="bi bi-person-fill sizeIcono " viewBox="0 0 16 16">
+             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+          </svg>
+          </a>   
+          <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0E8784" class="bi bi-cart-fill sizeIcono" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </svg>
+        </a>              
+        </div>
+          </form>
+        </div>
+      </nav>
     `;
+
+  
      
 
 
