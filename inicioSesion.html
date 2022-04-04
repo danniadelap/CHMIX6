@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./src/img/logo_pestaña.png">
-    <title>Tutu-Wix Inicio Sesión</title>
+    <title>Tutu-Wix Ingreso</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="./src/css/login.css">
     <link rel="stylesheet" href="./src/css/login2.css">
@@ -21,40 +21,44 @@
     <header id="anclaBarra"> </header>
 
     <section class="container">
-
-        <div id="ingreso" class="btn-group btn-group-toggle centrar" data-toggle="buttons">
-            <label class="btn btn-secondary estilo_boton active">
-                <input type="radio" onclick="cambiar1();" name="options" id="option1" checked> Iniciar sesión
-            </label>
-            <label class="btn btn-secondary estilo_boton">
-                <input type="radio" onclick="cambiar();" name="options" id="option2"> Crear cuenta
-            </label>
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+                <div id="ingreso" class="btn-group btn-group-toggle centrar" data-toggle="buttons">
+                    <label class="btn btn-secondary estilo_boton active">
+                        <input type="radio" onclick="cambiar1();" name="options" id="option1" checked> Iniciar sesión
+                    </label>
+                    <label class="btn btn-secondary estilo_boton">
+                        <input type="radio" onclick="cambiar();" name="options" id="option2"> Crear cuenta
+                    </label>
+                </div>
+            </div>
         </div>
-
-        <div class="row" id="registro_pre">
-            <div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-8 col-lg-6" id="registro_pre">
+                <div class="titulo_producto">
+                    <hr class="linea_separadora">
+                    <h4>Crear cuenta</h4>
+                    <hr class="linea_separadora">
+                </div>
                 <div class="fondo">
-                    <div class="titulo_producto">
-                        <h4>Crear cuenta</h4>
-                    </div>
 
                     <div class="formulario">
                         <div id="existe_alert" class="alerta centrar">Correo ya existente.</div>
                         <form class="needs-validation" id="agregar_usuario">
 
                             <div class="form-group">
-                                <input type="text" name="correo" class="form-control sinEspacios" placeholder="Correo" id="correo">
+                                <input type="text" name="correo" class="form-control sinEspacios" placeholder="Correo" onblur="blurCorreo()" id="correo">
                                 <div id="correo_alert" class="alerta centrar centrar"></div>
                             </div>
 
                             <div class="form-group">
-                                <input type="text" name="nombre" class="form-control" placeholder="Nombre" id="nombre">
+                                <input type="text" name="nombre" class="form-control" placeholder="Nombre" onblur="blurNombre()" id="nombre">
                                 <div id="nombre_alert" class="alerta centrar"></div>
                             </div>
 
                             <div class="form-group">
-                                <input type="text" name="telefono" class="form-control" placeholder="Teléfono" id="telefono">
-                                <div id="telefono_alert" class="alerta centrar"></div>
+                                <input type="text" name="apellido" class="form-control" placeholder="Apellido" onblur="blurApellido()" id="apellido">
+                                <div id="apellido_alert" class="alerta centrar"></div>
                             </div>
 
                             <div class="form-group">
@@ -73,39 +77,39 @@
                                 <button class="estilo_boton" type="submit">Crear cuenta</button>
                                 <div id="exito_alert" class="alerta centrar">Usuario creado con éxito.</div>
                             </div>
-
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="row" id="inicio_pre">
-            <div class="fondo">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-8 col-lg-6" id="inicio_pre">
                 <div class="titulo_producto">
+                    <hr class="linea_separadora">
                     <h4>Iniciar sesión</h4>
+                    <hr class="linea_separadora">
                 </div>
+                <div class="fondo">
 
-                <div class="formulario">
-                    <div id="exito_alert" class="alerta centrar">Bienvenido.</div>
-                    <form class="needs-validation" id="login_usuario">
+                    <div class="formulario">
+                        <div id="ingresoAlert" class="alerta centrar"></div>
+                        <form class="needs-validation" id="login_usuario">
 
-                        <div class="form-group">
-                            <input type="text" name="correo" class="form-control sinEspacios" placeholder="Correo" id="correoLogin">
-                            <div id="correoAlert" class="alerta centrar">
+                            <div class="form-group">
+                                <input type="text" name="correo" class="form-control sinEspacios" placeholder="Correo" onblur="blurCorreoL()" id="correoLogin">
+                                <div id="correoAlert" class="alerta centrar"></div>
                             </div>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="password" name="contrasena" class="form-control" placeholder="Contraseña" id="contrasenaLogin">
-                            <div id="contrasenaAlert" class="alerta centrar">
+                             
+                            <div class="form-group">    
+                                <input type="password" name="contrasena" class="form-control" placeholder="Contraseña" id="contrasenaLogin">
+                                <div id="contrasenaAlert" class="alerta centrar"></div>
                             </div>
-                        </div>
 
-                        <div class="centrar_boton">
-                            <button class="estilo_boton" type="submit">Iniciar sesión</button>
-                        </div>
-                    </form>
+                            <div class="centrar_boton">
+                                <button class="estilo_boton" type="submit">Iniciar sesión</button>
+                            </div>                            
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -119,7 +123,6 @@
     <script src="./src/js/registro.js"></script>
     <script src="./src/js/inicioSesion.js"></script>
     <script type="text/javascript" src="./src/js/jquery.js"></script>
-    <script type="text/javascript" src="./src/js/spsc.js"></script>
 </body>
 
 </html>
