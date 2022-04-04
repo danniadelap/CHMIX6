@@ -180,7 +180,6 @@
 
 .margen_carrusel{
 margin: 2em 5em 5em 5em;
-
 }
 @media only screen and (max-width:600px) {
     .margen_carrusel{
@@ -189,12 +188,19 @@ margin: 2em 5em 5em 5em;
 }
 
 /*margenes del carrusel*/
-
 .imgRadius{
     border-radius: 3rem ;
     /*border-top-right-radius:3rem 3rem;*/
 }
 
+/*FLEX DE LA GORRA*/
+
+@media only screen and (max-width:600px) {
+    .flexGorras{
+       /*text-align: left;*/
+       flex-direction:column-reverse;
+    }
+}
 
 
 
