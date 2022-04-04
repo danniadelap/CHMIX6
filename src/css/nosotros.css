@@ -23,12 +23,7 @@
         overflow:hidden;
         filter:brightness(200%);
 
-.aligncontenedor{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-}
 
 .caja2{
     background-color: #333D4B;
