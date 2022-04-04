@@ -94,3 +94,24 @@ body{
     border: solid;
     border-radius: 20px;
 }
+.estilo_boton{
+    background-color: #0E8784;
+    border-radius: 10px;
+    color: #FEFCF7;
+    font-family: 'Fraunces';
+    padding: 10px;
+    text-transform: uppercase;
+}
+.estilo_boton:hover{
+    background-color: #66D2CF;
+}/*cambio de color del boton cuando pasa el cursor*/
+.estilo_boton:checked{
+    background-color: #003333;
+    color: #FEFCF7;
+}
+
+.btn_container{
+    display: flex;
+    justify-content: center;
+    
+}
