@@ -7,16 +7,38 @@
     padding-bottom: 15px;
 }
 
-.titulo_producto{
+
+body{
+    /*background-image: url(../img/Fondo_productos_form.png);*/
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+section{    
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    max-width: 300px;
+}
+
+.fondo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+    background-color: #EAEAEA;
+    border-radius: 20px;
+    padding: 1px 0px;
+}
+
+.titulo{
     border-radius: 20px 20px 0px 0px ;
-    background-color: #003333;
     width: 100%;
-    padding: 25px;
+    padding: 0px 12px;
     text-align: center;
     text-transform: uppercase;
     font-family: 'Fraunces';
 }
-
 
 .centrar_boton{
     text-align: center;
@@ -38,25 +60,24 @@
     color: #FEFCF7;
 }
 
+
 .centrar{
     display: flex;
     justify-content: center;
     text-align: center;
 }
-
+div{    
+    font-family: 'Barlow';
+}
 input{
-    margin-top: 30px;
-    font-family: 'Fraunces';
+    margin-top: 15px;
+    font-family: 'Barlow';
 }
 
 h4{
-    color: #FFFFFF;
+    color: #0E8784;
 }
-#ingreso{
-    padding-top: 40px;
-    text-transform: uppercase;
-    font-family: 'Fraunces';
-}
+
 .alerta{
     align-items: flex-start;
     color: #d93025;
@@ -64,6 +85,9 @@ h4{
     font-size: 12px;
     line-height: normal;
     margin-top: 2px;
+}
+.formulario{
+    margin: 20px;
 }
 
 
