@@ -1,8 +1,10 @@
-/*const form  = document.getElementsByTagName('form')[0];
 
-const phoneNumber = document.getElementById('nunber');
-const email = document.getElementById('email');
-const emailError = document.querySelector('#email + span.error');
+
+const form  = document.getElementsByTagName('form');
+
+const phoneNumber = document.getElementById('telefono');
+const email = document.getElementById('correo');
+const emailError = document.querySelector('#correo + co');
 
 email.addEventListener('submit', function (event) {
 
@@ -18,38 +20,30 @@ email.addEventListener('submit', function (event) {
 });
 
 form.addEventListener('submit', function (event) {
-  // si el campo de correo electrónico es válido, dejamos que el formulario se envíe
 
   if(!email.validity.valid) {
-    // Si no es así, mostramos un mensaje de error apropiado
     showError();
-    // Luego evitamos que se envíe el formulario cancelando el evento
     event.preventDefault();
   }
 });
 
 function showError() {
   if(email.validity.valueMissing) {
-    // Si el campo está vacío
-    // muestra el mensaje de error siguiente.
+    
     emailError.textContent = 'Debe introducir una dirección de correo electrónico.';
   } else if(email.validity.typeMismatch) {
-    // Si el campo no contiene una dirección de correo electrónico
-    // muestra el mensaje de error siguiente.
     emailError.textContent = 'El valor introducido debe ser una dirección de correo electrónico.';
   } else if(email.validity.tooShort) {
-    // Si los datos son demasiado cortos
-    // muestra el mensaje de error siguiente.
     emailError.textContent = 'El correo electrónico debe tener al menos ${ email.minLength } caracteres; ha introducido ${ email.value.length }.';
   }
 
-  // Establece el estilo apropiado
+  
   emailError.className = 'error activo';
-}*/
+}
 
 // deshabilita envios de formularios si hay campos no validos
 
-/*(function() {
+(function() {
     'use strict';
     window.addEventListener('load', function() {
       // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -65,10 +59,9 @@ function showError() {
         }, false);
       });
     }, false);
-  })();*/
-
+  })()
   
-  /*let celular = document.getElementById("telefono");
+  let celular = document.getElementById("telefono");
 celular.addEventListener("keypress" , (event)=>{
     event.preventDefault();
         
@@ -86,27 +79,4 @@ celular.addEventListener("keypress" , (event)=>{
         }
     }
 });
-*/
-
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-
-/*(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
-*/
-
 
