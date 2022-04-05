@@ -1,8 +1,6 @@
 // Repositorio:  https://github.com/danniadelap/CHMIX6
 
 
-const PI = 3.14159265;
-
 let barra = 
     {
         products: "./list_of_products.html",
@@ -16,20 +14,21 @@ let barra =
         sesion: "./inicioSesion.html",
         carrito: "#"
     };
-
+   
     const contenidoBarra = `
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-link">
+    <div>
+    <nav class=" navbar-expand-lg navbar-light bg-light navbar-link navbar">
         <a class="navbar-brand" href="${barra.logo}">
-            <img src="./src/img/tutu_logo_sin_fondo.png" width="60" height="40" alt="">
+            <img src="./src/img/tutu_logo_sin_fondo.png" width="80" height="40" alt="">
           </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class ="navbar-toggler-icon"></span>
         </button>        
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href=""${barra.logo}">INICIO <span class="sr-only">(current)</span></a>
+            <li class="nav-item ">
+              <a class="nav-link" href="${barra.logo}">INICIO <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="${barra.products}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -43,11 +42,10 @@ let barra =
                 </div>
               </li>
             <li class="nav-item">
-              <a class="nav-link" href="${barra.us}">NOSOTROS</a>
+              <a class="nav-link" href="${barra.nosotros}">NOSOTROS</a>
             </li>
-            
             <li class="nav-item">
-              <a class="nav-link" href=""${barra.contact}">CONTÁCTANOS</a>
+              <a class="nav-link" href="${barra.contact}">CONTÁCTANOS</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
