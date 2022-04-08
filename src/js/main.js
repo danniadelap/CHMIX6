@@ -43,7 +43,7 @@ let barra =
                 </div>
               </li>
             <li class="nav-item">
-              <a class="nav-link" href="${barra.us}">NOSOTROS</a>
+              <a class="nav-link" href="${barra.us}">SOMOS TUTU</a>
             </li>
             
             <li class="nav-item">
