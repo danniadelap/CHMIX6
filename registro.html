@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniscio de Sesión</title>
     <link rel="shortcut icon" href="./src/img/logo_pestaña.png">
-    <title>Tutu-Wix Ingreso</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="./src/css/login.css">
     <link rel="stylesheet" href="./src/css/login2.css">
     <link rel="stylesheet" href="src/css/nav_bar.css">
-    <link rel="stylesheet" href="./src/css/footer.css">
+    <link rel="stylesheet" href="src/css/footer.css">
     <link type="text/css" href="./src/css/spsc.css" rel="stylesheet" />
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&amp;family=Fraunces:wght@900&amp;display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -35,29 +38,34 @@
                         <form class="needs-validation" id="agregar_usuario">
 
                             <div class="form-group">
-                                <input type="text" name="correo" class="form-control sinEspacios" placeholder="Correo" onblur="blurCorreo()" id="correo">
+                                <input type="text" name="correo" class="form-control sinEspacios" placeholder="Correo"
+                                    onblur="blurCorreo()" id="correo">
                                 <div id="correo_alert" class="alerta centrar centrar"></div>
                             </div>
 
                             <div class="form-group">
-                                <input type="text" name="nombre" class="form-control" placeholder="Nombre" onblur="blurNombre()" id="nombre">
+                                <input type="text" name="nombre" class="form-control" placeholder="Nombre"
+                                    onblur="blurNombre()" id="nombre">
                                 <div id="nombre_alert" class="alerta centrar"></div>
                             </div>
 
                             <div class="form-group">
-                                <input type="text" name="apellido" class="form-control" placeholder="Apellido" onblur="blurApellido()" id="apellido">
+                                <input type="text" name="apellido" class="form-control" placeholder="Apellido"
+                                    onblur="blurApellido()" id="apellido">
                                 <div id="apellido_alert" class="alerta centrar"></div>
                             </div>
 
                             <div class="form-group">
-                                <input type="password" name="contrasena" class="form-control inputContra" placeholder="Contraseña" id="contrasena">
+                                <input type="password" name="contrasena" class="form-control inputContra"
+                                    placeholder="Contraseña" id="contrasena">
                                 <div id="complejidad" class="default">Usa al menos una Mayúscula, Número y Símbolo.
                                 </div>
                                 <div id="contrasena_alert" class="alerta centrar"></div>
                             </div>
 
                             <div class="form-group">
-                                <input type="password" name="confirmación" class="form-control sinEspacios" placeholder="Confirmación" onblur="blurValidacion()" id="validacion">
+                                <input type="password" name="confirmación" class="form-control sinEspacios"
+                                    placeholder="Confirmación" onblur="blurValidacion()" id="validacion">
                                 <div id="validacion_alert" class="alerta centrar"></div>
                             </div>
 
@@ -67,7 +75,8 @@
                             </div>
                         </form>
                     </div>
-                    <p class="centrar">¿Ya tienes cuanta? <span>_</span> <a href="./inicioSesion.html">iniciar sesión</a></p>
+                    <p class="centrar">¿Ya tienes cuanta? <span>_</span> <a href="./inicioSesion.html">iniciar
+                            sesión</a></p>
                 </div>
             </div>
         </div>
@@ -75,8 +84,12 @@
 
     <footer id="anclafooter"></footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
     <script src="./src/js/main.js"></script>
     <script src="./src/js/registro.js"></script>
     <script type="text/javascript" src="./src/js/jquery.js"></script>

@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="./src/img/logo_pestaña.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="./src/css/contact_us.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&amp;family=Fraunces:wght@900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/nav_bar.css">
     <link rel="stylesheet" href="src/css/footer.css">
     
@@ -24,55 +25,48 @@
 
     
     <section class="container">
-  
-      <div class="needs-validation" id="contactanos" novalidate>
+        <div class=" row titulo text-center mt-5">
+            <div class="col-md-12 titulo">
+                
+                <h4>Contáctanos</h4>
+                
+            </div>
+            
+        </div>
+      <div class="needs-validation" id="contactanos" >
           <div class="row fondo" >
-              <div class="titulo_producto">
-                  <h4>Contáctanos</h4>
-              </div>
+              
   
               <div class="col-md-12">
-                  <form class="needs-validation" id="contactanos">
+                  <form class="formulario" id="contactanos" onsubmit="return validacion()">
   
                       
                       <div class="form-group">
-                          <input type="text" name="nombre" class="form-control" placeholder="Nombre" id="nombre">
-                          
-                          <div id="nombre_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
-                              <strong>Por favor ingrese su nombre.
-                          </div>
-  
+                          <input type="text" name="nombre" class="form-control" placeholder="Nombre" onblur="blurNombre()" id="nombre">
+                          <div id="correoAlert" class="alerta centrar"></div>
                       </div>
   
                       <div class="form-group">
-                        <input type="text" name="correo" class="form-control" placeholder="Correo" id="correo">
-  
-                        <div id="correo_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
-                            <strong>Por favor introduzca un correo valido.
-                        </div>
+                        <input type="text" name="correo" class="form-control sinEspacios" placeholder="Correo" onblur="blurCorreo()" id="correo">
+                        <div id="correoAlert" class="alerta centrar"></div>
+                    </div>
   
 
-                    </div>
+                   
                       <div class="form-group">
-                          <input type="number" name="telefono" class="form-control" placeholder="Teléfono" id="telefono">
-  
-                          <div id="telefono_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
-                              <strong>Por favor introduzca un numero de teléfono valido.
-                          </div>
-  
+                          <input type="number" name="telefono" class="form-control" placeholder="Teléfono" onblur="blurTelefono()" id="telefono">
+                          <div id="telefonoAlert" class="alerta centrar"></div>
                       </div>
   
                       <div class="form-group">
-                        <label for="message"></label><!--mensaje-->
-                          <textarea  class="form-control" id="mensaje" name="mensaje" placeholder="Mensaje" rows="3" required></textarea>  
-                          <div id="mensaje_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
-                            <strong>Por favor introduzca su mensaje.
-                        </div>
+                        <label for="message"></label>
+                          <textarea  type text class="form-control" id="mensaje" name="mensaje" placeholder="Mensaje" rows="3" onblur="blurMesaje()"></textarea>  
+                          <div id="mensajeAlert" class="alerta centrar"></div>
                         </div>
                       
                       <div class="centrar_boton">
-                          <button class="btn btn-primary estilo_boton" type="submit">Enviar</button>
-                          <a href="" id="sendEmail"></a>
+                          <button class="btn btn-primary estilo_boton" type="submit" value="enviar">Enviar</button>
+                          <!--<a href="" id="sendEmail"></a>-->
                           
                           
                       </form>   

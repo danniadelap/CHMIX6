@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="src/css/nav_bar.css">
     <link rel="stylesheet" href="src/css/footer.css">
     <link rel="stylesheet" href="./src/css/form_admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&amp;family=Fraunces:wght@900&amp;display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -17,188 +18,213 @@
     <!-- se agrega la barra de navegacion  -->
   <header id="anclaBarra"> </header>
 
-<!-- <section> -->
-<div class="container">
-    
-    <form id="form" class="needs-validation col-md-5" novalidate>     
-
-        <div class="row fondo">
-       
-                <div class="titulo_producto">
-                <h4>Nuevo Producto</h4>
-                </div>
-
-                <div class="col-md-12">
-                    <div class=""  >
-                        <label id="divProduct">Nombre de producto</label>
-                        <input type="text"  id="product" name="product" class="form-control " required>
-                    </div>
-
-                    <div id="products"></div>
-                        <div >
-                            <label id="divPrice">Precio</label>
-                            <input type="number" id="price" name="price" class="form-control" required              minlength="3">
-                        </div>     
-
-                        <div id="prices"></div>
-                            
-                        <div>
-                            <div class=""  >
-                                <label>Categoria de producto</label>
-                                <select id="category" class="form-control">
-                                    <option value="Gorra" selected>Gorra</option>
-                                    <option value="Sombrero">Sombrero</option>
-                                </select>
-                            </div>
-
-                            <div class=""  >
-                                <label>Talla de producto</label>
-                                <select id="sizeProduct" class="form-control">
-                                    <option value="S" selected>Chica</option>
-                                    <option value="M">Mediana</option>
-                                    <option value="L">Grande</option>
-                                    <option value="XL">Extra Grande</option>
-                                </select>
-                            </div>
-
-                            <div >
-                                <label id="divAmount">Cantidad</label>
-                                <input type="number" id="amount" name="amount" class="form-control" required minlength="1">
-                            </div>    
-
-                            <div id="amounts"></div>
-                            <div>
-                                <label id="divDescription">Descripción</label>
-                                <input  type="text" id="description" class="form-control" name="description" required>
-                   
-                            </div>
-
-                            <div id="descriptions"></div>
-            
-                            <div>
-                                <label for="fileImage" >Selecciona una imagen:</label>
-                            </div>
-                            <div class="form-group container2">
-                        
-                                <input type="button" class="btn estilo_botones" value="Subir imagen" id="btnFake"> 
-                        
-                                <input type="file" class="form-control-file" id="fileImage" style="display:none">
-                            </div>                
-                
-                             <div class="container2">
-                                 <button type="submit" id="btnSaveProduct" class="btn estilo_botones">Crear Producto</button>
-                            </div>                
-                        </div>
-                </div> 
-        </div>
-    </form>
-    
-   
-    <div class="">
-        <div class="col-md-7">
-            <img id="imageFile"  name="imageFile" src="" alt="" title="Vista previa de la imagen" style="max-width: 350px; max-height: 450px; margin-top: 50px;" />
-        </div><!--col-6-->
-        
-        <div class="row">
-            <div class="col-10">
-                <textarea cols="90" rows="6" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="border:none;" ></textarea>
-            </div>
-        </div> <!--row-->
-    </div> 
-
-</div><!--container-->
-
-
-
-<!--AQUI EMPIEZA MODIFICAR PRODUCTO-->
-<form class="" novalidate>
-
-
-<form action="" class="needs-validation" id="Modificarformulario" novalidate>
-
-    <div class="row fondo mantenimiento" >
-        <div class="titulo_producto">
-            <h4>Modificar producto</h4>
-        </div>
-    
-        <div class="col-md-12">
-           
-            <!-- Grupo: Modificar nombre -->
-                <div class="form-group">
-                  <label for="validationCustom01NombreProducto"  class="form-label">Nombre de producto</label>
-                  <input type="text" id="validationCustom01NombreProducto" name="ModificarNombre" minlength="3" maxlength="25" class="form-control"  required>
-                  <div class="invalid-feedback ">Ingresa un nombre de producto válido</div>                  
-				  <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>              
-                </div>
-            <!-- Grupo: Modificar precio -->
-                <div class="form-group">
-                    <label for="validationCustom02Precio">Precio</label>
-                    <input type="number" id="validationCustom02Precio" name="ModificarPrecio"  class="form-control" value="0.0" step="any"  minlength="1"  required>
-                    <div class="invalid-feedback">Ingresa un precio válido</div>
-                </div>
-            <!-- Grupo: Modificar descripcion -->
-                <div class="form-group">
-                    <label for="validationCustom03Descripcion">Descripcion</label>
-                    <form class="textarea">
-                    <div class="invalid-feedback">
-                     Please enter a message in the textarea.
-                    </div>                                                                               
-                    <textarea class="form-control " name="ModificarDescripcion"  id="validationCustom03Descripcion" rows="3" required
-                    minlength="3" maxlength="60" ></textarea>
-                    <div class="invalid-feedback">Ingresa un texto válido</div>
-                    </div>
-            <!-- Grupo: Modificar Imagen -->
-                </div>
-                <div class="form-group col-md-12">
-                    <label for="validationTextarea">Imagen</label>
-                    <input type="file" class="form-control-file"   id="validatedCustomFile" required>
-                    <div class="invalid-feedback">Ingresa un archivo válido</div>
-                </div>
-
-             <!-- BUTTON -->
-                <div class="centrar_boton col-md-12" rows="3 ">
-                    <button type="submit" class="btn btn-primary estilo_boton ">Modificar Producto</button>
-                </div>
-                                              
-            </form>   
-                            
-        </div>         
-       
-    </div>
   
-<!-- </section> -->
+<section class="">  
+    
+    <div class="btn_container">
+        <div id="ingreso" class=" btn-group-toggle">
+        <label class="btn btn-secondary estilo_boton " id="addP">
+            <input type="radio" onclick="addP();" name="options"  checked> Agregar Producto
+        </label>
+        <label class="btn btn-secondary estilo_boton active" id="modifyP">
+            <input type="radio" onclick="modifyP();" name="options"  checked>Modificar Producto    </label>
+        </div>
+    </div>
 
-<footer id="anclafooter"></footer>
+    <div class="container" id="addProducts">
+        
+        <form id="form" class="needs-validation col-md-5" novalidate>     
 
-<script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function() {
-      'use strict';
-      window.addEventListener('load', function() {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function(form) {
-          form.addEventListener('submit', function(event) {
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-          }, false);
-        });
-      }, false);
-    })();
-</script>
+            <div class="row fondo">
+        
+                    <div class="titulo_producto">
+                    <h4>Agregar Producto</h4>
+                    </div>
 
-     
+                    <div class="col-md-12">
+                        <div class=""  >
+                            <label id="divProduct">Nombre de producto</label>
+                            <input type="text"  id="product" name="product" class="form-control " required>
+                        </div>
+
+                        <div id="products"></div>
+                            <div >
+                                <label id="divPrice">Precio</label>
+                                <input type="number" id="price" name="price" class="form-control" required              minlength="3">
+                            </div>     
+
+                            <div id="prices"></div>
+                                
+                            <div>
+                                <div class=""  >
+                                    <label>Categoria de producto</label>
+                                    <select id="category" class="form-control">
+                                        <option value="Gorra" selected>Gorra</option>
+                                        <option value="Sombrero">Sombrero</option>
+                                    </select>
+                                </div>
+
+                                <div class=""  >
+                                    <label>Talla de producto</label>
+                                    <select id="sizeProduct" class="form-control">
+                                        <option value="S" selected>Chica</option>
+                                        <option value="M">Mediana</option>
+                                        <option value="L">Grande</option>
+                                        <option value="XL">Extra Grande</option>
+                                    </select>
+                                </div>
+
+                                <div >
+                                    <label id="divAmount">Cantidad</label>
+                                    <input type="number" id="amount" name="amount" class="form-control" required minlength="1">
+                                </div>    
+
+                                <div id="amounts"></div>
+                                <div>
+                                    <label id="divDescription">Descripción</label>
+                                    <input  type="text" id="description" class="form-control" name="description" required>
+                    
+                                </div>
+
+                                <div id="descriptions"></div>
+                
+                                <div>
+                                    <label for="fileImage" >Selecciona una imagen:</label>
+                                </div>
+                                <div class="form-group container2">
+                            
+                                    <input type="button" class="btn estilo_botones" value="Subir imagen" id="btnFake"> 
+                            
+                                    <input type="file" class="form-control-file" id="fileImage" style="display:none">
+                                </div>                
+                    
+                                <div class="container2">
+                                    <button type="submit" id="btnSaveProduct" class="btn estilo_botones">Crear Producto</button>
+                                </div>                
+                            </div>
+                    </div> 
+            </div>
+        </form>
+        
+    
+        <div class="">
+            <div class="col-md-7">
+                <img id="imageFile"  name="imageFile" src="" alt="" title="Vista previa de la imagen" style="max-width: 350px; max-height: 450px; margin-top: 50px;" />
+            </div><!--col-6-->
+            
+            <div class="row">
+                <div class="col-10">
+                    <textarea cols="90" rows="6" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="border:none;" ></textarea>
+                </div>
+            </div> <!--row-->
+        </div> 
+
+    </div><!--container-->
 
 
 
+    <!--AQUI EMPIEZA MODIFICAR PRODUCTO-->
+
+    <div class="container" id="modifyProducts" style="display: none;">
+        
+        <form id="form" class="needs-validation col-md-5" novalidate>     
+
+            <div class="row fondo">
+        
+                    <div class="titulo_producto">
+                    <h4>Modificar Producto</h4>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class=""  >
+                            <label id="divProductM">Nombre de producto</label>
+                            <input type="text"  id="productM" name="productM" class="form-control " required>
+                        </div>
+
+                        <div id="productsM"></div>
+                            <div >
+                                <label id="divPriceM">Precio</label>
+                                <input type="number" id="priceM" name="priceM" class="form-control" required        minlength="3">
+                            </div>     
+
+                            <div id="pricesM"></div>
+                                
+                            <div>
+                                <div class=""  >
+                                    <label>Categoria de producto</label>
+                                    <select id="categoryM" class="form-control">
+                                        <option value="Gorra" selected>Gorra</option>
+                                        <option value="Sombrero">Sombrero</option>
+                                    </select>
+                                </div>
+
+                                <div class=""  >
+                                    <label>Talla de producto</label>
+                                    <select id="sizeProductM" class="form-control">
+                                        <option value="S" selected>Chica</option>
+                                        <option value="M">Mediana</option>
+                                        <option value="L">Grande</option>
+                                        <option value="XL">Extra Grande</option>
+                                    </select>
+                                </div>
+
+                                <div >
+                                    <label id="divAmountM">Cantidad</label>
+                                    <input type="number" id="amountM" name="amountM" class="form-control" required minlength="1">
+                                </div>    
+
+                                <div id="amountsM"></div>
+                                <div>
+                                    <label id="divDescriptionM">Descripción</label>
+                                    <input  type="text" id="descriptionM" class="form-control" name="descriptionM" required>
+                    
+                                </div>
+
+                                <div id="descriptionsM"></div>
+                
+                                <div>
+                                    <label for="fileImage" >selecciona una imagen:</label>
+                                </div>
+                                <div class="form-group container2">
+                            
+                                    <input type="button" class="btn estilo_botones" value="Subir imagen" id="btnFake"> 
+                            
+                                    <input type="file" class="form-control-file" id="fileImage" style="display:none">
+                                </div>                
+                    
+                                <div class="container2">
+                                    <button type="submit" id="btnSaveProductM" class="btn estilo_botones">Crear Producto</button>
+                                </div>                
+                            </div>
+                    </div> 
+            </div>
+        </form>
+        
+    
+        <div class="">
+            <div class="col-md-7">
+                <img id="imageFile"  name="imageFile" src="" alt="" title="Vista previa de la imagen" style="max-width: 350px; max-height: 450px; margin-top: 50px;" />
+            </div><!--col-6-->
+            
+            <div class="row">
+                <div class="col-10">
+                    <textarea cols="90" rows="6" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="border:none;" ></textarea>
+                </div>
+            </div> <!--row-->
+        </div> 
+
+    </div><!--container-->
+   </section> 
+
+   
 
 <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script> -->
+<footer id="anclafooter"></footer>
+
 <script src="./src/js/form_admin.js"></script>
 <script src="./src/js/main.js"></script>
+
+
 </body>
 </html>

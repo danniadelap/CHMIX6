@@ -1,112 +1,115 @@
-/*const form  = document.getElementsByTagName('form')[0];
 
-const phoneNumber = document.getElementById('nunber');
-const email = document.getElementById('email');
-const emailError = document.querySelector('#email + span.error');
+let contactanos = document.getElementById("contactanos")
 
-email.addEventListener('submit', function (event) {
-
-//verificamos si los campos del formulario son válidos.
-
-  if (email.validity.valid) {
-    
-    emailError.innerHTML = ''; // Restablece el contenido del mensaje
-    emailError.className = 'error'; // Restablece el estado visual del mensaje
-  } else {
-    showError();
-  }
-});
-
-form.addEventListener('submit', function (event) {
-  // si el campo de correo electrónico es válido, dejamos que el formulario se envíe
-
-  if(!email.validity.valid) {
-    // Si no es así, mostramos un mensaje de error apropiado
-    showError();
-    // Luego evitamos que se envíe el formulario cancelando el evento
-    event.preventDefault();
-  }
-});
-
-function showError() {
-  if(email.validity.valueMissing) {
-    // Si el campo está vacío
-    // muestra el mensaje de error siguiente.
-    emailError.textContent = 'Debe introducir una dirección de correo electrónico.';
-  } else if(email.validity.typeMismatch) {
-    // Si el campo no contiene una dirección de correo electrónico
-    // muestra el mensaje de error siguiente.
-    emailError.textContent = 'El valor introducido debe ser una dirección de correo electrónico.';
-  } else if(email.validity.tooShort) {
-    // Si los datos son demasiado cortos
-    // muestra el mensaje de error siguiente.
-    emailError.textContent = 'El correo electrónico debe tener al menos ${ email.minLength } caracteres; ha introducido ${ email.value.length }.';
-  }
-
-  // Establece el estilo apropiado
-  emailError.className = 'error activo';
-}*/
-
-// deshabilita envios de formularios si hay campos no validos
-
-/*(function() {
-    'use strict';
-    window.addEventListener('load', function() {
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      var forms = document.getElementsByClassName('form');
-      // Loop over them and prevent submission
-      var validation = Array.prototype.filter.call(forms, function(form) {
-        form.addEventListener('submit', function(event) {
-          if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        }, false);
-      });
-    }, false);
-  })();*/
-
+contactanos.addEventListener("submit", (e) => {
+  e.preventDefault();
+})
+function validacion (){
   
-  /*let celular = document.getElementById("telefono");
-celular.addEventListener("keypress" , (event)=>{
-    event.preventDefault();
-        
-    let codigoKey = event.keyCode;
-    let valorKey = String.fromCharCode(codigoKey);
-    console.log(valorKey);
+  var formValido = true;
 
-    let valor = parseInt(valorKey);
-    console.log(valor);
+  var nombre = document.getElementById("nombre").value;
 
-    if(valor < 10){
-        if (celular.value.length < 11 ) {
-            celular.value += valor;
-        console.log(celular.value.length);    
-        }
-    }
+  /*
+  if (nombre ==null || nombre.length <3){
+    nombreAlert.innerHTML = `Favor de ingresar su nombre.`;
+    nombreAlert.style.display = "block";
+    //alert("Por favor ingrese un telefono valido")
+    formValido =false;
+  } else  {
+    nombreAlert.style.display = "none";
+    nombre.classList.remove("is-invalid");
+    nombre.classList.add("is-valid");
+    
+  }
+*/
+  
+  
+
+  var numero = document.getElementById("telefono").value;
+  if (numero == null || numero.length < 8)  {
+    telefonoAlert.innerHTML = `Favor de ingresar un telefono valido.`;
+    telefonoAlert.style.display = "block";
+    telefono.classList.remove("is-valid");
+    telefono.classList.add("is-invalid");
+    //alert("Por favor ingrese un telefono valido")
+    formValido =false;
+  } else  if (numero.length>10){
+    telefonoAlert.innerHTML = `Favor de ingresar un telefono valido.`;
+    telefonoAlert.style.display = "block";
+    formValido =false;
+    telefono.classList.remove("is-valid");
+    telefono.classList.add("is-invalid");
+  }else {
+    telefonoAlert.style.display = "none";
+    telefono.classList.remove("is-invalid");
+    telefono.classList.add("is-valid");
+  }
+  
+  
+  var mensaje = document.getElementById("mensaje").value;
+  if (mensaje == null || mensaje.length == 0){
+    mensajeAlert.innerHTML = `Favor de ingresar un telefono valido.`;
+    mensajeAlert.style.display = "block";
+    mensaje.classList.remove("is-valid");
+    mensaje.classList.add("is-invalid");
+   
+    formValido =false;
+  }else {
+    mensajeAlert.style.display = "none";
+    mensaje.classList.remove("is-invalid");
+    mensaje.classList.add("is-valid");
+  }
+  
+  return formValido
+}
+
+
+/*var correo = document.getElementById("correo").value
+  if (correo == null || correo.length<4){
+  alert ("por favor ingrese un correo electronico valido");
+  formValido = false;  
+  }*/
+
+function validarCorreo(correo) {
+    let expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+    let esValido = expReg.test(correo);
+    return esValido;
+}
+
+let correo = document.getElementById("correo");
+let correoAlert = document.getElementById("correoAlert");
+
+let nombreAlert = document.getElementById("nombreAlert");
+let mensajeAlert=document.getElementById("mensajeAlert");
+let telefonoAlert = document.getElementById("telefonoAlert");
+
+/*
+validarDatos.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let valiCorreoL = validarCorreo(correoL.value);
+  //mandamos a llamar la funcion de correo para validarlo
+
+  if (correo.value === "") {
+      correoAlert.innerHTML = `Favor de ingresar correo.`;
+      correoAlert.style.display = "block";
+      correo.classList.remove("is-valid");
+      correo.classList.add("is-invalid");
+  } else if (valiCorreoL == true) {
+      correoAlert.style.display = "none";
+      correo.classList.remove("is-invalid");
+      correo.classList.add("is-valid");
+  } else {
+      correoAlert.innerText = "El correo no es válido, favor de verificarlo.";
+      correoAlert.style.display = "block";
+      correo.classList.remove("is-valid");
+      correo.classList.add("is-invalid");
+  }//validacion de correo
 });
+
 */
 
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-
-/*(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
-*/
-
-
+function blurCorreoL() {
+  correo.value = correo.value.toLowerCase().replace(/ /g, "");
+}

@@ -4,6 +4,7 @@
     background-color: #EAEAEA;
     border-radius: 20px;
     padding-bottom: 15px;
+    align-content: center;
 }
 
 .container2{
@@ -13,12 +14,12 @@
 
 .titulo_producto{
     border-radius: 20px 20px 0px 0px ;
-    /*background-color: rgb(51, 141, 43, .6);*/
-    background-color: #EAEAEA;
     width: 100%;
+    padding: 0px 12px;
     text-align: center;
+    text-transform: uppercase;
+    font-family: 'Fraunces';
 }
-
 .centrar_boton{
     text-align: center;
 }
@@ -85,12 +86,56 @@ body{
 }
 
 .container{
-    display: flex;
-    flex-direction: row;
-
+   justify-content: center;
 }
 
 #imageFile{
     border: solid;
     border-radius: 20px;
+}
+.estilo_boton{
+    background-color: #0E8784;
+    border-radius: 10px;
+    color: #FEFCF7;
+    font-family: 'Fraunces';
+    padding: 10px;
+    text-transform: uppercase;
+}
+.estilo_boton:hover{
+    background-color: #66D2CF;
+}/*cambio de color del boton cuando pasa el cursor*/
+.estilo_boton:checked{
+    background-color: #003333;
+    color: #FEFCF7;
+}
+
+.btn_container{
+    border-radius: 20px 20px 0px 0px ;
+    width: 100%;
+    padding: 0px 12px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Fraunces';
+    
+}
+
+.linea_separadora{
+    background-color: black;
+    height: 1px;
+    width: 300px;
+}
+
+.alinear_form{
+
+    border-radius: 20px 20px 0px 0px ;
+    width: 100%;
+    padding: 0px 12px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Fraunces';
+    
+}
+
+.centrar1{
+    justify-content: center;
 }

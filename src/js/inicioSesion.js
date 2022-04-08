@@ -1,10 +1,7 @@
 let array_usuario = [
     {
-        "id_usuario": "1",
         "correo": "correo@ejem.plo",
-        "nombre": "Correo Ejemplo",
-        "apellido": "3333333333",
-        "contrasena": "C0nt@5n@"
+        "contrasenia": "C0nt@5n@"
     }
 ];
 function validarCorreo(correo) {
@@ -101,7 +98,7 @@ login_usuario.addEventListener("submit", (e) => {
             .then(response => console.log('Success:', response));
         ///mandamos los datos de usuario al sesionStorage
         sessionStorage.setItem("lUsuario", lUsuario);
-        
+
         Swal.fire({
             icon: 'success',
             text: `${usuario_logeado.correo}, bienvenido a Tutu!`,
