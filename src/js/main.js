@@ -1,6 +1,4 @@
 // Repositorio:  https://github.com/danniadelap/CHMIX6
-
-
 let barra = 
     {
         products: "./list_of_products.html",
@@ -67,9 +65,6 @@ let barra =
     `;
 
   
-     
-
-
 let anclaBarra = document.getElementById("anclaBarra");
 anclaBarra.innerHTML = contenidoBarra;
 
@@ -130,6 +125,5 @@ const contenidoFooter =`
 </footer>
 
 `;
-
 let anclafooter = document.getElementById("anclafooter");
 anclafooter.innerHTML = contenidoFooter;
