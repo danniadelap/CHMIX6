@@ -31,8 +31,8 @@ login_usuario.addEventListener("submit", (e) => {
     //mandamos a llamar la funcion de correo para validarlo y que nos de un resusltado y lo guardamos en valiCorreo
 
     array_usuario.push(localStorage.getItem('rUsuario'))
-    const contrasCorrecta = array_usuarios.findIndex(elemento => {
-        if (elemento.correo == correoL.value){
+    const contrasCorrecta = array_usuario.findIndex(elemento => {
+        if (elemento.correo == correoL.value) {
             return elemento.contrasena == contrasenaL.value;
         }
     });
@@ -64,29 +64,44 @@ login_usuario.addEventListener("submit", (e) => {
         contrasenaL.classList.add("is-valid");
     }
 
-    if ((contrasCorrecta != "-1") && (valiCorreoL == "1") || (contrasenaL.value === "" || correoL.value === "") || valiCorreoL != true) {        
-        ingresoAlert.style.display = "none";
-    } else {        
-        ingresoAlert.innerHTML = "Datos de ingreso incorrectos, valide su usuario y contraseña.";
-        ingresoAlert.style.display = "block";
-    }
+    /*     if ((contrasCorrecta != "-1") && (valiCorreoL == "1") || (contrasenaL.value === "" || correoL.value === "") || valiCorreoL != true) {        
+            ingresoAlert.style.display = "none";
+        } else {        
+            ingresoAlert.innerHTML = "Datos de ingreso incorrectos, valide su usuario y contraseña.";
+            ingresoAlert.style.display = "block";
+        } */
 
     console.log(valiCorreoL);
     console.log(contrasCorrecta);
     //if (existe != "-1" && contrasCorrecta == "1" && valiCorreoL == "1") {
-    if (contrasCorrecta != "-1" && valiCorreoL == "1") {
-            //si esta condicion se cumple entrara en el if y creara el Json 
-        console.log("A");
-        let usuario_logeado = {
+    if (contrasenaL.value != "" && valiCorreoL == "1") {
+        //si esta condicion se cumple entrara en el if y creara el Json 
+        let lUsuario = {
             "correo": correoL.value,
             "contrasena": contrasenaL.value
         }//se crea un arreglo con los datos del nuevo usuario
-        array_usuario.push(usuario_logeado);
-        let usuarioLogeado = JSON.stringify(usuario_logeado);
-        localStorage.setItem("lUsuario", usuarioLogeado);
+        
+        array_usuario.push(lUsuario);
 
-        let json_user = JSON.stringify(usuario_logeado);//el arreglo principal se convierte a JSON
+        let json_user = JSON.stringify(lUsuario);//el arreglo principal se convierte a JSON
         console.log(json_user);
+        let url = 'http://localhost:8080/api/login/';
+        let data = {
+            "correo": correo.value,
+            "contrasenia": contrasena.value
+        };
+        fetch(url, {
+            method: 'POST', // or 'PUT'
+            body: JSON.stringify(data), // data can be `string` or {object}!
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+            .catch(error => console.error('Error:', error))
+            .then(response => console.log('Success:', response));
+        ///mandamos los datos de usuario al sesionStorage
+        sessionStorage.setItem("lUsuario", lUsuario);
+        
         Swal.fire({
             icon: 'success',
             text: `${usuario_logeado.correo}, bienvenido a Tutu!`,
@@ -101,4 +116,20 @@ login_usuario.addEventListener("submit", (e) => {
 });
 function blurCorreoL() {
     correoL.value = correoL.value.toLowerCase().replace(/ /g, "");
+    let valiCorreoL = validarCorreo(correoL.value);
+    if (correoL.value === "") {
+        correoAlert.innerHTML = `Favor de ingresar correo.`;
+        correoAlert.style.display = "block";
+        correoL.classList.remove("is-valid");
+        correoL.classList.add("is-invalid");
+    } else if (valiCorreoL == true) {
+        correoAlert.style.display = "none";
+        correoL.classList.remove("is-invalid");
+        correoL.classList.add("is-valid");
+    } else {
+        correoAlert.innerText = "El correo no es válido, favor de verificarlo.";
+        correoAlert.style.display = "block";
+        correoL.classList.remove("is-valid");
+        correoL.classList.add("is-invalid");
+    }//validacion de correo
 }

@@ -1,10 +1,9 @@
 let array_usuarios = [
     {
-        "id_usuario": "1",
         "correo": "correo@ejem.plo",
-        "nombre": "Correo Ejemplo",
+        "nombre_usu": "Correo Ejemplo",
         "apellido": "3333333333",
-        "contrasena": "C0nt@5n@"
+        "contrasenia": "C0nt@5n@"
     }
 ];//Arreglo guardar datos usuario
 
@@ -15,19 +14,23 @@ let numeros = false;
 let simbolos = false;
 let minContraLargo = 8;  //equivalente en spsc.js (necesario camniar ambos)
 let minCaracteLargo = 3;
+let valiCorreo;
+
+//declara URL fetch
+const urlAPI = 'http://localhost:8080/api/usuarios/';
 
 //declara elementos html
-let add_usuario = document.getElementById("agregar_usuario");
-let correo = document.getElementById("correo");
-let correo_alert = document.getElementById("correo_alert");
-let nombre = document.getElementById("nombre");
-let nombre_alert = document.getElementById("nombre_alert");
-let apellido = document.getElementById("apellido");
-let apellido_alert = document.getElementById("apellido_alert");
-let contrasena = document.getElementById("contrasena");
-let contrasena_alert = document.getElementById("contrasena_alert");
-let validacion = document.getElementById("validacion");
-let validacion_alert = document.getElementById("validacion_alert");
+const add_usuario = document.getElementById("agregar_usuario");
+const correo = document.getElementById("correo");
+const correo_alert = document.getElementById("correo_alert");
+const nombre = document.getElementById("nombre");
+const nombre_alert = document.getElementById("nombre_alert");
+const apellido = document.getElementById("apellido");
+const apellido_alert = document.getElementById("apellido_alert");
+const contrasena = document.getElementById("contrasena");
+const contrasena_alert = document.getElementById("contrasena_alert");
+const validacion = document.getElementById("validacion");
+const validacion_alert = document.getElementById("validacion_alert");
 
 function validarCorreo(correo) {
     let expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
@@ -50,18 +53,8 @@ function iniciarContrase() {
     simbolos = false;
 }//reinicia variables validacion contraseña
 
-//evento boton formulario
-add_usuario.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    let valiCorreo = validarCorreo(correo.value);
-
-    validarContrase(contrasena.value);
-
-    const existe = array_usuarios.findIndex(elemento => {
-        return elemento.correo == correo.value
-    }); //validamos correo ingresa ya existe en arreglo 
-
+function alertasCorreo() {
+    valiCorreo = validarCorreo(correo.value);
     if (correo.value === "") {
         correo_alert.innerHTML = `Favor de ingresar correo.`;
         correo_alert.style.display = "block";
@@ -77,8 +70,9 @@ add_usuario.addEventListener("submit", (e) => {
         correo.classList.remove("is-valid");
         correo.classList.add("is-invalid");
     }//validacion de correo
-
-    if (nombre.value === "") {
+}//alertasCorreo
+function alertasNombre() {
+    if (nombre.value === "" || nombre.value.slice(0, 1) === " ") {
         nombre_alert.innerHTML = "Favor de ingresar nombre.";
         nombre_alert.style.display = "block";
         nombre.classList.remove("is-valid");
@@ -94,19 +88,14 @@ add_usuario.addEventListener("submit", (e) => {
         nombre.classList.remove("is-valid");
         nombre.classList.add("is-invalid");
     }//validacion de longitud de nombre
-
-    if (existe == "-1") {
-        document.getElementById("existe_alert").style.display = "none";
-    } else {
-        document.getElementById("existe_alert").style.display = "block";
-    }//validacion existencia correo
-
-    if (apellido.value === "") {
+}//alertasNombre
+function alertasApellido() {
+    if (apellido.value === "" || apellido.value.slice(0, 1) === " ") {
         apellido_alert.innerHTML = "Favor de ingresar apellido.";
         apellido_alert.style.display = "block";
         apellido.classList.remove("is-valid");
         apellido.classList.add("is-invalid");
-    } else if (nombre.value.length > 2) {
+    } else if (apellido.value.length > 2) {
         apellido_alert.style.display = "none";
         apellido.classList.remove("is-invalid");
         apellido.classList.add("is-valid");
@@ -115,9 +104,9 @@ add_usuario.addEventListener("submit", (e) => {
         apellido_alert.style.display = "block";
         apellido.classList.remove("is-valid");
         apellido.classList.add("is-invalid");
-    }//validacion de longitud de telefono
-
-
+    }//validacion de longitud de apellido
+}//alertasApellido
+function alertasValidacion() {
     if (validacion.value === "") {
         validacion_alert.innerHTML = "Favor de confirmar contraseña.";
         validacion_alert.style.display = "block";
@@ -133,7 +122,8 @@ add_usuario.addEventListener("submit", (e) => {
         validacion.classList.remove("is-valid");
         validacion.classList.add("is-invalid");
     }//validacion de contraseña y validacion sean identicas
-
+}//alertasValidacion
+function alertasContrasena() {
     if (contrasena.value === "" || ((numeros == false || superior == false || simbolos == false || contrasena.value.length) < minContraLargo && contrasena.value.length > 0)) {
         contrasena_alert.innerHTML = "Favor de introducir contraseña optima.";
         contrasena_alert.style.display = "block";
@@ -144,23 +134,78 @@ add_usuario.addEventListener("submit", (e) => {
         contrasena.classList.remove("is-invalid");
         contrasena.classList.add("is-valid");
     }//Alerta contraseña optima
+}
+
+
+//evento boton formulario
+add_usuario.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    valiCorreo = validarCorreo(correo.value);
+
+    validarContrase(contrasena.value);
+
+    const existe = array_usuarios.findIndex(elemento => {
+        return elemento.correo == correo.value
+    }); //validamos correo ingresa ya existe en arreglo 
+
+    alertasCorreo();
+    alertasNombre();
+    alertasApellido();
+    alertasContrasena();
+    alertasValidacion();
+
+    if (existe == "-1") {
+        document.getElementById("existe_alert").style.display = "none";
+    } else {
+        document.getElementById("existe_alert").style.display = "block";
+    }//validacion existencia correo
 
     if ((numeros == true) && (superior == true) && (simbolos == true) && (valiCorreo == true) && (nombre.value.length > 2) && (apellido.value.length > 2) && (existe == "-1") && (contrasena.value == validacion.value) && (contrasena.value.length > 7)) {
         //si esta condicion se cumple entrara en el if y creara el Json 
 
         let rUsuario = {
-            "id_usuario": array_usuarios.length + 1,
             "correo": correo.value,
-            "nombre": nombre.value,
+            "nombre_usu": nombre.value,
             "apellido": apellido.value,
-            "contrasena": contrasena.value
+            "contrasenia": contrasena.value
         }//se crea un arreglo con los datos del nuevo usuario
 
         array_usuarios.push(rUsuario);//se grega el nuevo usuario en el arreglo principal 
         let json_usuario = JSON.stringify(rUsuario);//el arreglo principal se convierte a JSON
         console.log(array_usuarios);
         console.log(json_usuario);
-        localStorage.setItem("rUsuario", json_usuario);
+        fetch(urlAPI, {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(rUsuario),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        ///mandamos los datos de usuario al sesionStorage    
+        sessionStorage.setItem("rUsuario", json_usuario);
+
+        let url = 'http://localhost:8080/api/login/';
+        let data = {
+            "correo": correo.value,
+            "contrasenia": contrasena.value
+        };
+        fetch(url, {
+            method: 'POST', // or 'PUT'
+            body: JSON.stringify(data), // data can be `string` or {object}!
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+            .catch(error => console.error('Error:', error))
+            .then(response => console.log('Success:', response));
         Swal.fire({
             icon: 'success',
             text: `${rUsuario.nombre} ${rUsuario.apellido}, bienvenido a Tutu!`,
@@ -168,27 +213,16 @@ add_usuario.addEventListener("submit", (e) => {
             showConfirmButton: true,
             confirmButtonText: 'Volver',
             confirmButtonColor: '#595959',
-            timer: 1800 
-        })
-        window.open('./index.html', "_self");
+            timer: 1800
+        });
+        //window.open('./index.html', "_self");
     }
     iniciarContrase();
 });
 
-function cambiar() {
-    document.getElementById("registro_pre").style.display = "block";
-    document.getElementById("inicio_pre").style.display = "none";
-}
-
-function cambiar1() {
-    document.getElementById("registro_pre").style.display = "none";
-    document.getElementById("inicio_pre").style.display = "block";
-}
-
-
+//declara funcion inpide entrada espacios teclado
 const sinEspacios = document.querySelectorAll(".sinEspacios");
 sinEspacios.forEach((el) => el.addEventListener("keypress", impedirEspacios));
-
 function impedirEspacios(e) {
     if (e.key == " ") {
         // Si se pulsa el espacio eliminamos la pulsación
@@ -210,6 +244,7 @@ function blurApellido() {
 function capitalizar(texto) {
     return texto = texto.toLowerCase().trim().replace(/      /g, " ").replace(/     /g, " ").replace(/    /g, " ").replace(/   /g, " ").replace(/  /g, " ").split(' ').map(v => v[0].toUpperCase() + v.substr(1)).join(' ');;
 }//primera letra por palabra mayuscula + resto minusculas, retira espacios extras
+
 
 //agrega funciones cuando documento esta listo.
 $(document).ready(function () {
@@ -237,6 +272,11 @@ $(document).ready(function () {
 
     resultadoSalida();
     $(".inputContra").bind("keyup", checkVal);
+    $("#validacion").bind("keyup", alertasValidacion);
+    $("#nombre").bind("keyup", alertasNombre);
+    $("#apellido").bind("keyup", alertasApellido);
+    $("#correo").bind("keyup", alertasCorreo);
+    //$("#contrasena").bind("keyup", alertasContrasena);
 
     function checkVal() {
         init();
@@ -249,7 +289,6 @@ $(document).ready(function () {
         else {
             puntajeBase = 0;
         }
-
         resultadoSalida();
     }
 
@@ -299,7 +338,7 @@ $(document).ready(function () {
 
     }
     function resultadoSalida() {
-		validarContrase(contrasena.value);
+        validarContrase(contrasena.value);
         mensaje = " Al menos "
         if (contrasena.value.length < minContraLargo) {
             mensaje += " " + minContraLargo + " caracteres.";
@@ -330,18 +369,23 @@ $(document).ready(function () {
 
         if ($(".inputContra").val() == "") {
             complejidad.html(mensaje).removeClass("debil medio bueno exelente").addClass("default");
+            contrasena_alert.style.display = "none";
         }
         else if (puntaje < 50) {
             complejidad.html("Debil!" + mensaje).removeClass("medio bueno exelente").addClass("debil");
+            alertasContrasena();
         }
         else if (puntaje >= 50 && puntaje < 75) {
             complejidad.html("Promedio!" + mensaje).removeClass("bueno exelente").addClass("medio");
+            alertasContrasena();
         }
         else if (puntaje >= 75 && puntaje < 100) {
             complejidad.html("Fuerte!" + mensaje).removeClass("exelente").addClass("bueno");
+            alertasContrasena();
         }
         else if (puntaje >= 100) {
             complejidad.html("Segura!" + mensaje).addClass("exelente");
+            alertasContrasena();
         }
         iniciarContrase();
 
