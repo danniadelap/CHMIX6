@@ -5,7 +5,7 @@ let sombreros =[
         fotoAlt1 : "Sombrero Xeta",
         nombre: "Sombrero Xeta",
         precio: "$699.00",
-        detalle: "Demustra tu alegría",
+        detalle: "Demuestra tu alegría",
     },
     {
         foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/2.PNG",
