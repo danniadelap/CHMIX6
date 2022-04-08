@@ -5,42 +5,42 @@ let sombreros =[
         fotoAlt1 : "Sombrero Xeta",
         nombre: "Sombrero Xeta",
         precio: "$699.00",
-        detalle: "Nada como un rojo vibrante",
+        detalle: "Demustra tu alegría",
     },
     {
         foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/2.PNG",
         fotoAlt1 : "Sombrero Yivíme",
         nombre: "Sombrero Yivíme",
         precio: "$699.00",
-        detalle: "Un toque de elegancia que va contigo",
+        detalle: "Un toque de elegancia",
     },
     {
         foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/3.PNG",
         fotoAlt1 : "Sombrero Iyarí",
         nombre: "Sombrero Iyarí",
         precio: "$579.00",
-        detalle: "Siéntete en contacto con la naturaleza",
+        detalle: "Radiante y vibrante ",
     },
     {
         foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/4.PNG",
         fotoAlt1 : "Sombrero Tau",
         nombre: "Sombrero Tau",
         precio: "$789.00",
-        detalle: "Radiante y vibrante",
+        detalle: "Siéntete en contacto con la naturaleza",
     },
     {
         foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/5.PNG",
         fotoAlt1 : "Sombrero Yuavíme",
         nombre: "Sombrero Yuavíme",
         precio: "$799.00",
-        detalle: "Se un espíritu libre",
+        detalle: "Nada como proyectar un amarillo brillante e intenso ",
     },
 {
     foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/6.PNG",
     fotoAlt1 : "Sombrero Haaraweri",
     nombre: "Sombrero Haaraweri",
     precio: "$699.00",
-    detalle: "Se un espíritu libre",
+    detalle: "Proyecta tu buena vibra",
 }
 ];
 //Se setan los productos sombreros a localStorage

@@ -65,3 +65,50 @@ body{
     transform: translateY(-3%);
 
 }/*movimiento resalte y color de fondo de la card*/
+
+
+
+.jumbotronGorras {
+  /*  background-image: url(https://i1.wp.com/granturismomexico.com/wp-content/uploads/2015/10/huichol.jpg?fit=1600%2C1067&ssl=1);*/
+    background-image: url(../img/Productos/Gorras/ImgChaquiraRoja.webp);
+    margin-bottom: 0px;
+    background-position: 25% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+   /* filter: blur(10px);*/
+    
+}
+.tituloGorras{
+    color: whitesmoke ;
+    text-shadow: black 0.3em 0.3em 0.3em;
+    font-size: 3.5em;
+    text-align: center;
+}
+@media only screen and (max-width:600px) {
+    .jumbotronGorras .tituloGorras{
+        font-size:1.3em; 
+        text-shadow: black 0.1em 0.1em 0.1em;
+    }
+}
+
+.jumbotronSombreros{
+    margin-bottom: 0px;
+   /* background-image: url(https://i.pinimg.com/originals/26/50/6c/26506c852d4e0ada0e5660008c36a8a4.jpg);*/
+   background-image: url(../img/Productos/Sombreros/ImgChaquiraAzul.jpg);
+    background-position: 25% 25%;
+    opacity: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.tituloSombreros{
+    color: whitesmoke;
+    text-shadow: black 0.3em 0.3em 0.3em;
+    font-size: 3.5em;
+}
+@media only screen and (max-width:600px) {
+    .jumbotronSombreros .tituloSombreros{
+        font-size:1.3em; 
+        text-shadow: black 0.1em 0.1em 0.1em;
+    }
+}
