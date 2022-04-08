@@ -19,14 +19,14 @@ let gorras =[
         fotoAlt1 : "Gorra Ojo de Dios",
         nombre: "Gorra Ojo de Dios",
         precio: "$579.00",
-        detalle: "El poder de los dioses te acompañara en cualquier ocasión con esta gorra",
+        detalle: "Proyecta lo mejor de ti en todo momento",
     },
     {
         foto1:  "./src/img/Productos/Sombreros/Imagenes redimensionadas/Gorras/4.PNG",
         fotoAlt1 : "Gorra Xéri",
         nombre: "Gorra Xéri",
         precio: "$659.00",
-        detalle: "Contrastante con tu personalidad",
+        detalle: "Contrastante con tu personalidad moderna",
     }
 ];
 //Se setean los productos gorras a localStorage
