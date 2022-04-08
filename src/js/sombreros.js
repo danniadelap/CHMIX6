@@ -58,7 +58,7 @@ function crearCard(foto1,fotoAlt1,nombre,precio, detalle){
     let estilos = "";
     const myCard = `
     <div class="col-lg-4 col-md-6 col-sm-12" >
-                <div class="list_card">
+                <div class="list_card agregar-carrito">
                     
                     <div>
                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -77,7 +77,8 @@ function crearCard(foto1,fotoAlt1,nombre,precio, detalle){
                         <p class="estilos_precio"><b>${precio}</b></p>
                     </div>
                     <div>
-                        <h5 class="estilo_botones">Añadir a tu outfit</h5>                     
+                            
+                        <input type="button" class="btn estilo_botones añadirOutfit" value="Añadir a tu outfit" id="btnFake">                 
                     </div>
                     
                 </div> 

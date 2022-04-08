@@ -1,0 +1,47 @@
+
+table#cart {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table#cart th,
+  table#cart td {
+    padding: 0.5em;
+  }
+  
+  table#cart td {
+    border: 1px solid;
+  }
+  
+  table#cart tfoot {
+    background: #eee;
+  }
+  
+  input {
+    font: inherit;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: inherit;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+  }
+  .btn-delete {
+    color: #fff;
+    background-color: #cf000f;
+    border-color: #cf000f;
+  }
+  
+  h1,
+  .cta,
+  h2 {
+    text-align: center;
+  }
